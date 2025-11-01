@@ -1,6 +1,6 @@
 # Shuttle Installation - Fysetc CNC
 
-{% set assembly = get_hardware("shuttles")["CNC Shuttle Installation (Fysetc)"] %}
+{% set assembly = get_hardware("shuttles")["Shuttle Installation - Fysetc"] %}
 
 {% include "_templates/overview.md" %}
 

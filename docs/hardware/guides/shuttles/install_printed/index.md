@@ -1,6 +1,6 @@
 # Shuttle Installation - Printed
 
-{% set assembly = get_hardware("shuttles")["Printed Shuttle Installation"] %}
+{% set assembly = get_hardware("shuttles")["Shuttle Installation - Printed"] %}
 
 {% include "_templates/overview.md" %}
 

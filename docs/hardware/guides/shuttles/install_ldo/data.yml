@@ -1,25 +1,32 @@
-title: CNC Shuttle Installation (LDO)
+title: "Shuttle Installation - LDO"
 model: "Shuttle_MGN12.gltf"
+image: "/assets/shuttle_LDO_install.png"
 
 # primary_parts:
 # accent_parts:
 # frame_parts: 
 
 summary: >
-    The Clicky-Clack version of Door Buffer for Voron 2.4.
+    This guide covers the installation of the [LDO CNC Shuttle](https://docs.ldomotors.com/en/StealthChanger){: target="_blank"} for StealthChanger. 
 
-    !!! info "Short/Standard?"
-        There are different printed files depending on whether you are using short Modular Docks or Standard. If you are unsure, consult the [Tools Section](../../hardware/tools/tools.md) for compatibility.
+    !!! tip "Belt Helper"
+        The Belt Helper tool will aid in holding the belts in place while installing the shuttle.
 
 printed_bom:
-  TODO:
-    qty: 69420
-    urls: 
-      TODO: "#TODO"
+  Belt Helper:
+    qty: 1
+    urls:
+      Github: https://download-directory.github.io/?url=https://github.com/DraftShift/StealthChanger/tree/main/STLs/Extras/BeltHelper&filename=SC-Belt-Helper
 
 hardware_bom:
-  TODO:
-    qty: 69420
+  M3x10 SHCS Screws:
+    qty: 4
+  M3x25-50 Screws:
+    qty: 2
+  M3 Heat Inserts:
+    qty: 6
+  M3x6 BHCS Screws - Included:
+    qty: 4
 
 steps:
   - title: "TODO"

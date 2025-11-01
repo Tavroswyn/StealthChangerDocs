@@ -1,6 +1,6 @@
 # Shuttle Installation - LDO CNC
 
-{% set assembly = get_hardware("shuttles")["CNC Shuttle Installation (LDO)"] %}
+{% set assembly = get_hardware("shuttles")["Shuttle Installation - LDO"] %}
 
 {% include "_templates/overview.md" %}
 
