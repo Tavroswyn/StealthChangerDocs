@@ -10,19 +10,19 @@ printed_bom:
   Side A:
     qty: 4
     urls:
-      250: https://github.com/DraftShift/Tophat/blob/main/Printed%20version/STLs/250/Side_A_250x4.3mf?raw=true
-      300: https://github.com/DraftShift/Tophat/blob/main/Printed%20version/STLs/300/Side_A_300x4.3mf?raw=true
-      350: https://github.com/DraftShift/Tophat/blob/main/Printed%20version/STLs/350/Side_A_350x4.3mf?raw=true
+      250: https://github.com/DraftShift/Tophat/blob/main/Printed%20version/STLs/250/Side_A_250_x4.3mf?raw=true
+      300: https://github.com/DraftShift/Tophat/blob/main/Printed%20version/STLs/300/Side_A_300_x4.3mf?raw=true
+      350: https://github.com/DraftShift/Tophat/blob/main/Printed%20version/STLs/350/Side_A_350_x4.3mf?raw=true
   Side B:
     qty: 4
     urls:
-      250: https://github.com/DraftShift/Tophat/blob/main/Printed%20version/STLs/250/Side_B_250x4.3mf?raw=true
-      300: https://github.com/DraftShift/Tophat/blob/main/Printed%20version/STLs/300/Side_B_300x4.3mf?raw=true
-      350: https://github.com/DraftShift/Tophat/blob/main/Printed%20version/STLs/350/Side_B_350x4.3mf?raw=true
+      250: https://github.com/DraftShift/Tophat/blob/main/Printed%20version/STLs/250/Side_B_250_x4.3mf?raw=true
+      300: https://github.com/DraftShift/Tophat/blob/main/Printed%20version/STLs/300/Side_B_300_x4.3mf?raw=true
+      350: https://github.com/DraftShift/Tophat/blob/main/Printed%20version/STLs/350/Side_B_350_x4.3mf?raw=true
   Medallion:
     qty: 4
     urls:
-      Voron: https://github.com/DraftShift/Tophat/blob/main/Printed%20version/STLs/Medalion.3mf?raw=true
+      Voron: https://github.com/DraftShift/Tophat/blob/main/Printed%20version/STLs/Medalion.stl?raw=true
       Micron: https://github.com/DraftShift/Tophat/blob/main/Printed%20version/STLs/Medalion%20Micron.3mf?raw=true
       Archetype: https://github.com/DraftShift/Tophat/blob/main/Printed%20version/STLs/Medalion%20Archetype.3mf?raw=true
       Sovol: https://github.com/DraftShift/Tophat/blob/main/Printed%20version/STLs/Medalion%20Sovol.3mf?raw=true

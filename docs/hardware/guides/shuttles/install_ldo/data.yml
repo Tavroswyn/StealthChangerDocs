@@ -16,7 +16,7 @@ printed_bom:
   Belt Helper:
     qty: 1
     urls:
-      Github: https://download-directory.github.io/?url=https://github.com/DraftShift/StealthChanger/tree/main/STLs/Extras/BeltHelper&filename=SC-Belt-Helper
+      Link: https://download-directory.github.io/?url=https://github.com/DraftShift/StealthChanger/tree/main/STLs/Extras/BeltHelper&filename=SC-Belt-Helper
 
 hardware_bom:
   M3x10 SHCS Screws:

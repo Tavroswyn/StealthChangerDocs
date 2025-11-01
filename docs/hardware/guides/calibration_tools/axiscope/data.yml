@@ -3,7 +3,7 @@ model: "Axiscope_Camera.gltf"
 image: "/assets/camera.png"
 
 summary: >
-    A camera which complements the [Axiscope](https://github.com/nic335/Axiscope) software to get precise XY alignment between the tool's nozzles.
+    A camera which complements the [Axiscope](https://github.com/nic335/Axiscope){:target="_blank"} software to get precise XY alignment between the tool's nozzles.
 
     !!! danger "Requires Soldering"
         This guide requires soldering LEDs on to a PCB. If you are uncomfortable with soldering, there are cameras available for purchase, notably the [CXC Camera by Ember Prototypes](https://www.emberprototypes.com/products/cxc){:target="_blank"}.

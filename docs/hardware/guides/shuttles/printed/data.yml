@@ -13,8 +13,8 @@ printed_bom:
   StealthCahnger Shuttle:
     qty: 1
     urls: 
-      Github - MGN12: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Shuttle%20MGN12%20(With%20belt%20grooves).stl?raw=true
-      Github - MGN9: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Shuttle%20MGN9.stl?raw=true
+      MGN12: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Shuttle%20MGN12%20(With%20belt%20grooves).stl?raw=true
+      MGN9: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Shuttle%20MGN9.stl?raw=true
 
 hardware_bom:
   4x6x6mm brass bushings:

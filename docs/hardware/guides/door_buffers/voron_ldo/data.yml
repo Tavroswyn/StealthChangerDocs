@@ -8,7 +8,7 @@ summary: >
         The hardware components for this guide are all included as a part of LDO's `StealthChanger Tophat and Door Buffer Kit`.
 
     !!! info "Short/Standard?"
-        There are different printed files depending on whether you are using short Modular Docks or Standard. If you are unsure, consult the [Tools Section](../../hardware/tools/tools.md) for compatibility.
+        There are different printed files depending on whether you are using short Modular Docks or Standard. If you are unsure, consult the [Tools Section](../../../tools/tools) for compatibility.
 
 printed_bom:
   TODO:
