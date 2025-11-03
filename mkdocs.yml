@@ -59,8 +59,6 @@ nav:
     - Collaborations: hardware/collaborations.md
 
     - Build Guides:
-      - hardware/guides/index.md
-        
       - StealthChanger Shuttles: 
         - hardware/guides/shuttles/index.md
         - Printed Shuttle: hardware/guides/shuttles/printed/index.md
