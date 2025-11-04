@@ -167,3 +167,6 @@ extra:
       link: https://www.facebook.com/groups/449879874593718/
     - icon: fontawesome/brands/youtube
       link: https://www.youtube.com/@DraftShiftDesign
+  analytics:
+      provider: google
+      property: G-XKW8ZMLFGX
