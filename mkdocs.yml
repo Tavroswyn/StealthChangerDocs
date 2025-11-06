@@ -124,7 +124,6 @@ nav:
 plugins:
   - search
   - macros
-  - section-index
 
 markdown_extensions:
   - admonition
@@ -156,6 +155,9 @@ markdown_extensions:
 extra_css:
   - stylesheets/extra.css
   - stylesheets/assembly-viewer.css
+
+extra_javascript:
+  - javascripts/assembly-viewer.js
 
 extra:  
   social:

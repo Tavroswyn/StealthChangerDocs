@@ -132,4 +132,3 @@ window.assemblyViewerData = {
     subCategories: null
 };
 </script>
-<script src="/javascripts/assembly-viewer.js"></script>

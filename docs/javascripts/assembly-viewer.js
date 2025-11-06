@@ -1,20 +1,20 @@
 // Assembly Viewer JavaScript
 // This file contains all the JavaScript logic for the 3D assembly viewer
 
-// Global variables
-let modelFile = window.assemblyViewerData?.modelFile || '';
-let assemblySteps = window.assemblyViewerData?.assemblySteps || [];
-let bgColor = window.assemblyViewerData?.bgColor || [127, 127, 127];
-let primaryParts = window.assemblyViewerData?.primaryParts || [];
-let accentParts = window.assemblyViewerData?.accentParts || [];
-let frameParts = window.assemblyViewerData?.frameParts || [];
-let transparentParts = window.assemblyViewerData?.transparentParts || {};
-let primaryColor = window.assemblyViewerData?.primaryColor || [37, 13, 63];
-let accentColor = window.assemblyViewerData?.accentColor || [110, 63, 163];
-let frameColor = window.assemblyViewerData?.frameColor || [127, 127, 127];
-let focusColor = window.assemblyViewerData?.focusColor || [110, 255, 0];
-let subCategories = window.assemblyViewerData?.subCategories || null;
-let selectedSubCategory = null;
+// Global variables (using var to allow redeclaration with instant navigation)
+var modelFile = window.assemblyViewerData?.modelFile || '';
+var assemblySteps = window.assemblyViewerData?.assemblySteps || [];
+var bgColor = window.assemblyViewerData?.bgColor || [127, 127, 127];
+var primaryParts = window.assemblyViewerData?.primaryParts || [];
+var accentParts = window.assemblyViewerData?.accentParts || [];
+var frameParts = window.assemblyViewerData?.frameParts || [];
+var transparentParts = window.assemblyViewerData?.transparentParts || {};
+var primaryColor = window.assemblyViewerData?.primaryColor || [37, 13, 63];
+var accentColor = window.assemblyViewerData?.accentColor || [110, 63, 163];
+var frameColor = window.assemblyViewerData?.frameColor || [127, 127, 127];
+var focusColor = window.assemblyViewerData?.focusColor || [110, 255, 0];
+var subCategories = window.assemblyViewerData?.subCategories || null;
+var selectedSubCategory = null;
 
 // Global reference to viewer controls for external access
 window.modelViewerControls = null;
@@ -27,9 +27,9 @@ window.appliedCameraSettings = null; // Store the camera settings that were appl
 window.initialCameraPosition = null; // Store initial camera position after recenter
 window.initialTarget = null; // Store initial orbit target after recenter
 
-let currentStep = 0;
-let blinkInterval = null;
-let modelViewerInitialized = false;
+var currentStep = 0;
+var blinkInterval = null;
+var modelViewerInitialized = false;
 
 // Light positions
 const lightValues = {
@@ -1169,8 +1169,39 @@ function updateTOCActiveState(subcategoryKey) {
     }
 }
 
-// Setup event listeners on page load
-document.addEventListener('DOMContentLoaded', function() {
+// Setup function to initialize viewer and UI
+function setupAssemblyViewer() {
+    // Check if we're on an assembly viewer page
+    const modelViewerContainer = document.getElementById('model-viewer');
+    if (!modelViewerContainer) {
+        return; // Not an assembly viewer page
+    }
+    
+    // Reload data from window.assemblyViewerData (it changes on each page)
+    if (window.assemblyViewerData) {
+        modelFile = window.assemblyViewerData.modelFile || '';
+        assemblySteps = window.assemblyViewerData.assemblySteps || [];
+        bgColor = window.assemblyViewerData.bgColor || [127, 127, 127];
+        primaryParts = window.assemblyViewerData.primaryParts || [];
+        accentParts = window.assemblyViewerData.accentParts || [];
+        frameParts = window.assemblyViewerData.frameParts || [];
+        transparentParts = window.assemblyViewerData.transparentParts || {};
+        primaryColor = window.assemblyViewerData.primaryColor || [37, 13, 63];
+        accentColor = window.assemblyViewerData.accentColor || [110, 63, 163];
+        frameColor = window.assemblyViewerData.frameColor || [127, 127, 127];
+        focusColor = window.assemblyViewerData.focusColor || [110, 255, 0];
+        subCategories = window.assemblyViewerData.subCategories || null;
+    }
+    
+    // Reset state for new page
+    modelViewerInitialized = false;
+    currentStep = 0;
+    selectedSubCategory = null;
+    if (blinkInterval) {
+        clearInterval(blinkInterval);
+        blinkInterval = null;
+    }
+    
     initializeModelViewer();
 
     
@@ -1276,7 +1307,17 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
-});
+}
+
+// Setup event listeners for both initial page load and instant navigation
+document.addEventListener('DOMContentLoaded', setupAssemblyViewer);
+
+// MkDocs Material instant navigation support
+if (typeof document$ !== 'undefined') {
+    document$.subscribe(function() {
+        setTimeout(setupAssemblyViewer, 0);
+    });
+}
 
 function recenterScene(skipCameraPosition = true) {
     if (!window.scene || !window.modelViewerCamera || !window.modelViewerControls) {
