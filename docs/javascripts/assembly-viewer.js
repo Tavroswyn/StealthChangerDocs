@@ -1,7 +1,7 @@
 // Assembly Viewer JavaScript
 // This file contains all the JavaScript logic for the 3D assembly viewer
 
-// Global variables (using var to allow redeclaration with instant navigation)
+// Global variables
 var modelFile = window.assemblyViewerData?.modelFile || '';
 var assemblySteps = window.assemblyViewerData?.assemblySteps || [];
 var bgColor = window.assemblyViewerData?.bgColor || [127, 127, 127];
@@ -1177,6 +1177,40 @@ function setupAssemblyViewer() {
         return; // Not an assembly viewer page
     }
     
+    // Clean up old Three.js instance if it exists
+    if (window.scene) {
+        // Dispose of geometries and materials
+        window.scene.traverse(function(object) {
+            if (object.geometry) {
+                object.geometry.dispose();
+            }
+            if (object.material) {
+                if (Array.isArray(object.material)) {
+                    object.material.forEach(material => material.dispose());
+                } else {
+                    object.material.dispose();
+                }
+            }
+        });
+        
+        // Clear the scene
+        while(window.scene.children.length > 0) {
+            window.scene.remove(window.scene.children[0]);
+        }
+    }
+    
+    // Remove old renderer canvas if it exists
+    const oldCanvas = modelViewerContainer.querySelector('canvas');
+    if (oldCanvas) {
+        oldCanvas.remove();
+    }
+    
+    // Clear the container's parts list
+    const partsList = document.getElementById('parts-list');
+    if (partsList) {
+        partsList.innerHTML = '';
+    }
+    
     // Reload data from window.assemblyViewerData (it changes on each page)
     if (window.assemblyViewerData) {
         modelFile = window.assemblyViewerData.modelFile || '';
@@ -1201,6 +1235,17 @@ function setupAssemblyViewer() {
         clearInterval(blinkInterval);
         blinkInterval = null;
     }
+    
+    // Reset global references
+    window.modelViewerControls = null;
+    window.modelViewerCamera = null;
+    window.modelViewerParts = null;
+    window.scene = null;
+    window.originalPartColors = {};
+    window.lightDirections = {};
+    window.appliedCameraSettings = null;
+    window.initialCameraPosition = null;
+    window.initialTarget = null;
     
     initializeModelViewer();
 
