@@ -60,14 +60,14 @@ nav:
 
     - Build Guides:
       - StealthChanger Shuttles: 
-        - hardware/guides/shuttles/index.md
+        - Overview: hardware/guides/shuttles/index.md
         - Printed Shuttle: hardware/guides/shuttles/printed/index.md
         - Installation - Printed: hardware/guides/shuttles/install_printed/index.md
         - Installation - Fysetc CNC: hardware/guides/shuttles/install_fysetc/index.md
         - Installation - LDO CNC: hardware/guides/shuttles/install_ldo/index.md
 
       - StealthChanger Backplates: 
-        - hardware/guides/backplates/index.md
+        - Overview: hardware/guides/backplates/index.md
         - A4T: hardware/guides/backplates/a4t/index.md
         - Anthead: hardware/guides/backplates/anthead/index.md
         - BlackBird: hardware/guides/backplates/blackbird/index.md
@@ -80,14 +80,14 @@ nav:
 
 
       - Toolheads: 
-        - hardware/guides/toolheads/index.md
+        - Overview: hardware/guides/toolheads/index.md
         - Anthead: hardware/guides/toolheads/anthead/index.md
 
       - Cable Management: 
-        - hardware/guides/cable_management/index.md
+        - Overview: hardware/guides/cable_management/index.md
 
       - Door Buffers: 
-        - hardware/guides/door_buffers/index.md
+        - Overview: hardware/guides/door_buffers/index.md
         - Voron Standard: hardware/guides/door_buffers/voron_sd/index.md
         - Voron LDO: hardware/guides/door_buffers/voron_ldo/index.md
         - Voron Clicky-Clack: hardware/guides/door_buffers/voron_ccd/index.md
@@ -95,17 +95,19 @@ nav:
         - Micron Colony Clacker: hardware/guides/door_buffers/micron_ccd/index.md
 
       - Modular Docks:
-        - hardware/guides/modular_docks/index.md
+        - Overview: hardware/guides/modular_docks/index.md
 
       - Tophats: 
-        - hardware/guides/tophats/index.md
+        - Overview: hardware/guides/tophats/index.md
         - Printed Tophat: hardware/guides/tophats/printed/index.md
         - Extrusion Tophat: hardware/guides/tophats/extrusion/index.md
 
       - Calibration Tools: 
-        - hardware/guides/calibration_tools/index.md
+        - Overview: hardware/guides/calibration_tools/index.md
         - Sexball Probe: hardware/guides/calibration_tools/sexball/index.md
         - Axiscope Camera: hardware/guides/calibration_tools/axiscope/index.md
+
+    - Troubleshooting: hardware/troubleshooting.md
 
   - Software:
     - Overview: software/index.md
