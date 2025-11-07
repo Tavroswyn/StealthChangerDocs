@@ -108,13 +108,5 @@ Containers are an aesthetic addon that can be position in the frame of the Modul
 | :-: |
 | ![Containers](/assets/dock-container.png) |
 
-## Bill of Materials
-The bom will be obtained from the build guide metadata once its written. 
-### Printed
-![Soon](/assets/DSD_Soon.svg){ width=180}
-
-### Hardware
-![Soon](/assets/DSD_Soon.svg){ width=180}
-
 ## Assembly
 The assembly guide for the Modular Dock can be found in the [Build Guides](../guides/modular_docks) section. There you will find a guide for the different componants and how to contruct the final assembly.

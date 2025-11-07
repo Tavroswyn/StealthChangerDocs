@@ -11,14 +11,14 @@ To help the umbilical move in a controlled fashion, we employ the use of a flat 
 !!! tip "Spring Steel?"
     Flat spring steel (3x0.3mm) is the preferred aid for the tool's umbilical. It provides better lateral control and is what comes supplied as part of the LDO Toolhead and Dock Kit.
 
-## Fanny Pack
-Originally by [mancheetah](#){:target="_blank"}, the Fanny Pack has been adopted by DraftShift Design as the de facto method of housing a [distribution board](#distribution-boards) on the rear of the printer. Compared to the original, our updated version brings compatibility with a number of [distribution boards](#distribution-boards) and buck converter options.
+![Umbilical Cables](/assets/umbilicals.png)
 
-!!! danger "TODO"
-    Add images
+## Fanny Pack
+Originally by [ManCheetah](https://www.printables.com/@EddieSha_454383){:target="_blank"}, the Fanny Pack has been adopted by DraftShift Design as the de facto method of housing a [distribution board](#distribution-boards) on the rear of the printer. Compared to the original, our updated version brings compatibility with a number of [distribution boards](#distribution-boards) and buck converter options.
+
+![Fanny Pack](/assets/fanny_pack.png){:width="540"}
 
 ## Wire Duct
 The Wire Duct serves as a conduit between the [Fanny Pack](#fanny-pack) and your printers underside. Under its cover is an EMS compatible panel for you to mount any extra pieces you might need. 
 
-!!! danger "TODO"
-    Add images
+![Wire Duct](/assets/wire_duct.png){:width="540"}
