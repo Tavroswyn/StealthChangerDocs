@@ -1105,6 +1105,7 @@ const UIManager = {
         this.prevButtonHandler = function() {
             if (currentStep > 0) {
                 currentStep--;
+                updateStepHash();
                 updateStep();
             }
         };
@@ -1113,6 +1114,7 @@ const UIManager = {
             const maxStep = assemblySteps.length - 1;
             if (currentStep < maxStep) {
                 currentStep++;
+                updateStepHash();
                 updateStep();
             }
         };
@@ -1295,6 +1297,15 @@ function initializeModelViewer() {
             updateStep();
         }
     );
+}
+
+// Helper function to update URL hash
+function updateStepHash() {
+    const stepNum = currentStep + 1; // Convert to 1-indexed
+    const newHash = `#step-${stepNum}`;
+    if (window.location.hash !== newHash) {
+        window.history.pushState(null, '', newHash);
+    }
 }
 
 function updateStep() {
@@ -1548,7 +1559,21 @@ function setupAssemblyViewer() {
     
     // Reset state for new page
     modelViewerInitialized = false;
-    currentStep = 0;
+    
+    // Check URL hash for initial step (e.g., #step-5)
+    const hash = window.location.hash;
+    const stepMatch = hash.match(/^#step-(\d+)$/);
+    if (stepMatch) {
+        const stepNum = parseInt(stepMatch[1], 10) - 1; // Convert to 0-indexed
+        if (stepNum >= 0 && stepNum < assemblySteps.length) {
+            currentStep = stepNum;
+        } else {
+            currentStep = 0;
+        }
+    } else {
+        currentStep = 0;
+    }
+    
     selectedSubCategory = null;
     if (blinkInterval) {
         clearInterval(blinkInterval);
@@ -1622,6 +1647,19 @@ function setupAssemblyViewer() {
     UIManager.setupToggleButton();
     UIManager.setupCollapseButton();
     UIManager.setupKeyboardShortcuts();
+    
+    // Setup hash change listener for browser back/forward
+    window.addEventListener('hashchange', function() {
+        const hash = window.location.hash;
+        const stepMatch = hash.match(/^#step-(\d+)$/);
+        if (stepMatch) {
+            const stepNum = parseInt(stepMatch[1], 10) - 1;
+            if (stepNum >= 0 && stepNum < assemblySteps.length && stepNum !== currentStep) {
+                currentStep = stepNum;
+                updateStep();
+            }
+        }
+    });
     
     // Setup camera overlay click to copy
     const cameraOverlay = document.getElementById('camera-overlay');
