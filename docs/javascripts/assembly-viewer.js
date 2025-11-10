@@ -26,6 +26,8 @@ window.lightDirections = {}; // Store original light directions
 window.appliedCameraSettings = null; // Store the camera settings that were applied
 window.initialCameraPosition = null; // Store initial camera position after recenter
 window.initialTarget = null; // Store initial orbit target after recenter
+window.referenceViewportSize = null; // Store viewport size when camera settings were applied
+window.baseDistance = null; // Store the base distance from YAML
 
 var currentStep = 0;
 var blinkInterval = null;
@@ -34,6 +36,19 @@ var cameraOverlayHandler = null;
 var resizeHandler = null;
 var needsRenderGlobal = false; // Global flag for triggering renders from outside animate loop
 var renderFramesRemaining = 0; // Counter for forcing multiple renders during animations
+
+// Distance scaling configuration
+// Controls how much the camera distance scales with viewport size changes
+// 1.0 = full scaling (distance scales proportionally with viewport size)
+// 0.5 = half scaling (distance changes less aggressively)
+// 0.0 = no scaling (distance stays constant regardless of viewport size)
+var distanceScaleRatio = 1.6;
+
+// Reference viewport size - represents the typical size of the model-viewer container element
+var referenceFullViewportSize = {
+    width: 800,
+    height: 600
+};
 
 // Light positions
 const lightValues = {
@@ -557,6 +572,49 @@ function initModelViewer(modelPath, onModelLoaded) {
     }
     resizeHandler = function () {
         if (!container.clientWidth || !container.clientHeight) return;
+        
+        // Calculate scale factor based on viewport size change
+        // Use the smaller dimension to determine scale (maintains framing in both orientations)
+        if (window.referenceViewportSize && window.baseDistance) {
+            const currentSize = Math.min(container.clientWidth, container.clientHeight);
+            const referenceSize = Math.min(window.referenceViewportSize.width, window.referenceViewportSize.height);
+            const rawScaleFactor = referenceSize / currentSize;
+            
+            // Apply the configurable ratio to control how much scaling occurs
+            // scaleFactor = 1 + (rawScaleFactor - 1) * ratio
+            // When ratio = 1.0: full scaling
+            // When ratio = 0.5: half the scaling effect
+            // When ratio = 0.0: no scaling (scaleFactor = 1.0)
+            const scaleFactor = 1 + (rawScaleFactor - 1) * distanceScaleRatio;
+            
+            // Scale the distance: smaller viewport = larger distance (object appears same size)
+            const scaledDistance = window.baseDistance * scaleFactor;
+            
+            // Get current camera position in spherical coordinates
+            const pos = camera.position;
+            const target = controls.target;
+            const relX = pos.x - target.x;
+            const relY = pos.y - target.y;
+            const relZ = pos.z - target.z;
+            
+            const currentDistance = Math.sqrt(relX * relX + relY * relY + relZ * relZ);
+            const polar = Math.acos(relY / currentDistance);
+            const azimuth = Math.atan2(relZ, relX);
+            
+            // Reposition camera at scaled distance with same angles
+            const x = scaledDistance * Math.sin(polar) * Math.cos(azimuth);
+            const y = scaledDistance * Math.cos(polar);
+            const z = scaledDistance * Math.sin(polar) * Math.sin(azimuth);
+            
+            camera.position.set(
+                target.x + x,
+                target.y + y,
+                target.z + z
+            );
+            
+            controls.update();
+        }
+        
         camera.aspect = container.clientWidth / container.clientHeight;
         camera.updateProjectionMatrix();
         renderer.setSize(container.clientWidth, container.clientHeight);
@@ -565,6 +623,7 @@ function initModelViewer(modelPath, onModelLoaded) {
         renderFramesRemaining = 2;
     };
     window.addEventListener('resize', resizeHandler);
+
 }
 
 // Populate visibility controls
@@ -1438,11 +1497,28 @@ function updateStep() {
                 window.initialTarget.z + worldPan.z
             );
             
-            // Apply camera position
+            // Apply camera position with initial scaling based on viewport size
             if (azimuth !== null && polar !== null && distance !== null) {
-                const x = distance * Math.sin(polarRad) * Math.cos(azimuthRad);
-                const y = distance * Math.cos(polarRad);
-                const z = distance * Math.sin(polarRad) * Math.sin(azimuthRad);
+                // Get current viewport size
+                const container = document.getElementById('model-viewer');
+                let scaledDistance = distance;
+                
+                if (container) {
+                    // Calculate scale factor based on current viewport vs reference viewport
+                    const currentSize = Math.min(container.clientWidth, container.clientHeight);
+                    const referenceSize = Math.min(referenceFullViewportSize.width, referenceFullViewportSize.height);
+                    const rawScaleFactor = referenceSize / currentSize;
+                    
+                    // Apply the configurable ratio to control how much scaling occurs
+                    const scaleFactor = 1 + (rawScaleFactor - 1) * distanceScaleRatio;
+                    
+                    // Scale the distance for initial load
+                    scaledDistance = distance * scaleFactor;
+                }
+                
+                const x = scaledDistance * Math.sin(polarRad) * Math.cos(azimuthRad);
+                const y = scaledDistance * Math.cos(polarRad);
+                const z = scaledDistance * Math.sin(polarRad) * Math.sin(azimuthRad);
                 
                 camera.position.set(
                     controls.target.x + x,
@@ -1452,6 +1528,16 @@ function updateStep() {
             }
             
             controls.update();
+            
+            // Store the reference viewport size (from config) and base distance for scaling on resize
+            // Always use referenceFullViewportSize as the baseline, not the current viewport size
+            if (distance !== null) {
+                window.referenceViewportSize = {
+                    width: referenceFullViewportSize.width,
+                    height: referenceFullViewportSize.height
+                };
+                window.baseDistance = distance;
+            }
             
             // Force camera change detection by clearing last position
             // This ensures lights update on next animate loop iteration
