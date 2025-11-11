@@ -129,6 +129,7 @@ nav:
     - Overview: software/index.md
     - Klipper: software/klipper.md
     - Klipper-toolchanger: software/klipper-toolchanger.md
+    - Examples: software/examples.md
     - Slicers: software/slicers.md
 
   - Calibration:
