@@ -9,7 +9,7 @@
         <ul style="list-style-type: none;">
                 {% for reseller, res_data in resellers.regions[region].items() %}
                     <li>
-                        <a href="{{ res_data.url }}/" class="guide-card-link">
+                        <a href="{{ res_data.url }}/" target="_blank" class="guide-card-link">
                             <div class="grid cards" style="text-align: center;">
                                 <div class="card">
                                     <div class="card-content">
@@ -17,7 +17,7 @@
                                         <div class="card-text">
                                             <img src="{{ res_data.logo_url }}" alt="{{ res_data.name }}" style="max-width: 100%; max-height: 100px;">
                                             <p>{{ res_data.description }}</p>
-                                            <a href="{{ res_data.product_url }}" class="md-button">
+                                            <a href="{{ res_data.product_url }}" target="_blank" class="md-button">
                                                 <i class="fas fa-shopping-cart"></i> Kits
                                             </a>
                                         </div>
