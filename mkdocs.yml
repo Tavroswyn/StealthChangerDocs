@@ -202,3 +202,5 @@ extra:
   analytics:
       provider: google
       property: G-XKW8ZMLFGX
+watch:
+  - data
