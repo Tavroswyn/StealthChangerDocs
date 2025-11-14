@@ -3,7 +3,7 @@ manufacturers:
     birdsnest_can:
       name: Birdsnest CAN
       manufacturer: Isik Tech
-      image: /assets/distribution_boards/birdsnest_can.jpg
+      image: assets/distribution_boards/birdsnest_can.jpg
       description: "CAN Distribution Board With I/O"
       external_link: false
       url: store.isiks.tech
@@ -18,7 +18,7 @@ manufacturers:
     birdsnest_usb:
       name: Birdsnest USB
       manufacturer: Isik Tech
-      image: /assets/distribution_boards/birdsnest_usb.jpg
+      image: assets/distribution_boards/birdsnest_usb.jpg
       description: "USB Hub Distribution Board With I/O"
       external_link: false
       url: store.isiks.tech
@@ -33,7 +33,7 @@ manufacturers:
     moar_can:
       name: Moar CAN
       manufacturer: Isik Tech
-      image: /assets/distribution_boards/moar_can.jpg
+      image: assets/distribution_boards/moar_can.jpg
       description: "Pasive CAN Distribution Board"
       external_link: false
       url: store.isiks.tech
@@ -46,11 +46,11 @@ manufacturers:
     hexa:
       name: Hexa
       manufacturer: LDO
-      image: /assets/distribution_boards/nitehawk_hexa.jpg
+      image: assets/distribution_boards/nitehawk_hexa.jpg
       description: "USB Hub Distribution Board"
       external_link: true
       url: https://ldo.com
-      product_url: /resellers/
+      product_url: resellers.md
       features:
         protocol: USB
         outputs: 6
@@ -59,7 +59,7 @@ manufacturers:
     hexa_fusion:
       name: Tool Distribution
       manufacturer: Fysect
-      image: /assets/distribution_boards/hexa_distro.avif
+      image: assets/distribution_boards/hexa_distro.avif
       description: "Pasive CAN Distribution Board"
       external_link: false
       url: https://wiki.fysetc.com/docs/hexa_distro_fusion
@@ -71,7 +71,7 @@ manufacturers:
     hexa_distro_fusion:
       name: Hexa Distro Fusion
       manufacturer: Fysect
-      image: /assets/distribution_boards/hexa_distro_fusion.png
+      image: assets/distribution_boards/hexa_distro_fusion.png
       description: "CAN & USB Distribution Board"
       external_link: false
       url: https://fysect.com
@@ -89,7 +89,7 @@ manufacturers:
     ceb:
       name: CEB
       manufacturer: BTT
-      image: /assets/distribution_boards/ceb.webp
+      image: assets/distribution_boards/ceb.webp
       description: "Pasive CAN Distribution Board"
       external_link: false
       url: https://biqu.equipment/

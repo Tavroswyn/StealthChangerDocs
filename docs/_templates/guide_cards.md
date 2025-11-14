@@ -6,7 +6,7 @@
                 {% if guide.image is defined %}
                 <img src="{{ guide.image }}" alt="{{ title }}" class="guide-card-image">
                 {% else %}
-                <img src="/assets/DSD_Soon.svg" alt="{{ title }}" class="guide-card-image">
+                <img src="../../../assets/DSD_Soon.svg" alt="{{ title }}" class="guide-card-image">
                 {% endif %}
                 <div class="guide-card-content">
                     <hr class="guide-card-divider">

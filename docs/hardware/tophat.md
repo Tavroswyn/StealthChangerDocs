@@ -18,7 +18,7 @@ The Extrusion Tophat is like an extension of your printer, it uses the same extr
 | Voron 250 | 200mm x4 | 370mm x8 | 383x173x3mm x4 |
 | Micron 180 | 150mm x4 | 280mm x8 | 290x130x3mm x4 |
 
-![Extrusion Tophat](/assets/tophat_extrusion.png)
+![Extrusion Tophat](../assets/tophat_extrusion.png)
 
 !!! tip "LDO Kit"
     The extra hardware for the Extrusion Tophat comes as part of the LDO Tophat and Door Buffer Kit.
@@ -26,7 +26,7 @@ The Extrusion Tophat is like an extension of your printer, it uses the same extr
 ### Printed Tophat
 The Printed Tophat was developed for users that do not have easy access to aluminium extrusion or acrylic panels. The only additional hardware is screws, nut and heat inserts.
 
-![Printed Tophat](/assets/tophat_printed.png)
+![Printed Tophat](../assets/tophat_printed.png)
 
 !!! tip "Interim Tophat"
     Many of our members have fabricated a Tophat from cardboard which can be used while printing the pieces for your Printed Tophat.
@@ -35,4 +35,4 @@ The Printed Tophat was developed for users that do not have easy access to alumi
 If you plan on only printing open air, then you do not necessarily require a Tophat. You could just remove the top panel and let the umbilical cables extend past the top of the printer. 
 
 ## Assembly
-The assembly guides for the Tophats can be found in the [Build Guides](../guides/tophats/) section.
+The assembly guides for the Tophats can be found in the [Build Guides](guides/tophats/index.md) section.

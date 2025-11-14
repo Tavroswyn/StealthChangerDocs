@@ -1,9 +1,9 @@
 title: Base - Mini StealthBurner
 model: "Base - Mini StealthBurner.glb"
-# image: "/assets/dock-base_mini_stealthburner.png"
+# image: "assets/dock-base_mini_stealthburner.png"
 
 summary: >
-    This guide will prepare the Mini StealthBurner Base and Back for the [Modular Dock](/hardware/modular_docks).
+    This guide will prepare the Mini StealthBurner Base and Back for the [Modular Dock](../../../modular_dock.md).
 
 printed_bom:
   Mini StealthBurner Base:
@@ -40,7 +40,7 @@ steps:
     - "Back Heat Insert"
 
   - title: "Link Heat Inserts"
-    description: "Optional: If you are not using a [crossbar](/hardware/door_buffer/#crossbar), install 2 heat inserts in to the Base."
+    description: "Optional: If you are not using a [crossbar](../../door_buffer.md#crossbar), install 2 heat inserts in to the Base."
     camera:
       azimuth: 270
       polar: 154

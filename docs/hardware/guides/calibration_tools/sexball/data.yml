@@ -1,6 +1,6 @@
 title: Sexball Probe
 model: "Sexball_Probe.glb"
-image: "/assets/sexball.png"
+image: "assets/sexball.png"
 
 summary: >
     Multi axis probe for nozzle calibration.

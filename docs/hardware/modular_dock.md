@@ -6,9 +6,9 @@ search:
 The Modular Dock gives you a place to rest the tools while they are not in use. Its modular design allows for flexible configurations to match any printer and toolhead combination.
 
 ## Application
-The modular dock can be used in a variety of ways. The most common and recommended way is to use it in combination with a [crossbar](../../hardware/door_buffer/#crossbar). The [crossbar](../../hardware/door_buffer/#crossbar) is a part of the [Door Buffer](../../hardware/door_buffer) and offers a stirdy mounting point for the dock to be supported both above by the frame and below by the [crossbar](../../hardware/door_buffer/#crossbar).
+The modular dock can be used in a variety of ways. The most common and recommended way is to use it in combination with a [crossbar](door_buffer.md#crossbar). The [crossbar](door_buffer.md#crossbar) is a part of the [Door Buffer](door_buffer.md) and offers a stirdy mounting point for the dock to be supported both above by the frame and below by the [crossbar](door_buffer.md#crossbar).
 
-Alternativly, the dock can be mounted to the printers frame using the [Stabilizers](#stabilizers) and [Link](#link) components. This keeps the lower portion of the docks in place by joining them together while the outer docks get supported by the side of the printers frame. This adds some rigidity, but will not provide the same level of stability as the [crossbar](../../hardware/door_buffer/#crossbar).
+Alternativly, the dock can be mounted to the printers frame using the [Stabilizers](#stabilizers) and [Link](#links) components. This keeps the lower portion of the docks in place by joining them together while the outer docks get supported by the side of the printers frame. This adds some rigidity, but will not provide the same level of stability as the [crossbar](door_buffer.md#crossbar).
 
 Finally, the docks can be hung from the top of the printers frame with no lower support. This is the least stable option, should only used the other options are not available to you.
 
@@ -19,21 +19,21 @@ Because of its modularity, the Modular Dock has many differing pieces that can b
 * [Blocker](#blocker) - A section that mounts inside the [base](#base) that blocks the nozzle while docked which helps with ooze control.
 * [Back](#back) - Attaches to the rear of the [base](#base) to allow adjustment of the tools resting position.
 * [Wiper](#wiper) - A means of wiping the nozzle as the toolhead is exiting the dock.
-* [Frame](#frame) - The upright portion of the dock that connects to the top of the printers frame and optionally a [crossbar](../../hardware/door_buffer/#crossbar).
-* [Link](#link) - Attaches to the bottom of the docks, increases rigidity for hanging docks.
+* [Frame](#frame) - The upright portion of the dock that connects to the top of the printers frame and optionally a [crossbar](door_buffer.md#crossbar).
+* [Links](#links) - Attaches to the bottom of the docks, increases rigidity for hanging docks.
 * [Stabilizers](#stabilizers) - Ties the docks in to the side of the frame, further increasing rigidity for hanging docks.
-* [Containers](#container) - An optional addon that add a bit of flair to the front of the dock.
+* [Containers](#containers) - An optional addon that add a bit of flair to the front of the dock.
 
-## Componants
+## Components
 ### Base
 The base is a large section that is toolhead specific and has been shaped to match the bottom of the toolhead. It defines the width of the dock and helps define the position the tool sits in on the Y Axis. The base can be availiable in 2 variants, `standard` and `stubby`. Every toolhead has a `standard` base, but not all toolheads have the smaller `stubby` base.
 
 !!! warning "Smaller is better right?"
-    The `stubby` base is **NOT** compatible when using a [Door Buffer](../../hardware/door_buffer). If you are using a [Door Buffer](../../hardware/door_buffer), you MUST use the `standard` base. 
+    The `stubby` base is **NOT** compatible when using a [Door Buffer](door_buffer.md). If you are using a [Door Buffer](door_buffer.md), you MUST use the `standard` base. 
 
 | Base - Standard | Base - Stubby |
 | :-: | :-: |
-| ![Standard](/assets/dock-base_standard.png) | ![Stubby](/assets/dock-base_stubby.png) |
+| ![Standard](../assets/dock-base_standard.png) | ![Stubby](../assets/dock-base_stubby.png) |
 
 ### Blocker
 The blocker is a section that is toolhead agnostic and mounts inside the [base](#base). It serves as a barrier to prevent ooze while the tool is docked. It is availiable in 2 variants, `cup` and `spring steel`. There is no real advantage using one over the other, its more about what you have available to you. The `cup` version uses a pen spring, screw and heatset insert, while the `spring steel` version strip of the spring steel. Both versions use high temperature RTV silicone to block the nozzle.
@@ -43,24 +43,24 @@ The blocker is a section that is toolhead agnostic and mounts inside the [base](
 
 | Blocker - Cup | Blocker - Spring Steel |
 | :-: | :-: |
-| ![Cup](/assets/dock-cup_blocker.png) | ![Spring Steel](/assets/dock-spring_blocker.png) |
+| ![Cup](../assets/dock-cup_blocker.png) | ![Spring Steel](../assets/dock-spring_blocker.png) |
 
 ### Back
 The Back plate is toolhead specific and bolts to the rear of the [base](#base). Adjusting it up or down can help maintain the tool's alignment while it is docked.
 
 | Back |
 | :-: |
-| ![Back](/assets/dock-backplate.png){:width="340"} |
+| ![Back](../assets/dock-backplate.png){:width="340"} |
 
 ### Wiper
-The Wiper is toolhead agnostic and mounts to the [Back](#back) plate. There are 2 variants, `ptfe` and `bambu`. Both use a piece of PTFE tube to wipe the nozzle as it exits the dock. The `bambu` version emulates the wiper from the P1/X1 series of printers and can be printed or purchased from [BambuLab](https://bambulab.com/){:target="_blank"}.
+The Wiper is toolhead agnostic and mounts to the [Back](#back) plate. There are 2 variants, `ptfe` and `bambu`. Both use a piece of PTFE tube to wipe the nozzle as it exits the dock. The `bambu` version emulates the wiper from the P1/X1 series of printers and can be printed or purchased from [BambuLab](https://bambulab.com){:target="_blank"}.
 
 !!! tip "Wipers are optional"
     If you get excess ooze while returning to the print, a wiper may help.
 
 | Wiper - PTFE | Wiper - Bambu |
 | :-: | :-: |
-| ![PTFE](/assets/dock-ptfe_wiper.png) | ![Bambu](/assets/dock-bambu_wiper.png) | -->
+| ![PTFE](../assets/dock-ptfe_wiper.png) | ![Bambu](../assets/dock-bambu_wiper.png) | -->
 
 ### Frame
 The frame is what can be considered the front of the dock. It consists of a left piece, right piece, top piece and bottom piece. 
@@ -71,14 +71,14 @@ The left and right pieces come in 2 variants, `standard` and `short`. This deter
     Having a shorter frame can give you more printable area under the bed, but it does have some caveats. 
 
     * You may need to adjust the position of the z rails to ensure the carriage can reach.
-    * [StealthBurner](../../hardware/tools/tools/#StealthBurner) is not compatible with short docks.
+    * [StealthBurner](toolheads.md#stealthburner) is not compatible with short docks.
     * [Containers](#containers) are not compatible with short docks.
 
-There are 2020 and 1515 versions of the top and bottom pieces. Both versions have 2 varients, `standard` and `crossbar`. The `crossbar` is used in combination with [Door Buffer](../../hardware/door_buffer), while the standard version can be used for a `crossbar` in-line with the frame or as a combination with [Stabilizers](#stabilizers) or when hanging from the top of the printers frame. Optionally there is also an 'L bracket' that can help with stability of hanging docks.
+There are 2020 and 1515 versions of the top and bottom pieces. Both versions have 2 varients, `standard` and `crossbar`. The `crossbar` is used in combination with [Door Buffer](door_buffer.md), while the standard version can be used for a `crossbar` in-line with the frame or as a combination with [Stabilizers](#stabilizers) or when hanging from the top of the printers frame. Optionally there is also an 'L bracket' that can help with stability of hanging docks.
 
 | Standard Height | Short Height |
 | :-: | :-: |
-| ![Standard-Standard](/assets/dock_z-standard_y-standard.png) | ![Short-Standard](/assets/dock_z-short_y-standard.png) |
+| ![Standard-Standard](../assets/dock_z-standard_y-standard.png) | ![Short-Standard](../assets/dock_z-short_y-standard.png) |
 
 
 ### Links
@@ -88,7 +88,7 @@ The links for the frame differ depending on whether your using 2020 or 1515 top 
 
 | Links |
 | :-: |
-| ![Links](/assets/dock-links.png) |
+| ![Links](../assets/dock-links.png) |
 
 ### Stabilizers
 Stabilizers can be addded to the first and last dock to help with rigidity for hanging docks. There are left and right brackets for 2020 and 1515 frames which mount on the top Y axis extrusions of the frame, spacers and a brace which connects to the outer docks.
@@ -99,14 +99,14 @@ Stabilizers can be addded to the first and last dock to help with rigidity for h
 
 | Stabilizers |
 | :-: |
-| ![Stabilizer](/assets/dock-stabilizer.png) |
+| ![Stabilizer](../assets/dock-stabilizer.png) |
 
 ### Containers
 Containers are an aesthetic addon that can be position in the frame of the Modular Dock. They are considered optional.
 
 | Containers |
 | :-: |
-| ![Containers](/assets/dock-container.png) |
+| ![Containers](../assets/dock-container.png) |
 
 ## Assembly
-The assembly guide for the Modular Dock can be found in the [Build Guides](../guides/modular_docks) section. There you will find a guide for the different componants and how to contruct the final assembly.
+The assembly guide for the Modular Dock can be found in the [Build Guides](guides/modular_docks/index.md) section. There you will find a guide for the different componants and how to contruct the final assembly.

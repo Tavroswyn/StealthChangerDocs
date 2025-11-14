@@ -1,6 +1,6 @@
 title: Printed Tophat
 model: "Printed_Tophat.glb"
-image: "/assets/tophat_printed.png"
+image: "assets/tophat_printed.png"
 
 summary: >
     The 3D printed version of the Tophat uses mostly printed parts and common hardware. 

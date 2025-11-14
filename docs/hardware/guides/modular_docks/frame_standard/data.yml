@@ -1,12 +1,12 @@
 title: Frame - Standard
 model: "Frame - Standard.glb"
-# image: "/assets/dock-frame_standard.png"
+# image: "assets/dock-frame_standard.png"
 
 summary: >
-    This guide will prepare the Standard Frame for the [Modular Dock](/hardware/modular_docks). 
+    This guide will prepare the Standard Frame for the [Modular Dock](../../../modular_dock.md). 
     
     !!! warning "Door Buffer"
-        If you are using a [Door Buffer](/hardware/door_buffer), this is the wrong guide.
+        If you are using a [Door Buffer](../../../door_buffer.md), this is the wrong guide.
 
 printed_bom:
   Left:

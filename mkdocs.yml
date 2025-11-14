@@ -90,9 +90,9 @@ nav:
         - Overview: hardware/guides/door_buffers/index.md
         - Voron Standard: hardware/guides/door_buffers/voron_sd/index.md
         - Voron LDO: hardware/guides/door_buffers/voron_ldo/index.md
-        - Voron Clicky-Clack: hardware/guides/door_buffers/voron_ccd/index.md
-        - Micron Standard: hardware/guides/door_buffers/micron_sd/index.md
-        - Micron Colony Clacker: hardware/guides/door_buffers/micron_ccd/index.md
+        # - Voron Clicky-Clack: hardware/guides/door_buffers/voron_ccd/index.md
+        # - Micron Standard: hardware/guides/door_buffers/micron_sd/index.md
+        # - Micron Colony Clacker: hardware/guides/door_buffers/micron_ccd/index.md
 
       - Modular Dock:
         - Overview: hardware/guides/modular_docks/index.md
@@ -144,7 +144,7 @@ nav:
     - Troubleshooting: software/troubleshooting.md
 
   - Calibration:
-    - Overview: calibration/calibration.md
+    - Overview: calibration/index.md
     - Nozzle Offsets: calibration/nozzle_offsets.md
     - Dock Locations: calibration/dock_locations.md
   - Collaborations: collaborations.md
@@ -153,6 +153,9 @@ nav:
 plugins:
   - search
   - macros
+
+exclude_docs: |
+  _templates/
 
 markdown_extensions:
   - admonition

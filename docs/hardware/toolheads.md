@@ -29,7 +29,7 @@ For the purposes of StealthChanger the toolhead selection is rather important. I
 
     ### {{ tool }}
 
-    ![{{ tool }}](../../assets/tools/{{ tool }}.jpg){: style="max-width: 250px; display: block; margin: 0 auto; border: 1px solid #999; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);"}
+    ![{{ tool }}](../assets/tools/{{ tool }}.jpg){: style="max-width: 250px; display: block; margin: 0 auto; border: 1px solid #999; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);"}
 
     **Author:** {{ tool_data.author }}
 

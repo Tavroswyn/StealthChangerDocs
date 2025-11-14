@@ -1,6 +1,6 @@
 title: Fanny Pack
 model: "Fanny_Pack.glb"
-image: "/assets/fanny_pack.png"
+image: "assets/fanny_pack.png"
 
 summary: >
     This guide will walk you through the assembly of the Fanny Pack. 
@@ -96,7 +96,7 @@ steps:
       - "Wago Heat Inserts"
 
   - title: "Heat Inserts Part 3"
-    description: "Install 2 heat insert inside the base, these are used to mount the [Wire Duct](/hardware/cable_management/#wire-duct)."
+    description: "Install 2 heat insert inside the base, these are used to mount the [Wire Duct](../../../cable_management/#wire-duct)."
     camera:
       azimuth: 300
       polar: 43

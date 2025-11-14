@@ -1,1 +1,1 @@
-![Soon](/assets/DSD_Soon.svg)
+![Soon](../assets/DSD_Soon.svg)

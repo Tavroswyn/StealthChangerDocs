@@ -12,7 +12,7 @@ Converting an existing [Sexbolt Z Endstop](https://github.com/VoronDesign/VoronU
 !!! warning "Not just any Z endstop"
     Only Z endstops with a bushing are recommended for use as a Sexball Probe. If your Z endstop is the style with a deflanged pulley, you will need to source the another.
 
-![Sexball Probe](/assets/sexball.png){:width="540"}
+![Sexball Probe](../assets/sexball.png){:width="540"}
 
 !!! tip "LDO Kit"
     All of the hardware components for a Sexball Probe come as a part of LDO's Base StealthChanger Kit.
@@ -30,7 +30,7 @@ It provides a streamlined web interface for:
 * Quick and precise tool alignment.
 * No calculations required, the offsets are given to you in the exact format used with [Klipper-toolchanger](#).
 
-![Axiscope](/assets/camera.png){:width="540"}
+![Axiscope](../assets/camera.png){:width="540"}
 
 !!! tip "Which Camera?"
     Axiscope can technically use any webcam, but its recommended to use a camera that is built for purpose. See our build guide on how to assemble a camera specifically for Axiscope or consider [Ember Prototype's CXC camera](https://www.emberprototypes.com/products/cxc){:target="_blank"}.
@@ -42,7 +42,7 @@ More information can be found on the [Axiscope Github](https://github.com/nic335
 
 Nudge is a multi axis probe where the shaft is suspended in a wobbler. Nudging the probe in any axis makes contact with copper screws within the probe. 
 
-![Nudge](/assets/nudge.png){:width="540"}
+![Nudge](../assets/nudge.png){:width="540"}
 
 For more information and build instructions, visit the [Nudge GitHub](https://github.com/zruncho3d/nudge){:target="_blank"}.
 

@@ -1,9 +1,9 @@
 title: Base - A4T
 model: "Base - A4T.glb"
-# image: "/assets/dock-base_a4t.png"
+# image: "assets/dock-base_a4t.png"
 
 summary: >
-    This guide will prepare the A4T Base and Back for the [Modular Dock](/hardware/modular_docks).
+    This guide will prepare the A4T Base and Back for the [Modular Dock](../../../modular_dock.md).
 
 printed_bom:
   A4T Base:
@@ -40,7 +40,7 @@ steps:
     - "Back Heat Insert"
 
   - title: "Link Heat Inserts"
-    description: "Optional: If you are not using a [crossbar](/hardware/door_buffer/#crossbar), install 2 heat inserts in to the Base."
+    description: "Optional: If you are not using a [crossbar](../../door_buffer.md#crossbar), install 2 heat inserts in to the Base."
     camera:
       azimuth: 270
       polar: 154

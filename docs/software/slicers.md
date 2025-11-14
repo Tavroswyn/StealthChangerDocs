@@ -52,7 +52,7 @@ See below for custom gcode macros that will send the correct syntax to the [exam
 
 {% for slicer, data in slicers.items() %}
 
-### <a href="{{ data.github }}" target="_blank">![{{ slicer }}](../../assets/slicers/{{ slicer }}.png){width=32}</a> {{ slicer }}
+### <a href="{{ data.github }}" target="_blank">![{{ slicer }}](../assets/slicers/{{ slicer }}.png){width=32}</a> {{ slicer }}
 
 {% for gcode in data.gcodes %}
 **{{ gcode }} Gcode**

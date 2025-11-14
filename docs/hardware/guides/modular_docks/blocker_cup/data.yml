@@ -1,9 +1,9 @@
 title: Blocker - Cup
 model: "Blocker - Cup.glb"
-# image: "/assets/dock-base_a4t.png"
+# image: "assets/dock-base_a4t.png"
 
 summary: >
-    This guide will prepare the Cup Blocker for the [Modular Dock](/hardware/modular_docks).
+    This guide will prepare the Cup Blocker for the [Modular Dock](../../../modular_dock.md).
 
 printed_bom:
   Blocker - Cup Body:

@@ -1,6 +1,6 @@
 title: Extrusion Tophat
 model: "Extrusion_Tophat.glb"
-image: "/assets/tophat_extrusion.png"
+image: "assets/tophat_extrusion.png"
 
 summary: >
     The Extrusion version of the Tophat uses aluminum extrusions and acrylic panels to create a sturdy frame that looks like extension of the 3d Printer.

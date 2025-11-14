@@ -1,12 +1,12 @@
 title: "Printed Shuttle Assembly"
 model: "Shuttle_MGN12.glb"
-image: "/assets/shuttle_printed.png"
+image: "assets/shuttle_printed.png"
 
 summary: >
     The Stealthchanger Printed Shuttle.
 
     !!! tip "Printing"
-        This is a critical component for StealthChanger. Make sure you have read the [Print Tuning Guide](/getting_started/#print-tuning) before printing.
+        This is a critical component for StealthChanger. Make sure you have read the [Print Tuning Guide](../../../../getting_started.md#print-tuning) before printing.
         The StealthChanger Shuttle must be printed with supports.
 
 printed_bom:
