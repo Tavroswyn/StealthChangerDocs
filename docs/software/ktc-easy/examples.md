@@ -1,10 +1,56 @@
 # Configuration Examples
 
 !!! danger "TOOD"
-    provide examples for print_start macro, toolchanger-config and nitehawk36 
+    provide examples for print_start/end, with and without primelines
+
+=== "Basic PRINT_START"
+    ``` jinja { title="basic print_start" .copy }
+    {% raw %}
+    {% set TOOL = params.TOOL | default(-1)| int %}
+    {% set TOOL_TEMP = params.TOOL_TEMP | default(0) | int %}
+    {% set BED_TEMP = params.BED_TEMP | default(0) | int %}
+
+    STOP_CRASH_DETECTION
+
+    M117 Heating Bed
+    M190 S{BED_TEMP}
+
+    M117 Homing
+    G28
+    T0
+
+    M117 Quad Gantry Level
+    QUAD_GANTRY_LEVEL
+    G28 Z
+
+    ----------------------------------------
+    -----------@TODO-----------------------
+    ----------------------------------------
+
+    {% if TOOL >= 0 %}
+        M104 T0 S0 ; shutdown T0.  If it's up first it will be heated below.
+        T{params.TOOL}
+        {% set initialToolTemp = 'T' ~ params.TOOL|string ~ '_TEMP' %}
+        M117 Waiting on T{params.TOOL} S{params[initialToolTemp]}C
+        M109 S{params[initialToolTemp]}
+    {% else %}
+        M109 S{TOOL_TEMP}
+    {% endif %}
+    {% endraw %}
+
+    START_CRASH_DETECTION
+    ```
+
+=== "Basic PRINT_END"
+    ``` jinja { title="basic print_start" .copy }
+    NEMI IS IMPASIENT
+    ```
+
+!!! danger "TOOD"
+    provide examples for toolchanger-config and nitehawk36 
 
 === "extruder - T0"
-    ``` cfg title="Tool 0 Config"
+    ``` cfg { title="Tool 0 Config" .copy }
     # This file contains common pin mappings for the BIGTREETECH EBB36
     # Canbus board. To use this config, the firmware should be compiled for the
     # STM32G0B1 with "8 MHz crystal" and "USB (on PA11/PA12)" or "CAN bus (on PB0/PB1)".
@@ -107,7 +153,7 @@
     ```
 
 === "extruder - T1"
-    ``` cfg title="Tool 1 Config"
+    ``` cfg {title="Tool 1 Config" .copy }
 
     # This file contains common pin mappings for the BIGTREETECH EBB36
     # Canbus board. To use this config, the firmware should be compiled for the
