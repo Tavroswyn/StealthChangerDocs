@@ -1583,6 +1583,12 @@ function setupAssemblyViewer() {
         return; // Not an assembly viewer page
     }
     
+    // Prevent double initialization
+    if (modelViewerContainer.dataset.initialized === 'true') {
+        return;
+    }
+    modelViewerContainer.dataset.initialized = 'true';
+    
     // Clean up old Three.js instance if it exists
     if (window.scene) {
         // Dispose of geometries and materials
@@ -1830,6 +1836,11 @@ document.addEventListener('DOMContentLoaded', setupAssemblyViewer);
 // MkDocs Material instant navigation support
 if (typeof document$ !== 'undefined') {
     document$.subscribe(function() {
+        // Clear initialization flag on navigation to allow re-initialization on new pages
+        const oldContainer = document.getElementById('model-viewer');
+        if (oldContainer) {
+            delete oldContainer.dataset.initialized;
+        }
         setTimeout(setupAssemblyViewer, 0);
     });
 }
