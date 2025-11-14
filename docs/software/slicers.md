@@ -11,7 +11,7 @@ During a print, not all tools are being used at once. Turning off the heaters of
 The "idle" temperature is usually found in the filament settings. 
 
 !!! tip "OrcaSlicer Ooze Prevention"
-    OrcaSlicer has advanced ooze prevention that will preheat the nozzle just before picking it up again. This setting can be found in the [Multimaterial section](#https://github.com/SoftFever/OrcaSlicer/wiki/multimaterial_settings_ooze_prevention) of OrcaSlicer.
+    OrcaSlicer has advanced ooze prevention that will preheat the nozzle just before picking it up again. This setting can be found in the [Multimaterial section](https://github.com/SoftFever/OrcaSlicer/wiki/multimaterial_settings_ooze_prevention) of OrcaSlicer.
 
 ### Prime Tower
 Using a prime tower is highly recommended with StealthChanger. Typically, slicers will place them at the rear of the print. For StealthChanger it is often best for the prime tower to be placed in front of the print so that the tool does not need to pass over the print to reach it.
