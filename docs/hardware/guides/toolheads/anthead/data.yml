@@ -1,5 +1,5 @@
 title: Anthead
-model: "Anthead.gltf"
+model: "Anthead.glb"
 
 primary_parts:
   - "Main Body"

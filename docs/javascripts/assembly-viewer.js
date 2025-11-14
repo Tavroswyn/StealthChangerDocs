@@ -339,6 +339,15 @@ function initModelViewer(modelPath, onModelLoaded) {
 
     // Load glTF/GLB model
     const gltfLoader = new THREE.GLTFLoader();
+    
+    // Setup DRACOLoader for compressed models
+    if (typeof THREE.DRACOLoader !== 'undefined') {
+        const dracoLoader = new THREE.DRACOLoader();
+        // Use CDN for Draco decoder files
+        dracoLoader.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.5.6/');
+        dracoLoader.setDecoderConfig({ type: 'js' });
+        gltfLoader.setDRACOLoader(dracoLoader);
+    }
 
     gltfLoader.load(
         modelPath,
@@ -1865,6 +1874,10 @@ if (typeof document$ !== 'undefined') {
     });
 }
 
+// Reusable vectors for recenterScene
+const recenterTempOffset = new THREE.Vector3();
+const recenterTempDir = new THREE.Vector3();
+
 function recenterScene(skipCameraPosition = true) {
     if (!window.scene || !window.modelViewerCamera || !window.modelViewerControls) {
         console.warn('Scene not initialized');
@@ -1921,7 +1934,8 @@ function recenterScene(skipCameraPosition = true) {
     // Only reposition camera if not skipping (i.e., no explicit camera settings)
     if (!skipCameraPosition) {
         // Move camera to new position (maintaining relative angle to target)
-        const currentOffset = camera.position.clone().sub(controls.target);
+        recenterTempOffset.copy(camera.position).sub(controls.target);
+        const currentOffset = recenterTempOffset;
         const currentDistance = currentOffset.length();
         
         if (currentDistance > 0) {
@@ -1949,7 +1963,8 @@ function recenterScene(skipCameraPosition = true) {
             if (direction) {
                 // Position light at appropriate distance from the orbit target
                 const lightDistance = distance * 2;
-                object.position.copy(direction.clone().multiplyScalar(lightDistance)).add(controls.target);
+                recenterTempDir.copy(direction).multiplyScalar(lightDistance);
+                object.position.copy(recenterTempDir).add(controls.target);
                 
                 // If light has a target, update it to the orbit controls target
                 if (object.target) {
