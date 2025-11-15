@@ -8,42 +8,39 @@ summary: >
     !!! note "Distribution Board" 
         The guide shows LDO's Nitehawk Hexa board, all supported boards mount in a similar way.
 
-    !!! danger "TODO"
-        This guide is currently a work in progress.
-
 printed_bom:
   Base:
     qty: 1
     urls:
-      Link: https://github.com/DraftShift/CableManagement/blob/main/FannyPack/STLs/base.stl?raw=true
+      Link: https://github.com/DraftShift/CableManagement/blob/main/STLs/FannyPack/STLs/base.stl?raw=true
 
   Cover:
     qty: 1
     urls:
-      Voron: https://github.com/DraftShift/CableManagement/blob/main/FannyPack/STLs/%5Ba%5D_sc_voron_cover.stl?raw=true
-      Micron: https://github.com/DraftShift/CableManagement/blob/main/FannyPack/STLs/%5Ba%5D_sc_micron_cover.stl?raw=true
+      Voron: https://github.com/DraftShift/CableManagement/blob/main/STLs/FannyPack/STLs/%5Ba%5D_sc_voron_cover.stl?raw=true
+      Micron: https://github.com/DraftShift/CableManagement/blob/main/STLs/FannyPack/STLs/%5Ba%5D_sc_micron_cover.stl?raw=true
 
   Main Bracket:
     qty: 1
     urls:
-      Birds Nest: https://raw.githubusercontent.com/DraftShift/CableManagement/main/FannyPack/STLs/brackets/main/%5Ba%5D_birds_nest_bracket_v1.0.stl
-      CEB: https://raw.githubusercontent.com/DraftShift/CableManagement/main/FannyPack/STLs/brackets/main/%5Ba%5D_ceb_bracket_v1.0.stl
-      Dual Mellow Expand: https://raw.githubusercontent.com/DraftShift/CableManagement/main/FannyPack/STLs/brackets/main/%5Ba%5D_dual_mellow_expand.stl
-      FYSETC CANBus Distribution Board: https://raw.githubusercontent.com/DraftShift/CableManagement/main/FannyPack/STLs/brackets/main/%5Ba%5D_fysetc_canbus_distribution_board_bracket_v1.0.stl
-      Hexa v1.3: https://raw.githubusercontent.com/DraftShift/CableManagement/main/FannyPack/STLs/brackets/main/%5Ba%5D_hexa_bracket_v1.3.stl
-      MOAR CAN v2: https://raw.githubusercontent.com/DraftShift/CableManagement/main/FannyPack/STLs/brackets/main/%5Ba%5D_moar_can_bracket_v2.stl
-      WAGO 6x5: https://raw.githubusercontent.com/DraftShift/CableManagement/main/FannyPack/STLs/brackets/main/%5Ba%5D_wago_6x5.stl
-      WAGO 8x5: https://raw.githubusercontent.com/DraftShift/CableManagement/main/FannyPack/STLs/brackets/main/%5Ba%5D_wago_8x5.stl
+      Birds Nest: https://github.com/DraftShift/CableManagement/blob/main/STLs/FannyPack/STLs/brackets/main/%5Ba%5D_birds_nest_bracket_v1.0.stl?raw=true
+      CEB: https://github.com/DraftShift/CableManagement/blob/main/STLs/FannyPack/STLs/brackets/main/%5Ba%5D_ceb_bracket_v1.0.stl?raw=true
+      Dual Mellow Expand: https://github.com/DraftShift/CableManagement/blob/main/STLs/FannyPack/STLs/brackets/main/%5Ba%5D_dual_mellow_expand.stl?raw=true
+      FYSETC CANBus Distribution Board: https://github.com/DraftShift/CableManagement/blob/main/STLs/FannyPack/STLs/brackets/main/%5Ba%5D_fysetc_canbus_distribution_board_bracket_v1.0.stl?raw=true
+      Hexa v1.3: https://github.com/DraftShift/CableManagement/blob/main/STLs/FannyPack/STLs/brackets/main/%5Ba%5D_hexa_bracket_v1.3.stl?raw=true
+      MOAR CAN v2: https://github.com/DraftShift/CableManagement/blob/main/STLs/FannyPack/STLs/brackets/main/%5Ba%5D_moar_can_bracket_v2.stl?raw=true
+      WAGO 6x5: https://github.com/DraftShift/CableManagement/blob/main/STLs/FannyPack/STLs/brackets/main/%5Ba%5D_wago_6x5.stl?raw=true
+      WAGO 8x5: https://github.com/DraftShift/CableManagement/blob/main/STLs/FannyPack/STLs/brackets/main/%5Ba%5D_wago_8x5.stl?raw=true
 
   Sub Bracket:
     qty: 1
     urls:
-      Wago 2x5: https://github.com/DraftShift/CableManagement/blob/main/FannyPack/STLs/brackets/sub/%5Ba%5D_sub_wago_2x5.stl?raw=true
+      Wago 2x5: https://github.com/DraftShift/CableManagement/blob/main/STLs/FannyPack/STLs/brackets/sub/%5Ba%5D_sub_wago_2x5.stl?raw=true
 
   Mini DC-DC Buck Converter (Optional):
     qty: 2
     urls:
-      Link: https://raw.githubusercontent.com/DraftShift/CableManagement/main/FannyPack/STLs/brackets/main/%5Ba%5D_mini_dc_dc_buck_converter.stl
+      Link: https://github.com/DraftShift/CableManagement/blob/main/STLs/FannyPack/STLs/brackets/extra/%5Ba%5D_mini_dc_dc_buck_converter.stl?raw=true
 
 
 hardware_bom:
