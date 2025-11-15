@@ -10,7 +10,28 @@ printed_bom:
   Ramp:
     qty: 1
     urls:
-      Link: https://github.com/DraftShift/CableManagement/blob/main/STLs/Umbilical/Voron/%5Ba%5D_ptfe_ramp.stl
+      Link: https://github.com/DraftShift/CableManagement/blob/main/STLs/Umbilical/Voron/%5Ba%5D_ptfe_ramp.stl?raw=true
+
+  Umbilical Cover:
+    qty: 1
+    urls:
+      Link: https://github.com/DraftShift/CableManagement/blob/main/STLs/Umbilical/Voron/%5Ba%5D_umbilical_cover.stl?raw=true
+
+  ECAS Holder:
+    qty: N
+    urls:
+      ECAS: https://github.com/DraftShift/CableManagement/blob/main/STLs/Umbilical/Voron/ECAS_Panel/%5Ba%5D_ecas_ecas_bridge.stl?raw=true
+      Funnel: https://github.com/DraftShift/CableManagement/blob/main/STLs/Umbilical/Voron/ECAS_Panel/%5Ba%5D_ecas_funnel.stl?raw=true
+
+  ECAS Panel Top:
+    qty: 1
+    urls:
+      Link: https://github.com/DraftShift/CableManagement/blob/main/STLs/Umbilical/Voron/ECAS_Panel/ecas_panel_top.stl?raw=true
+
+  ECAS Panel Bottom:
+    qty: 1
+    urls:
+      Link: https://github.com/DraftShift/CableManagement/blob/main/STLs/Umbilical/Voron/ECAS_Panel/ecas_panel_7_bottom.stl?raw=true
 
 hardware_bom:
   M3 Heat Inserts:
