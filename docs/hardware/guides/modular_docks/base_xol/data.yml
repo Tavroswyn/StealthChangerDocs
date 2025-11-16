@@ -1,6 +1,6 @@
 title: Base - XOL
 model: "Base - XOL.glb"
-# image: "assets/dock-base_xol.png"
+# image: "dock-base_xol.png"
 
 summary: >
     This guide will prepare the XOL Base and Back for the [Modular Dock](../../../modular_dock.md).

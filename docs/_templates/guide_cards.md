@@ -4,7 +4,7 @@
         <a href="{{ guide.folder }}/" class="guide-card-link">
             <div class="card guide-card">
                 {% if guide.image is defined %}
-                <img src="{{ guide.image }}" alt="{{ title }}" class="guide-card-image">
+                <img src="../../../assets/{{ guide.image }}" alt="{{ title }}" class="guide-card-image">
                 {% else %}
                 <img src="../../../assets/DSD_Soon.svg" alt="{{ title }}" class="guide-card-image">
                 {% endif %}

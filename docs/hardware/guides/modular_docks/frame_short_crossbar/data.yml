@@ -1,6 +1,6 @@
 title: Frame - Short Crossbar
 model: "Frame - Short Crossbar.glb"
-# image: "assets/dock-frame_short.png"
+# image: "dock-frame_short.png"
 
 summary: >
     This guide will prepare the Short Frame to suit a crossbar for the [Modular Dock](../../../modular_dock.md).
