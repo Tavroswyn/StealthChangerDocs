@@ -3,7 +3,7 @@
 ## Klipper-toolchanger-easy
 Connect to the printer via SSH and enter the following commands:
 
-``` bash
+``` bash { .copy }
 cd ~/
 git clone https://github.com/jwellman80/klipper-toolchanger-easy.git
 cd ~/klipper-toolchanger-easy
@@ -37,7 +37,7 @@ After installation, your configuration will be organized as follows:
 
 Optional, but recommended, add the following to your `moonraker.conf` to enable automatic updates:
 
-``` cfg
+``` cfg { .copy }
 [update_manager klipper-toolchanger-easy]
 type: git_repo
 path: ~/klipper-toolchanger-easy

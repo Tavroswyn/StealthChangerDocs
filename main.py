@@ -71,3 +71,43 @@ def define_env(env):
         if match:
             return match.group(1)
         return ""
+    
+    @env.macro
+    def github_contributors(repo="DraftShift/StealthChanger"):
+        """Fetch and display GitHub contributors for a repository"""
+        import urllib.request
+        import json
+        
+        try:
+            # Fetch contributors from GitHub API
+            url = f"https://api.github.com/repos/{repo}/contributors"
+            req = urllib.request.Request(url)
+            req.add_header('Accept', 'application/vnd.github.v3+json')
+            
+            with urllib.request.urlopen(req, timeout=10) as response:
+                contributors = json.loads(response.read().decode())
+            
+            # Generate HTML for contributors
+            output = ['<div class="contributors-grid">']
+            
+            for contributor in contributors:
+                login = contributor.get('login', '')
+                avatar_url = contributor.get('avatar_url', '')
+                profile_url = contributor.get('html_url', '')
+                contributions = contributor.get('contributions', 0)
+                
+                output.append(f'''
+                <a href="{profile_url}" class="contributor-card" target="_blank" rel="noopener">
+                    <img src="{avatar_url}" alt="{login}" class="contributor-avatar">
+                    <div class="contributor-info">
+                        <div class="contributor-name">{login}</div>
+                        <div class="contributor-contributions">{contributions} contributions</div>
+                    </div>
+                </a>
+                ''')
+            
+            output.append('</div>')
+            return '\n'.join(output)
+            
+        except Exception as e:
+            return f'<p>Unable to load contributors: {str(e)}</p>'
