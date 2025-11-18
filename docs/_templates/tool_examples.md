@@ -26,9 +26,10 @@
             # change the mcu section name to the tool board you are configuring:
             # {{ data.mcu_name }}0, {{ data.mcu_name }}1, etc.
             [mcu {{mcu}}]
-            {%- if data.protocol == "CAN" %}
+            {%- if "can" in data.protocol|lower %}
             canbus_uuid: xxxxxxxxxxxx
-            {% else %}
+            {% endif %}
+            {%- if "usb" in data.protocol|lower %}
             serial: /dev/serial/by-id/usb-Klipper_xxxxxx_xxxxxxxxxxxxx
             restart_method: command
             {% endif %}
@@ -90,11 +91,19 @@
             # tachometer_pin: {{ pin(mcu, data.pin_map.he_tach_pin) }}
             # tachometer_ppr: 2
             {%- endif %}
-
+            {% if data.pin_map.part_fan_pin is iterable and data.pin_map.part_fan_pin is not string %}
+            [multi_pin T{{ i }}_multipin]
+            pins: {{ data.pin_map.part_fan_pin|join(", ") }}
+            {% endif %}
             # change the fan_generic section name to the tool you are configuring:
             # T0_partfan, T1_partfan, etc.
             [fan_generic T{{ i }}_part_fan]
+            {%- if data.pin_map.part_fan_pin is iterable and data.pin_map.part_fan_pin is not string %}
+            pin: multi_pin:T{{ i }}_multipin
+            {%- else %}
             pin: {{ pin(mcu, data.pin_map.part_fan_pin) }}
+            {%- endif -%}
+
             {%- if data.pin_map.part_tach_pin|length %}
             # tachometer_pin: {{ pin(mcu, data.pin_map.part_tach_pin) }}
             # tachometer_ppr: 2
