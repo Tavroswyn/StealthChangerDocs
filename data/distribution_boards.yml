@@ -67,7 +67,7 @@ manufacturers:
       features:
         protocol: CAN
         outputs: 6
-        IO: No
+        IO: 1 Type-A USB
     hexa_distro_fusion:
       name: Hexa Distro Fusion
       manufacturer: Fysect
