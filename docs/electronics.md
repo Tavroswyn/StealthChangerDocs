@@ -62,7 +62,7 @@ See below table of known boards for their protocol and capability:
 {%- for board_key, data in boards.items() -%}
 {%- if data.features is defined -%}
 {%- set target_attr = '' if data.external_link else '{: target="_blank"}' -%}
-| [{{data.name}}]({{data.product_url}}){{target_attr}} | <span style="width: 100px; display: block;">![{{data.name}}]({{data.image}})</span> | {{data.features.protocol}} | {{data.features.outputs}} | {{set_io_display(data.features.IO)}} | 
+| [{{data.name}}]({{data.product_url}}){{target_attr}} | <span style="width: 100px; display: block;">![{{data.name}}](assets/distribution_boards/{{data.image}})</span> | {{data.features.protocol}} | {{data.features.outputs}} | {{set_io_display(data.features.IO)}} | 
 {% endif -%}
 {%- endfor -%}
 {%- endfor %}

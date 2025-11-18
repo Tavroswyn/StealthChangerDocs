@@ -1,33 +1,3 @@
-EBB36 V1.2:
-  mcu_name: "EBB"
-  protocol: "CAN"
-  preface: |
-    # This file contains common pin mappings for the BIGTREETECH EBB36 V1.2.
-    # To use this config, the firmware should be compiled for the 
-    # STM32G0B1 with "8 MHz crystal" and "CAN bus (on PB0/PB1)".
-  accelerometer: "adxl345"
-  axis_map: "x,z,-y"
-  pullup_resistor: ""
-  sense_resistor: ""
-  pin_map:
-    acc_cs_pin: "PB12"
-    acc_sclk_pin: "PB10"
-    acc_mosi_pin: "PB11"
-    acc_miso_pin: "PB2"
-    step_pin: "PD0"
-    dir_pin: "PD1"
-    enable_pin: "!PD2"
-    heater_pin: "PB13"
-    sensor_pin: "PA3"
-    uart_pin: "PA15"
-    tx_pin: ""
-    hotend_fan_pin: "PA0"
-    he_tach_pin: ""
-    part_fan_pin: "PA1"
-    part_tach_pin: ""
-    detection_pin: "^PC13"
-    rgb_pin: "PD3"
-
 Nitehawk36 V1.4:
   mcu_name: "NHK"
   protocol: "USB"
@@ -88,34 +58,35 @@ NitehawkSB V1.5:
     detection_pin: "gpio10"
     rgb_pin: "gpio7"
 
-Mellow sht v2:
-  mcu_name: "SHT"
+EBB36 V1.2:
+  mcu_name: "EBB"
   protocol: "CAN"
   preface: |
-    # This file contains common pin mappings for the mellow fly sht36 v2.
+    # This file contains common pin mappings for the BIGTREETECH EBB36 V1.2.
     # To use this config, the firmware should be compiled for the 
-    # stm32f072".
+    # STM32G0B1 with "8 MHz crystal" and "CAN bus (on PB0/PB1)".
   accelerometer: "adxl345"
-  axis_map: ""
-  pullup_resistor: "4700"  # No jumper=4700 ohms for NTC thermistor. Add jumper to set to 1100 ohms for PT1000 thermistor.
-  sense_resistor: "0.100"
+  axis_map: "x,z,-y"
+  pullup_resistor: ""
+  sense_resistor: ""
   pin_map:
-    acc_cs_pin: "PA9"
-    acc_sclk_pin: "PB13"
-    acc_mosi_pin: "PB15"
-    acc_miso_pin: "PB14"
-    step_pin: "PB4"
-    dir_pin: "PB3"
-    enable_pin: "!PA15"
-    heater_pin: "PA8"
+    acc_cs_pin: "PB12"
+    acc_sclk_pin: "PB10"
+    acc_mosi_pin: "PB11"
+    acc_miso_pin: "PB2"
+    step_pin: "PD0"
+    dir_pin: "PD1"
+    enable_pin: "!PD2"
+    heater_pin: "PB13"
     sensor_pin: "PA3"
-    uart_pin: "PB5"
-    tx_pin:  ""
-    hotend_fan_pin: "PB10"
-    he_tach_pin: "PB10"  
-    part_fan_pin: "PB11"
-    detection_pin: "PA1"
-    rgb_pin: "PB0"
+    uart_pin: "PA15"
+    tx_pin: ""
+    hotend_fan_pin: "PA0"
+    he_tach_pin: ""
+    part_fan_pin: "PA1"
+    part_tach_pin: ""
+    detection_pin: "^PC13"
+    rgb_pin: "PD3"
 
 EBB36 Gen2 CAN:
   mcu_name: "EBB"
@@ -125,7 +96,7 @@ EBB36 Gen2 CAN:
     # To use this config, the firmware should be compiled for the 
     # STM32G0B1 with "8 MHz crystal" and "CAN bus (on PB12/PB13)".
   accelerometer: "adxl345"
-  axis_map: "x,Y,Z"
+  axis_map: "x,y,z"
   pullup_resistor: "2200"
   sense_resistor: ""
   pin_map:
@@ -155,7 +126,7 @@ EBB36 Gen2 USB:
     # To use this config, the firmware should be compiled for the 
     # STM32G0B1 with "8 MHz crystal" and "USB (on PA11/PA12)".
   accelerometer: "adxl345"
-  axis_map: "x,Y,Z"
+  axis_map: "x,y,z"
   pullup_resistor: "2200"
   sense_resistor: ""
   pin_map:
@@ -176,3 +147,32 @@ EBB36 Gen2 USB:
     part_tach_pin: ""
     detection_pin: "^PB8"
     rgb_pin: "PC7"
+
+Mellow SHT v2:
+  mcu_name: "SHT"
+  protocol: "CAN"
+  preface: |
+    # This file contains common pin mappings for the mellow fly sht36 v2.
+    # To use this config, the firmware should be compiled for the 
+    # stm32f072".
+  accelerometer: "adxl345"
+  axis_map: ""
+  pullup_resistor: "4700"  # No jumper=4700 ohms for NTC thermistor. Add jumper to set to 1100 ohms for PT1000 thermistor.
+  sense_resistor: "0.100"
+  pin_map:
+    acc_cs_pin: "PA9"
+    acc_sclk_pin: "PB13"
+    acc_mosi_pin: "PB15"
+    acc_miso_pin: "PB14"
+    step_pin: "PB4"
+    dir_pin: "PB3"
+    enable_pin: "!PA15"
+    heater_pin: "PA8"
+    sensor_pin: "PA3"
+    uart_pin: "PB5"
+    tx_pin:  ""
+    hotend_fan_pin: "PB10"
+    he_tach_pin: "PB10"  
+    part_fan_pin: "PB11"
+    detection_pin: "PA1"
+    rgb_pin: "PB0"

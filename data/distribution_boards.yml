@@ -1,9 +1,7 @@
 manufacturers:
-  isiktech:
-    birdsnest_can:
-      name: Birdsnest CAN
-      manufacturer: Isik Tech
-      image: assets/distribution_boards/birdsnest_can.jpg
+  Isik Tech:
+    Birdsnest CAN:
+      image: birdsnest_can.jpg
       description: "CAN Distribution Board With I/O"
       external_link: false
       url: store.isiks.tech
@@ -15,13 +13,12 @@ manufacturers:
           IO: 12
           RGB: 2
           Thermistor: 6
-    birdsnest_usb:
-      name: Birdsnest USB
-      manufacturer: Isik Tech
-      image: assets/distribution_boards/birdsnest_usb.jpg
+
+    Birdsnest USB:
+      image: birdsnest_usb.jpg
       description: "USB Hub Distribution Board With I/O"
       external_link: false
-      url: store.isiks.tech
+      url: https://store.isiks.tech
       product_url: https://store.isiks.tech/products/birds-nest
       features:
         protocol: USB
@@ -30,48 +27,43 @@ manufacturers:
           IO: 6
           RGB: 2
           Thermistor: 4
-    moar_can:
-      name: Moar CAN
-      manufacturer: Isik Tech
-      image: assets/distribution_boards/moar_can.jpg
+  
+    Moar CAN:
+      image: moar_can.jpg
       description: "Pasive CAN Distribution Board"
       external_link: false
-      url: store.isiks.tech
+      url: https://store.isiks.tech
       product_url: https://store.isiks.tech/products/moar_can
       features:
         protocol: CAN
         outputs: 8
         IO: No
-  ldo:
-    hexa:
-      name: Hexa
-      manufacturer: LDO
-      image: assets/distribution_boards/nitehawk_hexa.jpg
+  LDO:
+    Nitehawk Hexa:
+      image: nitehawk_hexa.jpg
       description: "USB Hub Distribution Board"
       external_link: true
       url: https://ldo.com
-      product_url: resellers.md
+      product_url: ../resellers.md
       features:
         protocol: USB
         outputs: 6
-        IO: No
-  fysect:
-    hexa_fusion:
-      name: Tool Distribution
-      manufacturer: Fysect
-      image: assets/distribution_boards/hexa_distro.avif
+        IO: 1 Type-A USB
+
+  Fysect:
+    Hexa Fusion:
+      image: hexa_distro.avif
       description: "Pasive CAN Distribution Board"
       external_link: false
       url: https://wiki.fysetc.com/docs/hexa_distro_fusion
-      product_url: https://fysect.com/products/stealthchanger
+      product_url: https://www.fysetc.com/products/fysetc-stealthchanger-cnc-shuttle-kit-sb-combo-v2-board-tool-distribution-board-h36-board?variant=44927105007791
       features:
         protocol: CAN
         outputs: 6
         IO: 1 Type-A USB
-    hexa_distro_fusion:
-      name: Hexa Distro Fusion
-      manufacturer: Fysect
-      image: assets/distribution_boards/hexa_distro_fusion.png
+
+    Hexa Distro Fusion:
+      image: hexa_distro_fusion.png
       description: "CAN & USB Distribution Board"
       external_link: false
       url: https://fysect.com
@@ -85,30 +77,26 @@ manufacturers:
           IO: 6
           RGB: 6
           Thermistor: 4
-  btt:
-    ceb:
-      name: CEB
-      manufacturer: BTT
-      image: assets/distribution_boards/ceb.webp
+  BigTreeTech:
+    CEB:
+      image: ceb.webp
       description: "Pasive CAN Distribution Board"
       external_link: false
       url: https://biqu.equipment/
       product_url: https://biqu.equipment/products/bigtreetech-ceb
       features:
-        protocol: USB
+        protocol: CAN
         outputs: 5
         IO: No
 
   Mellow:
-    can expansion board:
-      name: CanBus expand board
-      manufacturer: Mellow
-      image: assets/distribution_boards/Mellowceb.avif
+    CanBus Expand Board:
+      image: Mellowceb.avif
       description: "Pasive CAN Distribution Board"
       external_link: false
-      url: 
+      url: https://3dmellow.com/
       product_url: https://www.aliexpress.com/i/3256805705529626.html?gatewayAdapt=4itemAdapt
       features:
-        protocol: can
+        protocol: CAN
         outputs: 4
         IO: No
