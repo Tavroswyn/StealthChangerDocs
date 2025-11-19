@@ -1,6 +1,6 @@
 title: Modular Dock Assembly
 model: "Dock - Assembly.glb"
-# image: "dock-base_a4t.png"
+image: "dock_assembly.png"
 
 summary: >
     This guide will guide you through the assembly of the Modular Dock. It is presumed you have already assembled the [Blocker](../../../modular_dock.md#blocker), [Base](../../../modular_dock.md#base) and [Frame](../../../modular_dock.md#frame) sub-assemblies.

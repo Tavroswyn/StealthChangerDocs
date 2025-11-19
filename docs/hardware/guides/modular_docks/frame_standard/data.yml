@@ -1,6 +1,6 @@
 title: Frame - Standard
 model: "Frame - Standard.glb"
-# image: "dock-frame_standard.png"
+image: "dock_frame_2020_standard.png"
 
 summary: >
     This guide will prepare the Standard Frame for the [Modular Dock](../../../modular_dock.md). 

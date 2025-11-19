@@ -1,6 +1,6 @@
 title: Frame - Standard Crossbar
 model: "Frame - Standard Crossbar.glb"
-# image: "dock-frame_standard.png"
+image: "dock_frame_crossbar_standard.png"
 
 summary: >
     This guide will prepare the Standard Frame to suit a crossbar for the [Modular Dock](../../../modular_dock.md). 

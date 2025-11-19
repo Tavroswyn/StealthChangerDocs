@@ -1,6 +1,6 @@
 title: Base - Mini StealthBurner
 model: "Base - Mini StealthBurner.glb"
-# image: "dock-base_mini_stealthburner.png"
+image: "dock_base_mini_stealthburner.png"
 
 summary: >
     This guide will prepare the Mini StealthBurner Base and Back for the [Modular Dock](../../../modular_dock.md).

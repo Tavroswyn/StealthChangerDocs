@@ -1,6 +1,6 @@
 title: Base - DragonBurner
 model: "Base - DragonBurner.glb"
-# image: "dock-base_dragonburner.png"
+image: "dock_base_dragonburner.png"
 
 summary: >
     This guide will prepare the DragonBurner Base and Back for the [Modular Dock](../../../modular_dock.md).

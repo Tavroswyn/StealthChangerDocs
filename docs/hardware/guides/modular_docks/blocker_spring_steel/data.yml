@@ -1,6 +1,6 @@
 title: Blocker - Spring Steel
 model: "Blocker - Spring Steel.glb"
-# image: "dock-base_a4t.png"
+image: "dock_blocker_spring_steel.png"
 
 summary: >
     This guide will prepare the Spring Steel Blocker for the [Modular Dock](../../../modular_dock.md).

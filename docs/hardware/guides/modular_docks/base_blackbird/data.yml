@@ -1,6 +1,6 @@
 title: Base - Blackbird
 model: "Base - Blackbird.glb"
-# image: "dock-base_blackbird.png"
+image: "dock_base_blackbird.png"
 
 summary: >
     This guide will prepare the Blackbird Base and Back for the [Modular Dock](../../../modular_dock.md).

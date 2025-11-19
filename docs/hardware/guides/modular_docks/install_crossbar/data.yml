@@ -1,6 +1,6 @@
 title: Modular Dock Install - Crossbar
 model: "Install - Crossbar.glb"
-# image: "dock-base_a4t.png"
+image: "dock_crossbar_install.png"
 
 summary: >
     This guide will guide you through the installation of the Modular Dock for printers with a Crossbar.
