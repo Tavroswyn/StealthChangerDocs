@@ -88,7 +88,6 @@ steps:
       distance: 23
       pan_x: 0.59
       pan_y: 0.80
-      pan_z: 0.00
     visible: 
     - "Medallion Accent Front"
     - "Medallion Primary Front"
@@ -104,7 +103,6 @@ steps:
       distance: 39
       pan_x: 0.75
       pan_y: 1.54
-      pan_z: 0.00
     visible: 
       - "SideB Primary Front"
       - "SideB Accent Front"
@@ -120,7 +118,6 @@ steps:
       distance: 48
       pan_x: 0.14
       pan_y: 2.35
-      pan_z: 0.00
     visible: 
       - "SideA Primary Front"
       - "SideA Accent Front"
@@ -136,7 +133,6 @@ steps:
       distance: 44
       pan_x: 3.42
       pan_y: -0.06
-      pan_z: 0.00
     visible: 
       - "SideA Primary Front"
       - "SideA Accent Front"
@@ -158,7 +154,6 @@ steps:
       distance: 62
       pan_x: -0.19
       pan_y: -3.48
-      pan_z: 0.00
     visible:
       - "Frame"
       - "T Nuts"
@@ -174,7 +169,6 @@ steps:
       distance: 53
       pan_x: -4.55
       pan_y: -22.92
-      pan_z: 0.00
     visible:
       - "Medallion Primary Front"
       - "Medallion Primary Back"
@@ -216,7 +210,6 @@ steps:
       distance: 77
       pan_x: 21.40
       pan_y: -4.62
-      pan_z: 0.00
     visible:
       - "Medallion Primary Front"
       - "Medallion Primary Back"
@@ -258,7 +251,6 @@ steps:
       distance: 77
       pan_x: 0.41
       pan_y: 0.90
-      pan_z: 0.00
     visible: []
     focus:
       - "Top Clips"
@@ -272,5 +264,4 @@ steps:
       distance: 85
       pan_x: -1.21
       pan_y: -3.15
-      pan_z: 0.00
     visible: []

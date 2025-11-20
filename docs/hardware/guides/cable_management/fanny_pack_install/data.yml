@@ -71,7 +71,6 @@ steps:
       distance: 40
       pan_x: -0.11
       pan_y: -0.08
-      pan_z: 0.00
     visible: 
       - Ramp
       - "Ramp Heat Inserts" 
@@ -88,7 +87,6 @@ steps:
       distance: 40
       pan_x: 3.17
       pan_y: -1.25
-      pan_z: 0.00
     visible: 
       - Ramp
       - "Ramp Heat Inserts"
@@ -105,7 +103,6 @@ steps:
       distance: 58
       pan_x: 1.87
       pan_y: 1.24
-      pan_z: 0.00
     visible: 
       - Ramp
       - "Ramp Heat Inserts"
@@ -126,7 +123,6 @@ steps:
       distance: 58
       pan_x: -0.27
       pan_y: 4.22
-      pan_z: 0.00
     visible: 
       - Ramp
       - "Ramp Heat Inserts"
@@ -143,14 +139,13 @@ steps:
      
 
   - title: "Fanny Pack attachment to printer "
-    description: "Vhb tape the back of Fanny Pack and align with umbilical plate. Vhb tape holds fanny pack to back panel."
+    description: "VHB tape the back of Fanny Pack and align with umbilical plate. VHB tape holds fanny pack to back panel."
     camera:
       azimuth: 283
       polar: 87
       distance: 58
       pan_x: 0.33
       pan_y: 4.22
-      pan_z: 0.00
     visible: 
       - Ramp
       - "Ramp Heat Inserts"
@@ -164,7 +159,7 @@ steps:
       - "Rear Panel"
       - "FannyPack Hardware"
       - "Umbilical Hexes"
-      - "Fanny Pack Cover Magnets"
+      # - "Fanny Pack Cover Magnets"
       - "Hexa Bracket"
     focus: 
     focus: 
@@ -177,7 +172,6 @@ steps:
       distance: 32
       pan_x: -0.35
       pan_y: -0.29
-      pan_z: 0.00
     visible: 
       - ECAS Bridge Single
       - ECAS Single
@@ -192,7 +186,6 @@ steps:
       distance: 58
       pan_x: 0.31
       pan_y: 4.16
-      pan_z: 0.00
     visible: 
       -"ECAS Bridge Bottom"
       -"ECAS Bridge Single"
@@ -211,7 +204,6 @@ steps:
       distance: 59
       pan_x: 0.00
       pan_y: 0.00
-      pan_z: 0.00
     visible: 
       -"ECAS Bridge Bottom"
       -"ECAS Bridge Single"
@@ -231,12 +223,12 @@ steps:
       distance: 58
       pan_x: 0.28
       pan_y: 3.68
-      pan_z: 0.00
     visible: 
       - Ramp
       - "Ramp Heat Inserts"
       - "Ramp Magnets" 
       - "Fanny Pack Base"
+      - "FannyPack Hardware"
       - "Fanny Pack M3x16 SHCS Screws"
       - "Frame"
       - "Umbilical Outer Plate"
@@ -264,7 +256,6 @@ steps:
       distance: 58
       pan_x: -0.36
       pan_y: 3.66
-      pan_z: 0.00
     visible: 
      - "Umbilical Cover"
      - "Umbilical Cover Magnets"
@@ -279,7 +270,6 @@ steps:
       distance: 75
       pan_x: 0.47
       pan_y: 3.34
-      pan_z: 0.00
     visible: 
       - Ramp
       - "Ramp Heat Inserts"

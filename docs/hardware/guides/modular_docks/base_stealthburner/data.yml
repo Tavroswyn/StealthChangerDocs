@@ -32,7 +32,6 @@ steps:
       distance: 71
       pan_x: -0.16
       pan_y: 0.62
-      pan_z: 0.00
     visible: 
     - "Back"
     - "Back Heat Insert"
@@ -47,7 +46,6 @@ steps:
       distance: 71
       pan_x: -0.50
       pan_y: 1.43
-      pan_z: 0.00
     visible: 
     - "Base"
     - "Link Heat Inserts"
@@ -62,7 +60,6 @@ steps:
       distance: 71
       pan_x: -0.51
       pan_y: 1.00
-      pan_z: 0.00
     visible: 
     - "Base"
     - "Link Heat Inserts"
@@ -78,5 +75,4 @@ steps:
       distance: 87
       pan_x: 1.23
       pan_y: -3.50
-      pan_z: 0.00
     visible: []

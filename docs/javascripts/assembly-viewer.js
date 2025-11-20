@@ -131,9 +131,8 @@ function updateCameraOverlay() {
     const distanceEl = document.getElementById('overlay-distance');
     const panXEl = document.getElementById('overlay-pan-x');
     const panYEl = document.getElementById('overlay-pan-y');
-    const panZEl = document.getElementById('overlay-pan-z');
     
-    if (!azimuthEl || !polarEl || !distanceEl || !panXEl || !panYEl || !panZEl || !window.modelViewerCamera || !window.modelViewerControls) return;
+    if (!azimuthEl || !polarEl || !distanceEl || !panXEl || !panYEl || !window.modelViewerCamera || !window.modelViewerControls) return;
     
     const pos = window.modelViewerCamera.position;
     const target = window.modelViewerControls.target;
@@ -175,16 +174,14 @@ function updateCameraOverlay() {
         
         panXEl.textContent = screenPanX.toFixed(2);
         panYEl.textContent = screenPanY.toFixed(2);
-        panZEl.textContent = '0.00';
     } else {
         panXEl.textContent = '0.00';
         panYEl.textContent = '0.00';
-        panZEl.textContent = '0.00';
     }
 }
 
 // Function to set camera position using spherical coordinates
-function setCameraPosition(azimuth, polar, distance, pan_x = 0, pan_y = 0, pan_z = 0) {
+function setCameraPosition(azimuth, polar, distance, pan_x = 0, pan_y = 0) {
     if (!window.modelViewerCamera || !window.modelViewerControls) return;
     
     const target = window.modelViewerControls.target;
@@ -201,7 +198,7 @@ function setCameraPosition(azimuth, polar, distance, pan_x = 0, pan_y = 0, pan_z
     window.modelViewerCamera.position.set(
         target.x + x + pan_x,
         target.y + y + pan_y,
-        target.z + z + pan_z
+        target.z + z
     );
     
     window.modelViewerControls.update();
@@ -1873,8 +1870,7 @@ function setupAssemblyViewer() {
       polar: ${Math.round(polar)}
       distance: ${Math.round(distance)}
       pan_x: ${panX.toFixed(2)}
-      pan_y: ${panY.toFixed(2)}
-      pan_z: 0.00`;
+      pan_y: ${panY.toFixed(2)}`;
             
             // Copy to clipboard
             navigator.clipboard.writeText(yamlText).then(function() {

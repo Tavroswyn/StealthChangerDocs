@@ -47,7 +47,6 @@ steps:
       distance: 73
       pan_x: -0.18
       pan_y: -1.29
-      pan_z: 0.58
     visible:
       - "Backplate"
       - "M3 Heat Inserts"
@@ -62,7 +61,6 @@ steps:
       distance: 54
       pan_x: 0
       pan_y: 0
-      pan_z: 0
     visible:
       - "Backplate"
       - "M3 Heat Inserts"
@@ -78,7 +76,6 @@ steps:
       distance: 54
       pan_x: -0.54
       pan_y: -6.28
-      pan_z: 0.00
     visible:
       - "Backplate"
       - "M3 Heat Inserts"
@@ -95,7 +92,6 @@ steps:
       distance: 31
       pan_x: 1.20
       pan_y: -4.95
-      pan_z: 1.54
     visible:
       - "Backplate"
       - "M3 Heat Inserts"
@@ -113,7 +109,6 @@ steps:
       distance: 42
       pan_x: 3.58
       pan_y: 11.82
-      pan_z: 2.60
     visible:
       - "Backplate"
       - "M3 Heat Inserts"
@@ -132,7 +127,6 @@ steps:
       distance: 66
       pan_x: 1.58
       pan_y: 10.56
-      pan_z: 0.00
     visible:
       - "Backplate"
       - "M3 Heat Inserts"
@@ -153,7 +147,6 @@ steps:
       distance: 73
       pan_x: 1.48
       pan_y: -0.00
-      pan_z: 1.65
     visible:
       - "Backplate"
       - "M3 Heat Inserts"
@@ -179,7 +172,6 @@ steps:
       distance: 42
       pan_x: -1.10
       pan_y: -14.90
-      pan_z: 4.16
     visible:
       - "Backplate"
       - "M3 Heat Inserts"

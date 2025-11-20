@@ -48,7 +48,6 @@ steps:
       distance: 14
       pan_x: -10.01
       pan_y: -0.21
-      pan_z: 0.00
     
     visible: 
       - "Spring Steel"
@@ -63,7 +62,6 @@ steps:
       distance: 15
       pan_x: -8.35
       pan_y: -2.55
-      pan_z: 0.00
     visible: 
       - "Spring Steel"
       - "Relief"
@@ -78,7 +76,6 @@ steps:
       distance: 20
       pan_x: -8.45
       pan_y: -2.19
-      pan_z: 0.00
     visible: 
       - "Spring Steel"
       - "Relief"
@@ -94,7 +91,6 @@ steps:
       distance: 23
       pan_x: -3.96
       pan_y: -0.14
-      pan_z: 0.00
     visible: 
       - "Spring Steel"
       - "Relief"
@@ -117,7 +113,6 @@ steps:
       distance: 12
       pan_x: 2.59
       pan_y: -0.76
-      pan_z: 0.00
     visible: 
       - "Spring Steel"
       - "Relief"
@@ -139,7 +134,6 @@ steps:
       distance: 51
       pan_x: 2.55
       pan_y: -0.87
-      pan_z: 0.00
     visible: 
       - "Spring Steel"
       - "Relief"
@@ -164,7 +158,6 @@ steps:
       distance: 29
       pan_x: 8.11
       pan_y: 0.21
-      pan_z: 0.00
     visible: 
       - "Spring Steel"
       - "Relief"
@@ -188,7 +181,6 @@ steps:
       distance: 29
       pan_x: 8.11
       pan_y: 0.21
-      pan_z: 0.00
     visible: 
       - "Spring Steel"
       - "Relief"

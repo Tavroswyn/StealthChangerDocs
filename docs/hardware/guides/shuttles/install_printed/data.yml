@@ -47,7 +47,6 @@ steps:
       distance: 34
       pan_x: 0.02
       pan_y: 0.74
-      pan_z: 0.00
     visible: 
       - "Heat Inserts Left"
       - "Heat Inserts Right"
@@ -65,7 +64,6 @@ steps:
       distance: 32
       pan_x: 0.00
       pan_y: 0.00
-      pan_z: 0.00
     visible: 
       - "Heat Inserts Right"
       - "Heat Inserts Right2"
@@ -82,7 +80,6 @@ steps:
       distance: 30
       pan_x: -0.37
       pan_y: -1.07
-      pan_z: 0.00
     visible: 
       - "Left M3x10 SHCS"
       - "Right M3x10 SHCS"
@@ -105,7 +102,6 @@ steps:
       distance: 39
       pan_x: 2.06
       pan_y: 0.36
-      pan_z: 0.00
     visible: 
       - "Left M3x10 SHCS"
       - "Block Left"
@@ -126,7 +122,6 @@ steps:
       distance: 36
       pan_x: 0.00
       pan_y: -0.00
-      pan_z: 0.00
     visible:
       - "Left M3x10 SHCS"
       - "Right M3x10 SHCS Open"
@@ -152,7 +147,6 @@ steps:
       distance: 36
       pan_x: -0.96
       pan_y: -0.05
-      pan_z: 0.00
     visible: 
       - "Left M3x10 SHCS"
       - "Right M3x10 SHCS Open"
@@ -179,7 +173,6 @@ steps:
       distance: 40
       pan_x: -2.01
       pan_y: 0.20
-      pan_z: 0.00
     visible: 
       - "Left M3x10 SHCS"
       - "Right M3x10 SHCS"
@@ -205,7 +198,6 @@ steps:
       distance: 37
       pan_x: -0.62
       pan_y: 0.02
-      pan_z: 0.00
     visible: 
       - "Extrusion"
       - "MGN12 Rail"
@@ -235,7 +227,6 @@ steps:
       distance: 32
       pan_x: -1.65
       pan_y: -0.62
-      pan_z: 0.00
     visible: 
       - "Extrusion"
       - "MGN12 Rail"

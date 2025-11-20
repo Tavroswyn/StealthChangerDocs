@@ -50,7 +50,6 @@ steps:
       distance: 23
       pan_x: -0.38
       pan_y: 0.87
-      pan_z: 0.00
     visible: 
       - "Ball"
       - "Shaft"
@@ -65,7 +64,6 @@ steps:
       distance: 20
       pan_x: -0.60
       pan_y: -0.00
-      pan_z: 0.00
     visible: 
       - "8x10x5mm Bushing"
       - "Endstop Block"
@@ -80,7 +78,6 @@ steps:
       distance: 17
       pan_x: 0.14
       pan_y: -0.32
-      pan_z: 0.00
     visible: 
       - "8x10x5mm Bushing"
       - "Endstop Block"
@@ -97,7 +94,6 @@ steps:
       distance: 17
       pan_x: 0.02
       pan_y: -0.93
-      pan_z: 0.00
     visible: 
       - "8x10x5mm Bushing"
       - "Endstop Block"
@@ -117,7 +113,6 @@ steps:
       distance: 39
       pan_x: -0.71
       pan_y: -4.45
-      pan_z: 0.00
     visible: []
     focus:
       - "Ball"
@@ -131,7 +126,6 @@ steps:
       distance: 41
       pan_x: 4.23
       pan_y: -3.96
-      pan_z: 0.00
     visible: 
       - "8x10x5mm Bushing"
       - "Bed Mockup"

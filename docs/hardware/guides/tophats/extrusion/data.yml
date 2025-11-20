@@ -105,7 +105,6 @@ steps:
       distance: 34
       pan_x: 5.00
       pan_y: -1.52
-      pan_z: 0.00
     visible: 
       - "Horizontal Bottom Front"
       - "M5x16 BHCS BFL"
@@ -122,7 +121,6 @@ steps:
       distance: 56
       pan_x: 0.36
       pan_y: 13.61
-      pan_z: 0.00
     visible: 
       - "Horizontal Bottom Front"
       - "Horizontal Bottom Left"
@@ -144,7 +142,6 @@ steps:
       distance: 89
       pan_x: -0.43
       pan_y: -3.92
-      pan_z: 0.00
     visible: 
       - "Horizontal Bottom Front"
       - "Horizontal Bottom Left"
@@ -176,7 +173,6 @@ steps:
       distance: 85
       pan_x: -0.45
       pan_y: -1.65
-      pan_z: 0.00
     visible: 
       - "Horizontal Bottom Front"
       - "Horizontal Bottom Left"
@@ -225,7 +221,6 @@ steps:
       distance: 19
       pan_x: -1.29
       pan_y: 0.70
-      pan_z: 0.00
     visible: 
       - "Left Hinge Lower"
       - "Left 625-2RS"
@@ -240,7 +235,6 @@ steps:
       distance: 23
       pan_x: -1.70
       pan_y: -0.58
-      pan_z: 0.00
     visible: 
       - "Left Hinge Lower"
       - "Left 625-2RS"
@@ -259,7 +253,6 @@ steps:
       distance: 19
       pan_x: 0.34
       pan_y: 0.33
-      pan_z: 0.00
     visible: 
       - "Right Hinge Lower"
       - "Right 625-2RS"
@@ -274,7 +267,6 @@ steps:
       distance: 23
       pan_x: 1.30
       pan_y: -0.41
-      pan_z: 0.00
     visible: 
       - "Right Hinge Lower"
       - "Right 625-2RS"
@@ -293,7 +285,6 @@ steps:
       distance: 44
       pan_x: 1.35
       pan_y: 1.89
-      pan_z: 0.00
     visible: 
       - "Front Panel"
       - "Front Foam"
@@ -308,7 +299,6 @@ steps:
       distance: 80
       pan_x: -2.42
       pan_y: -3.70
-      pan_z: 0.00
     visible: 
       - "Horizontal Bottom Front"
       - "Horizontal Bottom Left"
@@ -362,7 +352,6 @@ steps:
       distance: 80
       pan_x: -2.09
       pan_y: -5.25
-      pan_z: 0.00
     visible: 
       - "Front Clips"
       - "Left Clips"
@@ -389,7 +378,6 @@ steps:
       distance: 85
       pan_x: -1.41
       pan_y: -2.83
-      pan_z: 0.00
     visible: 
       - "Horizontal Bottom Front"
       - "Horizontal Bottom Left"
@@ -449,7 +437,6 @@ steps:
       distance: 85
       pan_x: -1.41
       pan_y: -2.83
-      pan_z: 0.00
     visible: 
       - "Horizontal Bottom Front"
       - "Horizontal Bottom Left"
@@ -508,7 +495,6 @@ steps:
       distance: 69
       pan_x: -1.02
       pan_y: 0.96
-      pan_z: 0.00
     visible: 
       - "Horizontal Bottom Front"
       - "Horizontal Bottom Left"
@@ -570,7 +556,6 @@ steps:
       distance: 73
       pan_x: 0.94
       pan_y: 3.91
-      pan_z: 0.00
     visible: 
       - "Horizontal Bottom Front"
       - "Horizontal Bottom Left"
@@ -643,7 +628,6 @@ steps:
       distance: 69
       pan_x: 0.00
       pan_y: -0.00
-      pan_z: 0.00
     visible: 
       - "Horizontal Bottom Front"
       - "Horizontal Bottom Left"
@@ -715,7 +699,6 @@ steps:
       distance: 46
       pan_x: 2.30
       pan_y: 0.63
-      pan_z: 0.00
     visible: 
       - "Right Hinge Lower Nuts"
       - "Left Hinge Lower Nuts"
@@ -732,7 +715,6 @@ steps:
       distance: 77
       pan_x: -2.29
       pan_y: 1.86
-      pan_z: 0.00
     visible: []
     focus:
       - "Right Hinge Lower Screws"

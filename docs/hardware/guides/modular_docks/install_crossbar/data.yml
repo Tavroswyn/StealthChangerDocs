@@ -45,7 +45,6 @@ steps:
       distance: 28
       pan_x: 2.06
       pan_y: -5.89
-      pan_z: 0.00
     visible: 
     - "DB Primary"
     - "DB Accent"
@@ -65,7 +64,6 @@ steps:
       distance: 14
       pan_x: 3.12
       pan_y: 8.13
-      pan_z: 0.00
     visible: 
     - "DB Primary"
     - "DB Accent"
@@ -86,7 +84,6 @@ steps:
       distance: 57
       pan_x: 0.08
       pan_y: 4.59
-      pan_z: 0.00
     visible: 
     - "6x3mm Magnets"
     - "Base"
@@ -158,7 +155,6 @@ steps:
       distance: 15
       pan_x: 0.09
       pan_y: -5.64
-      pan_z: 0.00
     visible: 
     - "6x3mm Magnets"
     - "Base"
@@ -206,7 +202,6 @@ steps:
       distance: 7
       pan_x: 1.01
       pan_y: 9.47
-      pan_z: 0.00
     visible: 
     - "6x3mm Magnets"
     - "Base"
@@ -255,7 +250,6 @@ steps:
       distance: 57
       pan_x: 0.10
       pan_y: 4.34
-      pan_z: 0.00
     visible: 
     - "6x3mm Magnets"
     - "Base"

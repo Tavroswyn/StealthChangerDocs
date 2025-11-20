@@ -76,7 +76,6 @@ steps:
       distance: 42
       pan_x: 0.87
       pan_y: 0.60
-      pan_z: 0.00
     visible: 
       - "Backplate"
       - "Backplate Hardware"
@@ -89,7 +88,6 @@ steps:
       distance: 28
       pan_x: 0.30
       pan_y: 0.92
-      pan_z: 0.00
     visible: 
       - "Main Body"
       - "Main Body Heat Inserts"
@@ -104,7 +102,6 @@ steps:
       distance: 23
       pan_x: -0.02
       pan_y: 0.44
-      pan_z: 0.00
     visible: 
       - "Spacers"
       - "Spacer Heat Inserts"
@@ -119,7 +116,6 @@ steps:
       distance: 37
       pan_x: -1.06
       pan_y: 0.06
-      pan_z: 0.00
     visible: 
       - "PCB Mount"
       - "PCB Mount Heat Inserts"
@@ -134,7 +130,6 @@ steps:
       distance: 36
       pan_x: 1.20
       pan_y: -0.10
-      pan_z: 0.00
     visible: 
       - "Duct Left"
       - "Duct Right"
@@ -150,7 +145,6 @@ steps:
       distance: 22
       pan_x: -0.18
       pan_y: -0.46
-      pan_z: 0.00
     visible: 
       - "HE Mount"
       - "HE Mount Heat Inserts"
@@ -165,7 +159,6 @@ steps:
       distance: 31
       pan_x: 0.09
       pan_y: 1.83
-      pan_z: 0.00
     visible: 
       - "HE Mount"
       - "HE Mount Heat Inserts"
@@ -182,7 +175,6 @@ steps:
       distance: 28
       pan_x: 0.46
       pan_y: 1.26
-      pan_z: 0.00
     visible: 
       - "HE Mount"
       - "HE Mount Heat Inserts"
@@ -201,7 +193,6 @@ steps:
       distance: 30
       pan_x: -0.40
       pan_y: 0.78
-      pan_z: 0.00
     visible: 
       - "HE Mount"
       - "HE Mount Heat Inserts"
@@ -226,7 +217,6 @@ steps:
       distance: 32
       pan_x: 0.12
       pan_y: -0.26
-      pan_z: 0.00
     visible: 
       - "Main Body"
       - "Main Body Heat Inserts"
@@ -242,7 +232,6 @@ steps:
       distance: 32
       pan_x: 0.12
       pan_y: -0.26
-      pan_z: 0.00
     visible: 
       - "Main Body"
       - "Main Body Heat Inserts"
@@ -271,7 +260,6 @@ steps:
       distance: 32
       pan_x: -0.11
       pan_y: -0.19
-      pan_z: 0.00
     visible: 
       - "HE Mount"
       - "HE Mount Heat Inserts"
@@ -307,7 +295,6 @@ steps:
       distance: 36
       pan_x: 1.20
       pan_y: -0.10
-      pan_z: 0.00
     visible: 
       - "Duct Left"
       - "Duct Right"
@@ -326,7 +313,6 @@ steps:
       distance: 32
       pan_x: -0.11
       pan_y: -0.19
-      pan_z: 0.00
     visible: 
       - "HE Mount"
       - "HE Mount Heat Inserts"
@@ -367,7 +353,6 @@ steps:
       distance: 36
       pan_x: 0.20
       pan_y: 1.07
-      pan_z: 0.00
     visible: 
       - "HE Mount"
       - "HE Mount Heat Inserts"
@@ -409,7 +394,6 @@ steps:
       distance: 36
       pan_x: 0.07
       pan_y: -1.82
-      pan_z: 0.00
     visible: 
       - "HE Mount"
       - "HE Mount Heat Inserts"
@@ -452,7 +436,6 @@ steps:
       distance: 33
       pan_x: -0.67
       pan_y: 1.59
-      pan_z: 0.00
     visible: 
       - "HE Mount"
       - "HE Mount Heat Inserts"
@@ -496,7 +479,6 @@ steps:
       distance: 33
       pan_x: -0.67
       pan_y: 1.59
-      pan_z: 0.00
     visible: 
       - "HE Mount"
       - "HE Mount Heat Inserts"
@@ -542,7 +524,6 @@ steps:
       distance: 39
       pan_x: 1.15
       pan_y: 4.02
-      pan_z: 0.00
     visible: 
       - "HE Mount"
       - "HE Mount Heat Inserts"
@@ -591,7 +572,6 @@ steps:
       distance: 43
       pan_x: 2.22
       pan_y: 2.38
-      pan_z: 0.00
     visible: 
       - "HE Mount"
       - "HE Mount Heat Inserts"
@@ -642,7 +622,6 @@ steps:
       distance: 43
       pan_x: 2.22
       pan_y: 2.38
-      pan_z: 0.00
     visible: 
       - "HE Mount"
       - "HE Mount Heat Inserts"
@@ -695,7 +674,6 @@ steps:
       distance: 43
       pan_x: 2.22
       pan_y: 2.38
-      pan_z: 0.00
     visible: 
       - "HE Mount"
       - "HE Mount Heat Inserts"
@@ -750,7 +728,6 @@ steps:
       distance: 27
       pan_x: -0.21
       pan_y: -0.08
-      pan_z: 0.00
     visible: 
       - "NH Cover Shell"
       - "NH Cover Supports" 
@@ -765,7 +742,6 @@ steps:
       distance: 27
       pan_x: 0.24
       pan_y: -0.25
-      pan_z: 0.00
     visible: 
       - "NH Cover Shell"
       - "NH M3x12 BHCS" 
@@ -780,7 +756,6 @@ steps:
       distance: 65
       pan_x: 0.90
       pan_y: 0.92
-      pan_z: 0.00
     visible: 
       - "HE Mount"
       - "HE Mount Heat Inserts"

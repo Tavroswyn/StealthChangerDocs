@@ -41,7 +41,6 @@ steps:
       distance: 68
       pan_x: 0.19
       pan_y: -1.72
-      pan_z: 0.00
     visible:
       - "Case Lower"
       - "6x3 Magnets"
@@ -56,7 +55,6 @@ steps:
       distance: 61
       pan_x: -0.17
       pan_y: 1.02
-      pan_z: 0.00
     visible: 
       - "OV9726 Camera"
       - "Diode Silkscreen"
@@ -75,7 +73,6 @@ steps:
       distance: 73
       pan_x: 0.00
       pan_y: 0.00
-      pan_z: 0.00
     visible: 
       - "Case Upper"
       - "OV9726 Camera"
@@ -93,7 +90,6 @@ steps:
       distance: 75
       pan_x: -0.83
       pan_y: -5.52
-      pan_z: -4.54
     visible: 
       - "Case Upper"
       - "OV9726 Camera"
@@ -109,7 +105,6 @@ steps:
       distance: 69
       pan_x: 0.00
       pan_y: 0.00
-      pan_z: 0.00
     visible: []
     focus: 
       - "Case Lower"

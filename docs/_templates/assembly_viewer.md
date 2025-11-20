@@ -73,7 +73,6 @@
                 <div>Distance: <span id="overlay-distance">0</span></div>
                 <div>Pan X: <span id="overlay-pan-x">0</span></div>
                 <div>Pan Y: <span id="overlay-pan-y">0</span></div>
-                <div>Pan Z: <span id="overlay-pan-z">0</span></div>
             </div>
         </div>
         <div id="step-nav">

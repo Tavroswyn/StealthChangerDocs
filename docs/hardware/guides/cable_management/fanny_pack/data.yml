@@ -72,7 +72,6 @@ steps:
       distance: 67
       pan_x: 1.44
       pan_y: 1.03
-      pan_z: 0.00
     visible: 
       - "Base"
       - "Base Heat Inserts"
@@ -87,7 +86,6 @@ steps:
       distance: 67
       pan_x: 1.44
       pan_y: 1.03
-      pan_z: 0.00
     visible: 
       - "Base"
       - "Base Heat Inserts"
@@ -103,7 +101,6 @@ steps:
       distance: 22
       pan_x: 1.21
       pan_y: -10.03
-      pan_z: 0.00
     visible: 
       - "Base"
       - "Base Heat Inserts"
@@ -120,7 +117,6 @@ steps:
       distance: 47
       pan_x: 0.18
       pan_y: -5.74
-      pan_z: 0.00
     visible: 
       - "Base"
       - "Base Heat Inserts"
@@ -138,7 +134,6 @@ steps:
       distance: 47
       pan_x: 0.31
       pan_y: -3.71
-      pan_z: 0.00
     visible: 
       - "Base"
       - "Base Heat Inserts"
@@ -157,7 +152,6 @@ steps:
       distance: 47
       pan_x: 0.31
       pan_y: -3.71
-      pan_z: 0.00
     visible: 
       - "Base"
       - "Base Heat Inserts"
@@ -178,7 +172,6 @@ steps:
       distance: 47
       pan_x: 0.31
       pan_y: -3.71
-      pan_z: 0.00
     visible: 
       - "Base"
       - "Base Heat Inserts"
@@ -201,7 +194,6 @@ steps:
       distance: 34
       pan_x: 0.43
       pan_y: -8.08
-      pan_z: 0.00
     visible: 
       - "Base"
       - "Base Heat Inserts"
@@ -229,7 +221,6 @@ steps:
       distance: 49
       pan_x: 0.41
       pan_y: -8.08
-      pan_z: 0.00
     visible: 
       - "Base"
       - "Base Heat Inserts"
@@ -259,7 +250,6 @@ steps:
       distance: 42
       pan_x: 0.23
       pan_y: -10.28
-      pan_z: 0.00
     visible: 
       - "Base"
       - "Base Heat Inserts"
@@ -290,7 +280,6 @@ steps:
       distance: 42
       pan_x: 0.23
       pan_y: -10.28
-      pan_z: 0.00
     visible: 
       - "Base"
       - "Base Heat Inserts"
@@ -324,7 +313,6 @@ steps:
       distance: 52
       pan_x: 2.81
       pan_y: -4.01
-      pan_z: 0.00
     visible: 
       - "Base"
       - "Base Heat Inserts"
@@ -359,7 +347,6 @@ steps:
       distance: 67
       pan_x: 0.61
       pan_y: 0.58
-      pan_z: 0.00
     visible: []
     focus: 
       - "Cover"
@@ -372,5 +359,4 @@ steps:
       distance: 75
       pan_x: 0.70
       pan_y: 0.96
-      pan_z: 0.00
     visible: []

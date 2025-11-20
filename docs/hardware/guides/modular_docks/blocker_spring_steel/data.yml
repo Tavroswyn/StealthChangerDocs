@@ -52,7 +52,6 @@ steps:
       distance: 71
       pan_x: 1.70
       pan_y: -1.65
-      pan_z: 0.00
     visible: 
     - "Silicone Jig"
     - "Spring Steel"
@@ -69,7 +68,6 @@ steps:
       distance: 71
       pan_x: 1.70
       pan_y: -1.65
-      pan_z: 0.00
     visible: 
     - "Spring Steel Body"
     - "Heat Inserts"
@@ -84,7 +82,6 @@ steps:
       distance: 71
       pan_x: 1.70
       pan_y: -1.65
-      pan_z: 0.00
     visible: 
     - "Spring Steel Body"
     - "Heat Inserts"
@@ -101,7 +98,6 @@ steps:
       distance: 71
       pan_x: 1.70
       pan_y: -1.65
-      pan_z: 0.00
     visible: 
     - "Spring Steel Body"
     - "Heat Inserts"

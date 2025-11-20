@@ -55,7 +55,6 @@ steps:
       distance: 34
       pan_x: 0.26
       pan_y: -1.10
-      pan_z: 0.00
     visible: 
     - "6x3mm Magnets"
     - "Base"
@@ -78,7 +77,6 @@ steps:
       distance: 46
       pan_x: 0.21
       pan_y: -14.84
-      pan_z: 0.00
     visible: 
     - "6x3mm Magnets"
     - "Base"
@@ -110,7 +108,6 @@ steps:
       distance: 40
       pan_x: -0.70
       pan_y: -14.71
-      pan_z: 0.00
     visible: 
     - "6x3mm Magnets"
     - "Base"
@@ -143,7 +140,6 @@ steps:
       distance: 40
       pan_x: -0.70
       pan_y: -14.71
-      pan_z: 0.00
     visible: 
     - "6x3mm Magnets"
     - "Base"
@@ -179,7 +175,6 @@ steps:
       distance: 34
       pan_x: -2.72
       pan_y: -18.61
-      pan_z: 0.00
     visible: 
     - "6x3mm Magnets"
     - "Base"
@@ -218,7 +213,6 @@ steps:
       distance: 81
       pan_x: 0.02
       pan_y: -0.03
-      pan_z: 0.00
     visible: 
     - "6x3mm Magnets"
     - "Base"

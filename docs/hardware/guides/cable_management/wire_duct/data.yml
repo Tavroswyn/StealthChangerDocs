@@ -44,7 +44,6 @@ steps:
       distance: 27
       pan_x: -0.52
       pan_y: -0.50
-      pan_z: 0.00
     visible: 
       - "Duct Base M3 Nuts"
       - "EMS Grill M3x6 BHCS"
@@ -62,7 +61,6 @@ steps:
       distance: 18
       pan_x: 0.15
       pan_y: 0.34
-      pan_z: 0.00
     visible: 
       - "Duct Base M3 Nuts"
       - "EMS Grill M3x6 BHCS"
@@ -82,7 +80,6 @@ steps:
       distance: 35
       pan_x: 0.99
       pan_y: -1.63
-      pan_z: 0.00
     visible: 
       - "Duct Base M3 Nuts"
       - "EMS Grill M3x6 BHCS"
@@ -108,7 +105,6 @@ steps:
       distance: 35
       pan_x: 0.51
       pan_y: -10.25
-      pan_z: 0.00
     visible: 
       - "Duct Base M3 Nuts"
       - "EMS Grill M3x6 BHCS"
@@ -137,7 +133,6 @@ steps:
       distance: 19
       pan_x: -0.63
       pan_y: -1.47
-      pan_z: 0.00
     visible: 
       - "90 Center Rear Skirt"
       - "Skirt M3x8 SHCS Horizontal"
@@ -154,7 +149,6 @@ steps:
       distance: 35
       pan_x: 0.71
       pan_y: -12.78
-      pan_z: 0.00
     visible: 
       - "Duct Base M3 Nuts"
       - "EMS Grill M3x6 BHCS"
@@ -186,7 +180,6 @@ steps:
       distance: 25
       pan_x: -0.13
       pan_y: -16.54
-      pan_z: 0.00
     visible: 
       - "Duct Base M3 Nuts"
       - "EMS Grill M3x6 BHCS"
@@ -220,7 +213,6 @@ steps:
       distance: 25
       pan_x: -0.13
       pan_y: -16.54
-      pan_z: 0.00
     visible: 
       - "Duct Base M3 Nuts"
       - "EMS Grill M3x6 BHCS"
@@ -254,7 +246,6 @@ steps:
       distance: 32
       pan_x: 0.74
       pan_y: -13.58
-      pan_z: 0.00
     visible: 
       - "Duct Base M3 Nuts"
       - "EMS Grill M3x6 BHCS"
@@ -290,7 +281,6 @@ steps:
       distance: 44
       pan_x: 2.37
       pan_y: -3.84
-      pan_z: 0.00
     visible: 
       - "Duct Base M3 Nuts"
       - "EMS Grill M3x6 BHCS"

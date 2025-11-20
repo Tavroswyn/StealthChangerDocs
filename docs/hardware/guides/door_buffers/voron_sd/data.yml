@@ -49,7 +49,6 @@ steps:
       distance: 85
       pan_x: 0
       pan_y: 0
-      pan_z: 0
     visible: 
       - "Bottom Left"
       - "Bottom right"
@@ -71,7 +70,6 @@ steps:
       distance: 85
       pan_x: 0.00
       pan_y: 0.00
-      pan_z: 0.00
     visible: 
       - "Bottom Left"
       - "Bottom right"
@@ -94,7 +92,6 @@ steps:
       distance: 85
       pan_x: 0.00
       pan_y: -0.00
-      pan_z: 0.00
     visible: 
       - "Bottom Left"
       - "Bottom right"
@@ -118,7 +115,6 @@ steps:
       distance: 26
       pan_x: 21.35
       pan_y: 3.76
-      pan_z: -4.50
     visible: 
       - "Bottom Left"
       - "Bottom right"
@@ -143,7 +139,6 @@ steps:
       distance: 85
       pan_x: 0.00
       pan_y: 0.00
-      pan_z: 0.00
     visible: 
       - "Bottom Left"
       - "Bottom right"
@@ -169,7 +164,6 @@ steps:
       distance: 14
       pan_x: 21.75
       pan_y: 2.87
-      pan_z: 0.71
     visible: 
       - "Bottom Left"
       - "Bottom right"
@@ -198,7 +192,6 @@ steps:
       distance: 33
       pan_x: 1.55
       pan_y: 21.35
-      pan_z: -9.01
     visible: 
       - "Bottom Left"
       - "Bottom right"
@@ -224,7 +217,6 @@ steps:
       distance: 89
       pan_x: 0.98
       pan_y: 0.12
-      pan_z: -18.79
     visible: 
       - "Bottom Left"
       - "Bottom right"

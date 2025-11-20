@@ -44,7 +44,6 @@ steps:
       distance: 34
       pan_x: 0.02
       pan_y: 0.74
-      pan_z: 0.00
     visible: 
       - "Heat Inserts Left"
       - "Heat Inserts Right"
@@ -62,7 +61,6 @@ steps:
       distance: 32
       pan_x: 0.00
       pan_y: 0.00
-      pan_z: 0.00
     visible: 
       - "Heat Inserts Right"
       - "Heat Inserts Right2"
@@ -78,7 +76,6 @@ steps:
       distance: 30
       pan_x: -0.02
       pan_y: 2.12
-      pan_z: 0.00
     visible: 
       - "Frame"
       - "Flag"
@@ -104,7 +101,6 @@ steps:
       distance: 30
       pan_x: -0.22
       pan_y: -0.05
-      pan_z: 0.00
     visible: 
       - "Frame"
       - "Shuttle Hardware"
@@ -129,7 +125,6 @@ steps:
       distance: 30
       pan_x: -0.35
       pan_y: -0.68
-      pan_z: 0.00
     visible: 
       - "Frame"
       - "Shuttle Hardware"
@@ -152,7 +147,6 @@ steps:
       distance: 30
       pan_x: -6.15
       pan_y: 2.40
-      pan_z: 0.00
     visible: 
       - "Frame"
       - "Shuttle Hardware"
@@ -172,7 +166,6 @@ steps:
       distance: 29
       pan_x: -3.63
       pan_y: 1.22
-      pan_z: 0.00
     visible: 
       - "Left M3x10 SHCS"
       - "Block Left"
@@ -196,7 +189,6 @@ steps:
       distance: 40
       pan_x: -4.61
       pan_y: 0.79
-      pan_z: 0.00
     visible: 
       - "Left M3x10 SHCS"
       - "Heat Inserts Left"
@@ -223,7 +215,6 @@ steps:
       distance: 36
       pan_x: -1.16
       pan_y: -0.05
-      pan_z: 0.00
     visible: 
       - "Left M3x10 SHCS"
       - "Right M3x10 SHCS Open"
@@ -254,7 +245,6 @@ steps:
       distance: 40
       pan_x: 0.12
       pan_y: 0.06
-      pan_z: 0.00
     visible: 
       - "Left M3x10 SHCS"
       - "Right M3x10 SHCS"
@@ -288,7 +278,6 @@ steps:
       distance: 37
       pan_x: -0.62
       pan_y: 0.02
-      pan_z: 0.00
     visible: 
       - "Extrusion"
       - "MGN12 Rail"
@@ -325,7 +314,6 @@ steps:
       distance: 51
       pan_x: 1.28
       pan_y: -1.02
-      pan_z: 0.00
     visible: 
       - "Extrusion"
       - "MGN12 Rail"
@@ -349,7 +337,6 @@ steps:
       distance: 37
       pan_x: -0.62
       pan_y: 0.02
-      pan_z: 0.00
     visible: 
       - "Extrusion"
       - "MGN12 Rail"
@@ -383,7 +370,6 @@ steps:
       distance: 37
       pan_x: -0.62
       pan_y: 0.04
-      pan_z: 0.00
     visible: 
       - "Extrusion"
       - "MGN12 Rail"
@@ -419,7 +405,6 @@ steps:
       distance: 46
       pan_x: -0.44
       pan_y: -0.05
-      pan_z: 0.00
     visible: 
       - "Extrusion"
       - "MGN12 Rail"

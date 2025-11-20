@@ -39,7 +39,6 @@ steps:
       distance: 36
       pan_x: 0.47
       pan_y: 0.99
-      pan_z: 0.00
     visible: 
     - "Silicone Cup"
     - "Heat Insert Cup"
@@ -54,7 +53,6 @@ steps:
       distance: 60
       pan_x: 0.34
       pan_y: -4.21
-      pan_z: 0.00
     visible: 
     - "Silicone Cup"
     - "Heat Insert Cup"
@@ -72,7 +70,6 @@ steps:
       distance: 71
       pan_x: 1.70
       pan_y: -1.65
-      pan_z: 0.00
     visible: 
     - "Block"
     - "Heat Inserts Body"
@@ -87,7 +84,6 @@ steps:
       distance: 71
       pan_x: -1.31
       pan_y: -1.15
-      pan_z: 0.00
     visible: []
 
     focus:
@@ -102,5 +98,4 @@ steps:
       distance: 83
       pan_x: -1.31
       pan_y: -1.11
-      pan_z: 0.00
     visible: []
