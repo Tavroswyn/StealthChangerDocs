@@ -1,5 +1,11 @@
 # Dock Locations & Setup Guide
 
+!!! warning "Important"
+    It is important that T0 has a calibrated `z_offset` before calibrating the docks.
+
+!!! warning "Important"
+    Don't forget to set you tool path in the config.
+
 ## Parameter Definitions
 
 - **params_safe_y**  
