@@ -23,8 +23,8 @@ docs/hardware/guides/
 ├── backplates/
 │   ├── 1_a4t/
 │   │   ├── data.yml          # Assembly configuration
-│   │   ├── model.glb         # 3D model file (standardized name)
-│   │   ├── image.png         # Preview image (standardized name)
+│   │   ├── model.glb         # 3D model file
+│   │   ├── image.png         # Preview image
 │   │   └── index.md          # Overview page
 │   ├── 2_anthead/
 │   │   ├── data.yml
@@ -49,12 +49,10 @@ Each category folder (e.g., `toolheads`, `backplates`) contains individual guide
 
 ### Guide Folders
 
-Each guide folder must:
-- Be named with an index prefix (e.g., `1_name`, `2_name`) to control sort order in navigation
-- Contain the following standardized files:
+Each guide folder must contain the following standardized files:
   - **`data.yml`** - The assembly configuration file
-  - **`model.glb`** - The 3D model file (standardized filename)
-  - **`image.png`** - Preview image for guide cards (standardized filename)
+  - **`model.glb`** - The 3D model file
+  - **`image.png`** - Preview image for guide cards
   - **`index.md`** - Overview page with embedded assembly viewer
 
 ---

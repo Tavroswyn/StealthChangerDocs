@@ -12,7 +12,10 @@ Every toolchanger build is different, the end user must calculate the required p
 
     - Combined total = `280.2W`
 
-In this example, 6 tools equipped with 70W heaters produce a combined load of 280W. This alone exceeds the standard Voron 200W power supply before accounting for motion stepper motors, electronics, fans, and other system components. 
+In this example, 6 tools equipped with 70W heaters produce a combined load of 280W. This alone exceeds the standard Voron 200W power supply before accounting for motion stepper motors, electronics, fans, and other system components which would typically consume around 100-120W.
+
+!!! warning "DC Beds"
+    A typical Voron has an AC bed, which does not draw power from the printer's PSU. If you have a DC bed, you will need to calculate the power requirements for it separately.
 
 In practice, this means that either an [additional power supply](#additional-power-supplies) would be required to cover the extra demand, or the stock supply must be [replaced with a higher-wattage unit](#replacement-power-supplies). These figures are illustrative; your actual power requirements will depend on the specific hardware and configuration of your build.
 
