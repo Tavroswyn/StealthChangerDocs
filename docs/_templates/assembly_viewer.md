@@ -114,7 +114,7 @@
 <script>
 // Assembly data embedded from YAML via Jinja
 window.assemblyViewerData = {
-    modelFile: '{{ assembly.model if assembly.model is defined else "" }}',
+    modelFile: 'model.glb',
     assemblySteps: {{ assembly.steps|tojson if assembly.steps is defined else [] }},
     bgColor: {{ bg_color|list }},
     primaryParts: {{ assembly.primary_parts|tojson if assembly.primary_parts is defined else []}},

@@ -3,11 +3,7 @@
     {% for title, guide in guides.items() %}
         <a href="{{ guide.folder }}/" class="guide-card-link">
             <div class="card guide-card">
-                {% if guide.image is defined %}
-                <img src="../../../assets/{{ guide.image }}" alt="{{ title }}" class="guide-card-image">
-                {% else %}
-                <img src="../../../assets/DSD_Soon.svg" alt="{{ title }}" class="guide-card-image">
-                {% endif %}
+                <img src="{{ guide.folder }}/image.png" alt="{{ title }}" class="guide-card-image">
                 <div class="guide-card-content">
                     <hr class="guide-card-divider">
                     <h3 class="guide-card-title">{{ title }}</h3>
