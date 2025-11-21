@@ -44,24 +44,7 @@ Because the StealthChanger’s action relies on precisely fitted pins and bushin
 
 Please reference the [Tool Calibration](../../../calibration/index.md).
 
-### Probe offset
-The last step before being able to print again is to calibrate your probe offsets. This procedure is different depending on whether you are using TAP or an Eddy current sensor for probing.
-
-=== "TAP"
-    1. Home the printer with `G28`.
-    2. Run `QUAD_GANTRY_LEVEL`.
-    3. Run `G28 Z`.
-    4. Run `PROBE_CALIBRATE`.
-    5. Change the `z_offset` variable in the tool's [[tool_probe]](../configuration/tool.md#tool_probe) section.
-
-    !!! caution "SAVE_CONFIG"
-        Because klipper-toolchanger-easy reroutes probe to each tool object, when you run `SAVE_CONFIG` it saves the values to `[probe]`. Having a `[probe]` section in your config while also having `[tool_probe]` will cause issues with Klipper. `SAVE_CONFIG` should be avoided.
-
-        If you do save the values, you will need to move the offset from the bottom of `printer.cfg` to your tools `[tool_probe]` section.
-
-
-=== "Eddy Current"
-    Set the probe offset as per your Sensor's documentation.
+{% include "_templates/probe_offset.md" %}
 
 ## First Print
 If you copied your [extruder] values from a previous config, you are ready for your first print. If your setting up the printer for the first time, you may need to PID tune your hotend and tune your extruder first.
