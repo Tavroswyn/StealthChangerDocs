@@ -13,8 +13,6 @@ var primaryColor = window.assemblyViewerData?.primaryColor || [37, 13, 63];
 var accentColor = window.assemblyViewerData?.accentColor || [110, 63, 163];
 var frameColor = window.assemblyViewerData?.frameColor || [127, 127, 127];
 var focusColor = window.assemblyViewerData?.focusColor || [110, 255, 0];
-var subCategories = window.assemblyViewerData?.subCategories || null;
-var selectedSubCategory = null;
 
 // Global reference to viewer controls for external access
 window.modelViewerControls = null;
@@ -23,7 +21,6 @@ window.modelViewerParts = null;
 window.scene = null;
 window.originalPartColors = {}; // Store original colors for reset
 window.lightDirections = {}; // Store original light directions
-window.appliedCameraSettings = null; // Store the camera settings that were applied
 window.initialCameraPosition = null; // Store initial camera position after recenter
 window.initialTarget = null; // Store initial orbit target after recenter
 window.referenceViewportSize = null; // Store viewport size when camera settings were applied
@@ -180,31 +177,6 @@ function updateCameraOverlay() {
     }
 }
 
-// Function to set camera position using spherical coordinates
-function setCameraPosition(azimuth, polar, distance, pan_x = 0, pan_y = 0) {
-    if (!window.modelViewerCamera || !window.modelViewerControls) return;
-    
-    const target = window.modelViewerControls.target;
-    
-    // Convert spherical coordinates to Cartesian (relative to target)
-    const azimuthRad = THREE.MathUtils.degToRad(azimuth);
-    const polarRad = THREE.MathUtils.degToRad(polar);
-    
-    const x = distance * Math.sin(polarRad) * Math.cos(azimuthRad);
-    const y = distance * Math.cos(polarRad);
-    const z = distance * Math.sin(polarRad) * Math.sin(azimuthRad);
-    
-    // Position camera relative to target, with pan offset
-    window.modelViewerCamera.position.set(
-        target.x + x + pan_x,
-        target.y + y + pan_y,
-        target.z + z
-    );
-    
-    window.modelViewerControls.update();
-    updateCameraOverlay();
-}
-
 // Function to set which parts are visible
 function setVisibleParts(visiblePartNames, showAll) {
     if (!window.modelViewerParts) return;
@@ -280,6 +252,7 @@ function initModelViewer(modelPath, onModelLoaded) {
 
     // Camera setup
     const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 2000);
+    window.modelViewerCamera = camera; // Make camera globally accessible
     camera.position.set(0, 50, 100);
 
     // Renderer setup - prioritize performance over quality
@@ -327,13 +300,10 @@ function initModelViewer(modelPath, onModelLoaded) {
 
     // Controls
     const controls = new THREE.OrbitControls(camera, renderer.domElement);
+    window.modelViewerControls = controls; // Make controls globally accessible
     controls.enableDamping = true;
     controls.dampingFactor = 0.05;
     
-    // Store globally for external access
-    window.modelViewerCamera = camera;
-    window.modelViewerControls = controls;
-
     // Load glTF/GLB model
     const gltfLoader = new THREE.GLTFLoader();
     
@@ -513,10 +483,8 @@ function initModelViewer(modelPath, onModelLoaded) {
     window.lastCameraQuaternion = camera.quaternion.clone();
     let needsRender = true; // Flag to track if we need to render
     
-    // Reusable vectors to avoid object creation in loops/animate
+    // Reusable vector to avoid object creation in loops/animate
     const tempVector = new THREE.Vector3();
-    const tempVector2 = new THREE.Vector3();
-    const tempVector3 = new THREE.Vector3();
     
     // Request render on control changes
     controls.addEventListener('change', function() {
@@ -643,7 +611,7 @@ function initModelViewer(modelPath, onModelLoaded) {
 }
 
 // Populate visibility controls
-function createVisibilityControls(controlsId, modelParts) {
+function createVisibilityControls(modelParts) {
     const partsList = document.getElementById('parts-list');
     if (!partsList) return;
     
@@ -803,13 +771,6 @@ const ColorManager = {
         return this.colors[type] || [127, 127, 127];
     },
     
-    // Set color by type (with save)
-    setColor: function(type, r, g, b) {
-        this.colors[type] = [r, g, b];
-        this.updateDisplay(type, r, g, b);
-        this.saveToStorage();
-    },
-    
     // Set color without saving (for live preview)
     setColorWithoutSave: function(type, r, g, b) {
         this.colors[type] = [r, g, b];
@@ -927,23 +888,6 @@ const PartsManager = {
         return item.dataset.partName;
     },
     
-    updateIcon: function(partName, visible) {
-        document.querySelectorAll('#parts-list .part-item').forEach(function(item) {
-            if (PartsManager.getPartNameFromItem(item) === partName) {
-                const icon = item.querySelector('.visibility-icon');
-                if (icon) {
-                    if (visible) {
-                        setIcon(icon, 'icon-eye');
-                        icon.classList.add('visible');
-                    } else {
-                        setIcon(icon, 'icon-eye-off');
-                        icon.classList.remove('visible');
-                    }
-                }
-            }
-        });
-    },
-    
     updateAllIcons: function(visiblePartNames, showAll) {
         document.querySelectorAll('#parts-list .part-item').forEach(function(item) {
             const icon = item.querySelector('.visibility-icon');
@@ -965,17 +909,6 @@ const PartsManager = {
             }
         });
     },
-    
-    ensurePartVisible: function(partName) {
-        if (!window.modelViewerParts || !window.modelViewerParts[partName]) return;
-        
-        toArray(window.modelViewerParts[partName]).forEach(function(mesh) {
-            if (!mesh.visible) {
-                mesh.visible = true;
-                PartsManager.updateIcon(partName, true);
-            }
-        });
-    }
 };
 
 // Color Picker Manager - handles color picker interactions
@@ -1321,9 +1254,16 @@ const UIManager = {
                     return;
                 }
                 
-                // Get all part names and format as YAML list
-                const partNames = Object.keys(window.modelViewerParts).sort();
-                const yamlList = partNames.map(name => `  - "${name}"`).join('\n');
+                // Get only visible part names and format as YAML list
+                const visiblePartNames = Object.keys(window.modelViewerParts).filter(function(partName) {
+                    const meshes = window.modelViewerParts[partName];
+                    // Check if at least one mesh in this part is visible
+                    const meshArray = Array.isArray(meshes) ? meshes : [meshes];
+                    return meshArray.some(function(mesh) {
+                        return mesh.visible;
+                    });
+                }).sort();
+                const yamlList = visiblePartNames.map(name => `      - "${name}"`).join('\n');
                 
                 // Copy to clipboard
                 navigator.clipboard.writeText(yamlList).then(function() {
@@ -1368,7 +1308,7 @@ function initializeModelViewer() {
             UIManager.hideLoading();
             
             // Populate the parts list in the overlay
-            createVisibilityControls('visibility-controls', window.modelViewerParts);
+            createVisibilityControls(window.modelViewerParts);
             
             // Don't call updateStep here - it will be called and will handle colors
             updateStep();
@@ -1427,8 +1367,8 @@ function updateStep() {
     const maxStep = assemblySteps.length - 1;
     
     if (prevBtn) {
-        // Enable previous button if: not on step 0, OR on step 0 with a selected subcategory
-        const canGoPrev = currentStep > 0 || (currentStep === 0 && selectedSubCategory);
+        // Enable previous button if not on step 0
+        const canGoPrev = currentStep > 0;
         prevBtn.disabled = !canGoPrev;
     }
     if (nextBtn) {
@@ -1584,23 +1524,6 @@ function updateStep() {
     }
 }
 
-// Function to update TOC active state
-function updateTOCActiveState(subcategoryKey) {
-    // Remove active class from all TOC links
-    document.querySelectorAll('.md-nav__link').forEach(function(link) {
-        link.classList.remove('md-nav__link--active');
-    });
-    
-    if (subcategoryKey) {
-        // Find and activate the TOC link for this subcategory
-        const normalizedKey = subcategoryKey.toLowerCase().replace(/\s+/g, '-');
-        const tocLinks = document.querySelectorAll('.md-nav__link[href="#' + normalizedKey + '"]');
-        tocLinks.forEach(function(link) {
-            link.classList.add('md-nav__link--active');
-        });
-    }
-}
-
 // Setup function to initialize viewer and UI
 function setupAssemblyViewer() {
     // Check if we're on an assembly viewer page
@@ -1662,7 +1585,6 @@ function setupAssemblyViewer() {
         accentColor = window.assemblyViewerData.accentColor || [110, 63, 163];
         frameColor = window.assemblyViewerData.frameColor || [127, 127, 127];
         focusColor = window.assemblyViewerData.focusColor || [110, 255, 0];
-        subCategories = window.assemblyViewerData.subCategories || null;
         
         // Update ColorManager with template colors (as defaults)
         ColorManager.colors.primary = primaryColor;
@@ -1692,7 +1614,6 @@ function setupAssemblyViewer() {
         currentStep = 0;
     }
     
-    selectedSubCategory = null;
     if (blinkInterval) {
         clearInterval(blinkInterval);
         blinkInterval = null;
@@ -1705,7 +1626,6 @@ function setupAssemblyViewer() {
     window.scene = null;
     window.originalPartColors = {};
     window.lightDirections = {};
-    window.appliedCameraSettings = null;
     window.initialCameraPosition = null;
     window.initialTarget = null;
     

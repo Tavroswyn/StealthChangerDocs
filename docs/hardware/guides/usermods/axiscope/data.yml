@@ -33,12 +33,12 @@ primary_parts:
   - "Case Lower"
 
 # accent_parts:
-#   - "Case Upper"
-#   - "Case Lower"
+  # - "Accent Part1"
+  # - "Accent Part2"
 
 # frame_parts:
-#   - "Case Upper"
-#   - "Case Lower"
+#   - "Frame Upper"
+#   - "Frame Lower"
 
 transparent_parts:
   "LED Bulbs": 0.8

@@ -125,6 +125,5 @@ window.assemblyViewerData = {
     accentColor: {{ accent_color|list }},
     frameColor: {{ frame_color|list }},
     focusColor: {{ focus_color|list }},
-    subCategories: null
 };
 </script>
