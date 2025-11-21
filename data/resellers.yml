@@ -20,6 +20,18 @@ regions:
       url: https://west3d.com
       product_url: https://west3d.com/search?type=product&q=stealthchanger
       configurator_url: https://west3d.com/products/stealthchanger-kit-for-multiple-toolheads-by-ldo-motors-and-draftshift-ldo-sc-stealth-changer-tool-changer-bundle
+    Isik Tech:
+      is_sponsor: false
+      logo_url: https://store.isiks.tech/cdn/shop/files/Isiks_Tech_Profile_TP_Amber_R_bb275eff-e8fe-421c-b146-a2a8de49f57a.png?v=1735439881&width=280
+      description: ""
+      url: https://store.isiks.tech/
+      product_url: 
+  Canada:
+     Bobcat 3D:
+      is_sponsor: false
+      logo_url: https://i.etsystatic.com/35950299/r/isla/eb87d7/62833842/isla_100x100.62833842_cptwbaxu.jpg
+      description: ""
+      url: https://www.etsy.com/shop/bobcat3d/?etsrc=sdt
   uk:
     123-3D:
       is_sponsor: false
@@ -63,3 +75,11 @@ regions:
       region: "AU"
       url: https://store.dremc.com.au
       product_url: https://store.dremc.com.au/search?type=product&q=stealthchanger
+  International:
+    Fysect:
+      is_sponsor: false
+      logo_url: https://www.fysetc.com/cdn/shop/files/FYSETC_White_125x.png?v=1662524387
+      description: ""
+      region: "world wide"
+      url: https://www.fysetc.com/
+      product_url: https://www.fysetc.com/search?type=stealth+changer&options%5Bprefix%5D=last&q=stealthchanger
