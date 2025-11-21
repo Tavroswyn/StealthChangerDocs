@@ -6,8 +6,8 @@ Cura:
   features:
     Ooze Prevention:
       Parked Tool Retract: true
-      Parked Tool Cool Down: false
-      Parked Tool Preheat: false
+      Parked Tool Cool Down: true
+      Parked Tool Preheat: true
     Painting:
       Object Painting: false
       Color Remapping: false
@@ -16,7 +16,7 @@ Cura:
       Define Tool (Interface): true
       Define Tool (Structure): true
     Priming:
-      Adjust Prime Line Location: false
+      Adjust Prime Line Location: true
       Adjust Prime Line Volume: false
       Define Outer Perimeter Tool: false
       Define Minimum Volume: true

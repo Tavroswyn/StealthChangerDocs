@@ -114,3 +114,10 @@
   color: var(--md-default-fg-color--light);
   margin-top: 0.25rem;
 }
+
+/* Center images */
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

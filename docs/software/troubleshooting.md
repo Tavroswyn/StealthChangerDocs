@@ -7,6 +7,11 @@
 
 ---
 
+### INITIALIZE_TOOLCHANGER - Wrong Tool Recognized
+- Check the `tool_number` assignment in the [[tool]](ktc-easy/configuration/tool.md#tool) section.
+
+---
+
 ### Wrong hotend fan turns on
 - Check the `extruder` assignment in the [[heater_fan]](ktc-easy/configuration/tool.md#heater_fan) section.
 

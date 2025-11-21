@@ -39,6 +39,9 @@ docs/hardware/guides/
 └── tophats/
 ```
 
+### Example Guide
+The `usermods/axiscope` folder contains an example guide. The STEP file has been included for reference purposes only and is not expected when submitting new guides. The source for your usermod should remain in the projects usermods folder.
+
 ### Category Folders
 
 Each category folder (e.g., `toolheads`, `backplates`) contains individual guide folders. The category name is used by the `get_hardware()` macro to retrieve guide data.
@@ -408,7 +411,6 @@ Here's a complete minimal example for a simple assembly guide:
 docs/hardware/guides/example_parts/simple_mount/
 ├── data.yml
 ├── SimpleMountModel.glb
-├── assembly.md
 └── index.md
 ```
 
@@ -485,14 +487,6 @@ steps:
       - "Heat Inserts"
       - "Mounting Plate"
       - "M3x8 BHCS Screws"
-```
-
-### assembly.md
-```markdown
-# Simple Mount Assembly
-
-{% set assembly = get_hardware("example_parts")["Simple Mount"] %}
-{% include "_templates/assembly_viewer.md" %}
 ```
 
 ### index.md

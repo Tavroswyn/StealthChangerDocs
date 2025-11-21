@@ -120,9 +120,13 @@ nav:
       - Calibration Tools: 
         - Overview: hardware/guides/calibration_tools/index.md
         - Sexball Probe: hardware/guides/calibration_tools/sexball/index.md
-        - Axiscope Camera: hardware/guides/calibration_tools/axiscope/index.md
+      
+      - Usermods:
+        - Overview: hardware/guides/usermods/index.md
+        - Axiscope Camera: hardware/guides/usermods/axiscope/index.md
 
     - Troubleshooting: hardware/troubleshooting.md
+    - FAQ: hardware/faq.md
 
   - Software:
     - Overview: software/index.md
@@ -141,11 +145,14 @@ nav:
 
     - Slicers: software/slicers.md
     - Troubleshooting: software/troubleshooting.md
+    - FAQ: software/faq.md
 
   - Calibration:
     - Overview: calibration/index.md
     - Dock Locations: calibration/dock_locations.md
     - Nozzle Offsets: calibration/nozzle_offsets.md
+    - Troubleshooting: calibration/troubleshooting.md
+    - FAQ: calibration/faq.md
 
   - Contributing: contributing.md
   - Resellers: resellers.md

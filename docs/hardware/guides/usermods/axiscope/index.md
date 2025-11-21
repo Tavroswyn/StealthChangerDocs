@@ -1,6 +1,6 @@
 # Axiscope Camera
 
-{% set assembly = get_hardware("calibration_tools")["Axiscope Camera"] %}
+{% set assembly = get_hardware("usermods")["Axiscope Camera"] %}
 
 {% include "_templates/overview.md" %}
 

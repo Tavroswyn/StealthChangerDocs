@@ -32,6 +32,17 @@ primary_parts:
   - "Case Upper"
   - "Case Lower"
 
+# accent_parts:
+#   - "Case Upper"
+#   - "Case Lower"
+
+# frame_parts:
+#   - "Case Upper"
+#   - "Case Lower"
+
+transparent_parts:
+  "LED Bulbs": 0.8
+
 steps:
   - title: "Install Magnets"
     description: "Install the 4 6x3mm magnets in the Case Lower using glue to keep them in place."
