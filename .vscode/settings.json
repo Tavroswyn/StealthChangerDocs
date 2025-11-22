@@ -1,7 +1,0 @@
-{
-    "python.languageServer": "None",
-    "python.analysis.diagnosticSeverityOverrides": {
-        "reportMissingModuleSource": "none",
-        "reportShadowedImports": "none"
-    }
-}
