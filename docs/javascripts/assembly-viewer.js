@@ -1351,8 +1351,11 @@ function updateStep() {
         stepTitle.textContent = step.title;
     }
     if (stepDescription && step.description) {
-        // Convert markdown links [text](url) to HTML links
-        const htmlDescription = step.description.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+        // Convert markdown links [text](url){target="_blank"} to HTML links with target attribute
+        // First handle links with target="_blank" attribute
+        let htmlDescription = step.description.replace(/\[([^\]]+)\]\(([^)]+)\)\{target="_blank"\}/g, '<a href="$2" target="_blank">$1</a>');
+        // Then handle regular links without attributes
+        htmlDescription = htmlDescription.replace(/\[([^\]]+)\]\(([^)]+)\)(?!\{)/g, '<a href="$2">$1</a>');
         stepDescription.innerHTML = htmlDescription;
     }
 
