@@ -33,4 +33,3 @@ Proper [Cable Management](hardware/cable_management.md) plays a critical role in
 ![Cable Management](assets/sexball.png){ width=250 align=left } 
 ### Calibration Tools
 For [StealthChanger](hardware/stealthchanger.md) to operate accurately, the printer must compensate for any positional offsets between tool nozzles. The [Calibration Tools](hardware/calibration_tools.md) section details the available options for achieving this calibration.
-are 
