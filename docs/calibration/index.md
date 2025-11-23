@@ -82,4 +82,4 @@ There are several ways to measure these offsets:
 - **[Manual](https://www.printables.com/model/201707-x-y-and-z-calibration-tool-for-idex-dual-extruder){:target="_blank"}** - Measuring the physical distance between nozzle with a printed tool
 - **[SexBall Probe](/hardware/calibration_tools/#sexball-probe)** – Mechanical probe using precision spheres for repeatable measurements
 - **[Axiscope](https://github.com/nic335/Axiscope){:target="_blank"}** – Camera-based visual alignment to printed targets
-- **[Nudge](https://github.com/zruncho3d/nudge){:target="_blank"}** – Software-guided iterative calibration using printed patterns
+- **[Nudge](https://github.com/zruncho3d/nudge){:target="_blank"}** – Software-guided Mechanical probe
