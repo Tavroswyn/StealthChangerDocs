@@ -84,7 +84,7 @@ Automatic calibration uses specialized tools to measure X/Y/Z offsets more preci
 - **[Axiscope](https://github.com/nic335/Axiscope){:target="_blank"}** – Camera-based visual alignment to printed targets
 - **[NozzleAlign](https://github.com/viesturz/NozzleAlign){:target="_blank"}** – Camera-based alignment system
 - **[kTAMV](https://github.com/TypQxQ/kTAMV){:target="_blank"}** – Klipper Tool Alignment Machine Vision
-- **[Nudge](https://github.com/zruncho3d/nudge){:target="_blank"}** – Software-guided iterative calibration using printed patterns
+- **[Nudge](https://github.com/zruncho3d/nudge){:target="_blank"}** – Software-guided Mechanical probe
 
 Refer to each tool's documentation for specific calibration procedures.
 
