@@ -68,6 +68,13 @@ regions:
       logo_url: https://shop.zen3d.eu/!common_design/custom/zen3d.unas.hu/element/layout_hu_header_logo-200x50_1_default.png
       url: https://shop.zen3d.eu
       product_url: https://shop.zen3d.eu/toolchanger-parts
+    3D Jake:
+      is_sponsor: false
+      region: "EU"
+      description: ""
+      logo_url: https://3d.nice-cdn.com/disco/build/assets/Logo/threedjake-logo.59ac968b5h0p.svg
+      url: https://www.3djake.com/
+      product_url: https://www.3djake.com/search?keyword=stealth+changer
   au:
     DREMC:
       is_sponsor: false
