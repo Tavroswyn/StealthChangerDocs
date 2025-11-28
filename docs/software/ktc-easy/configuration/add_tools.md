@@ -41,6 +41,6 @@ These include:
 Go through the [Pre Launch](../configuration/validation.md#pre-launch) steps again for each additional tool, optionally excluding the [Probe offset](../configuration/validation.md#probe-offset) calibration and [First Print](../configuration/validation.md#first-print) test.
 
 !!! tip "Probe Offsets for Subsequent Tools"
-    All tool offsets are calibrated relative to T0. Setting probe offsets for tools other than T0 is generally only useful if you need to home using that specific tool. However, even if another tool is used for homing, it’s recommended to home T0 again before starting a print to ensure consistent alignment and accuracy.
+    All tool offsets are calibrated relative to T0. Setting probe offsets for tools other than T0 is generally only useful if you need to home using that specific tool. However, even if another tool is used for homing, it is required to home using T0 again before starting a print to ensure consistent alignment and accuracy.
 
 With the tools broken in and functioning corrently, we can move on to [Calibration](../../../calibration/index.md).
