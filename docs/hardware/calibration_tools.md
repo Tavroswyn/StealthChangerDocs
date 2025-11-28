@@ -26,7 +26,7 @@ Axiscope is a specialized tool created by members of our community that is desig
 It provides a streamlined web interface for:
 
 * Manual XY calibration using camera feedback.
-* Automatic Z alignment through use of a Z endstop or [Sexball Probe](#sexball-probe).
+* Automated Z alignment through use of a Z endstop or [Sexball Probe](#sexball-probe).
 * Quick and precise tool alignment.
 * No calculations required, the offsets are given to you in the exact format used with [Klipper-toolchanger](../software/index.md#klipper-toolchanger).
 

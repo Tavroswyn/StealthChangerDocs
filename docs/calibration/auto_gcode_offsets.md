@@ -1,4 +1,4 @@
-Automatic calibration uses specialized tools to measure X/Y/Z offsets more precisely and efficiently. Refer to each tool's documentation for specific calibration procedures.
+Automated calibration uses specialized tools to measure X/Y/Z offsets more precisely and efficiently. Refer to each tool's documentation for specific calibration procedures.
 
 ## Available Methods
 
@@ -13,7 +13,7 @@ Automatic calibration uses specialized tools to measure X/Y/Z offsets more preci
 ### Define Switch Location
 With the SexBall Probe mounted to the printer's bed extrusion, the absolute position of the ball needs to be added to the [[gcode_macro _CALIBRATION_SWITCH]](#) variables.
 
-``` cfg hl_lines="2 3 4"
+``` cfg title="Calibration switch variables example." hl_lines="2 3 4"
   [gcode_macro _CALIBRATION_SWITCH]
   variable_x: 227.471875
   variable_y: 353.703125
@@ -33,7 +33,7 @@ With the SexBall Probe mounted to the printer's bed extrusion, the absolute posi
 - Set the `pin` variable to the pin that your calibration probe is connected to.
 - Calibrate `trigger_to_bottom_z`
 
-``` cfg
+``` cfg title="[tools_calibrate] example."
   [tools_calibrate]
   pin:   #pin that your calibration probe is connected to.
   travel_speed: 20  # mms to travel sideways for XY probing

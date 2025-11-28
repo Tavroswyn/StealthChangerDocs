@@ -1,6 +1,6 @@
 # Park Positions
 {% macro code_block() %}
-``` cfg hl_lines="5 6 7"
+``` cfg title="[tool Tn] example." hl_lines="5 6 7"
   [tool T0]
   tool_number: 0 # change to the index of the tool. 0, 1, 2, etc.
   extruder: extruder # change to match the extruder you are configuring: extruder, extruder1, etc.

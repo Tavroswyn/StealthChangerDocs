@@ -2,7 +2,7 @@
 Before being able to print, it is nesacerry to calibrate your probe offsets. This procedure differs depending on whether you are using the OptoTap Sensor or an Eddy current sensor for probing.
 
 === "TAP"
-    ``` cfg hl_lines="4"
+    ``` cfg title="[tool_probe] example." hl_lines="4"
         [tool_probe T0]
         pin: NHK0:gpio10
         tool: 0 # change to the index of the tool. 0, 1, 2, etc.

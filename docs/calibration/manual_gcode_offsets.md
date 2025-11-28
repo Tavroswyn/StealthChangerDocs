@@ -1,5 +1,5 @@
 {% macro code_block(lines="8 9 10") %}
-``` cfg hl_lines="{{ lines }}"
+``` cfg title="[tool Tn] example." hl_lines="{{ lines }}"
   [tool T1]
   tool_number: 1 # change to the index of the tool. 0, 1, 2, etc.
   extruder: extruder1 # change to match the extruder you are configuring: extruder, extruder1, etc.
