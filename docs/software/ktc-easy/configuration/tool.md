@@ -15,6 +15,9 @@ As a minimum, the following sections are required in a tool config:
 * [tool_probe]
 * [gcode_macro Tn]
 
+!!! note "Reference Examples"
+    The following sections are for reference only. The contetnts of the reference examples may differ from your config. For complete examples, please reference the [Examples](../examples.md) page.
+
 ## [mcu]
 Each toolhead board requires a unique MCU name. Typically you would give them a descriptive name followed by the respective tool number.
 
