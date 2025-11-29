@@ -33,7 +33,7 @@ AXES_SHAPER_CALIBRATION ACCEL_CHIP="'adxl345 T0'"
 ```
 
 ### Applying the Results
-Each tool can have the frequency, and shaper type for the X and Y axis' set in it's `[tool Tn]` section by adding `params_input_shaper_freq_x`, `params_input_shaper_type_x`, `params_input_shaper_freq_y` and `params_input_shaper_type_y`.
+Each tool can have the frequency, and shaper type for the X and Y axes set in it's `[tool Tn]` section by adding `params_input_shaper_freq_x`, `params_input_shaper_type_x`, `params_input_shaper_freq_y` and `params_input_shaper_type_y`.
 
 ``` cfg hl_lines="12 13 14 15" title="Example [tool Tn] section with input shaper"
 [tool T0]
