@@ -5,7 +5,7 @@ The toolchanger-config sets up the main toolchanger object as well as homing and
     The following sections are for reference only. The contetnts of the reference examples may differ from your config. For complete examples, please reference the [Examples](../examples.md) page.
 
 ## [rounded_path]
-Rounded path gives non-printing gcode moves calculated rounded corners to minimize jerk and increase toolchange times. 
+Rounded path gives non-printing G-code moves calculated rounded corners to minimize jerk and increase toolchange times. 
 
 ``` cfg
 [rounded_path]
@@ -38,7 +38,7 @@ require_tool_present: True # Set to False to allow toolless movement. Toolless m
 ```
 
 !!! info "Info"
-    Further information on the [toolchanger] section can be found in the [Klipper-toolchanger-easy](https://github.com/jwellman80/klipper-toolchanger-easy){:target="_blank"} documentation.
+    Further information on the [toolchanger] section can be found in the [Klipper-toolchanger-easy](https://github.com/jwellman80/klipper-toolchanger-easy/blob/main/toolchanger.md#toolchanger){:target="_blank"} documentation.
 
 ## [gcode_macro homing_override_config]
 [Klipper-toolchanger-easy](https://github.com/jwellman80/klipper-toolchanger-easy){:target="_blank"} has its own homing routine that homes the Y axis first which allows the tool on the shuttle to be clear of the umbilical cables before homing the X axis. 
@@ -60,7 +60,7 @@ Adjusting the default deadband will change the precision required when using the
 !!! tip "Deadband?"
     Deadband defines the acceptable temperature range around the target setpoint within which the printer considers the temperature “close enough” to proceed. For example, with a deadband value of 4, the printer will continue operation once the actual temperature is within ±2 °C of the target. 
     
-    * Increasing the deadband can allow faster tool change times but reduces temperature precision. 
+    * Increasing the deadband can allow faster tool change times, but reduces temperature precision. 
     * Decreasing the deadband improves accuracy at the cost of longer stabilization times.
 
 ``` cfg
@@ -82,9 +82,9 @@ gcode:
 ```
 
 ## [tools_calibrate]
-Defining the [tools_calibrate] section enables the multi axis probe calibration. Change the variables to match your requirements.
+Defining the `[tools_calibrate]` section enables the multi axis probe calibration. Change the variables to match your requirements.
 
-This section is optional and only required if you are using a calibration probe.
+This section is optional and only required if you are using an automated calibration probe such as [SexBall Probe](../../../hardware/calibration_tools.md#sexball-probe).
 
 ``` cfg
 [tools_calibrate]

@@ -9,7 +9,7 @@ Adding additional tool configurations works much like setting up T0. Simply crea
 
 The following items need to be incremented:
 
-* `[mcu]` section name and the serial/canbus id. All references to the MCU name's pins also need to be changed. 
+* `[mcu]` section name. All references to the MCU name's pins will need to be changed as well. 
 * `[extruder]` section name.
 * `[tmc2209]` section name.
 * `[heater_fan]` section name and its `heater` variable.
@@ -18,7 +18,7 @@ The following items need to be incremented:
 * `[tool_probe]` name and its `tool` and `activate_gcode` variables.
 * `[gcode_macro Tn]` and its `gcode` variable.
 
-If you have any extra sections such as RGB, adxl, etc. They will also need to be incremented.
+If you have any extra sections such as RGB, ADXL345, etc. They will also need to be incremented.
 
 ## Calibrated Values
 If you copied a previous tool's config, all calibrated values are for the previous tool. They will need to be recelebrated for the new tool.
