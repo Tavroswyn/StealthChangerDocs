@@ -78,7 +78,7 @@ def define_env(env):
         return ""
     
     @env.macro
-    def github_contributors(repo="DraftShift/StealthChanger"):
+    def github_contributors(repo="DraftShift/Docs"):
         """Fetch and display GitHub contributors for a repository (cached during build)"""
         import urllib.request
         import json
