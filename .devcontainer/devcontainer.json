@@ -1,0 +1,11 @@
+{
+  "name": "MkDocs DevContainer",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "settings": {
+    "python.defaultInterpreterPath": "/usr/bin/python3"
+  },
+  "forwardPorts": [8000],
+  "postCreateCommand": "pip install -r requirements.txt"
+}
