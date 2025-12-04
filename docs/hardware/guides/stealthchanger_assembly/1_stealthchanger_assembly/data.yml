@@ -1,17 +1,5 @@
 title: Stealthchanger Assembly
 author: "DraftShift Design"
-primary_parts:
-  - "VoronV2"
-  - "Cable Management"
-  - "Docks"
-  - "Doorbuffer"
-  - "Stealthchanger Shuttle"
-  - "Tools"
-  - "Tophat"
-  
-
-accent_parts:
-
 
 summary: >
   This is the full assembly of a Voron V2 250mm with Stealthchanger.  

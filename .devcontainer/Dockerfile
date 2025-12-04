@@ -8,6 +8,6 @@ RUN apt-get update && apt-get install -y \
 
 # Copy requirements and install
 #COPY requirements.txt /tmp/
-#RUN pip install -r /tmp/requirements.txt
-RUN pip install mkdocs mkdocs-material mkdocs-macros-plugin mkdocs-section-index pyyaml
+#RUN pip install -r requirements.txt
+
 
