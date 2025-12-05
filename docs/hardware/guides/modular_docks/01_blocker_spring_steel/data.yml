@@ -25,7 +25,6 @@ printed_bom:
     urls:
       Link: https://github.com/DraftShift/ModularDock/blob/main/STLs/Blockers/Spring%20Steel%20Pad%20Mold/Nozzle%20Pad%20Mold%20B.stl?raw=true
 
-
 hardware_bom:
     M3 Heat Inserts:
       qty: 6
@@ -33,6 +32,9 @@ hardware_bom:
       qty: 1
     Spring Steel 7x0.1x36mm:
       qty: 1
+
+resources:
+  DraftShift ModularDock Github: https://github.com/DraftShift/ModularDock
 
 primary_parts:
   - "Spring Steel Body"

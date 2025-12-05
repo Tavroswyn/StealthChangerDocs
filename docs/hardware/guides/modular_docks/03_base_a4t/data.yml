@@ -17,6 +17,9 @@ hardware_bom:
     M3 Heat Inserts:
       qty: 4-7
 
+resources:
+  DraftShift ModularDock Github: https://github.com/DraftShift/ModularDock
+
 primary_parts:
   - "Back"
   - "Base"

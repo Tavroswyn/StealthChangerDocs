@@ -15,6 +15,9 @@ hardware_bom:
     M5 T Nuts:
       qty: 4
 
+resources:
+  DraftShift ModularDock Github: https://github.com/DraftShift/ModularDock
+
 primary_parts:
   - "Back"
   - "Base"

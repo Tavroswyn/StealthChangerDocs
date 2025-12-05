@@ -33,6 +33,10 @@ hardware_bom:
   M3 Heat Inserts:
     qty: 6
 
+resources:
+  DraftShift StealthChanger Github: https://github.com/DraftShift/StealthChanger
+  Aliexpress: https://s.click.aliexpress.com/e/_c45dqDeH
+  
 steps:
   - description: "Install 2 heat inserts in to each block."
     camera:

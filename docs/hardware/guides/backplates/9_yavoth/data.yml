@@ -21,7 +21,6 @@ printed_bom:
         HF: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/Yavoth_HF_Spacer.stl?raw=true
         UHF: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/Yavoth_UHF_Spacer.stl?raw=true
 
-  
 hardware_bom:
   4mmx12mm rounded pins with M3 internal thread:
     qty: 3
@@ -35,6 +34,9 @@ hardware_bom:
     qty: 1
   6x3mm tapered magnet with M2x8 FHCS screw (Alternatively 6x3mm magnet to be glued):
     qty: 1
+
+resources:
+  DraftShift StealthChanger Github: https://github.com/DraftShift/StealthChanger
 
 primary_parts:
   - "Shuttle"

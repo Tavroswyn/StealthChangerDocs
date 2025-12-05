@@ -55,8 +55,10 @@ hardware_bom:
   M5 T-Nuts:
     qty: 2
 
+resources:
+  DraftShift Cable Management Github: https://github.com/DraftShift/CableManagement
+  N3MI's Original Usermod: https://github.com/DraftShift/CableManagement/tree/main/UserMods/N3MI-DG/Umbilical_plates_V2#installation
 primary_parts:
-
   - "Outer Plate"
 
 accent_parts:

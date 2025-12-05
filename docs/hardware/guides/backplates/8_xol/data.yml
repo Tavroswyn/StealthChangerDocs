@@ -27,6 +27,9 @@ hardware_bom:
   6x3mm tapered magnet with M2x8 FHCS screw (Alternatively 6x3mm magnet to be glued):
     qty: 1
 
+resources:
+  DraftShift StealthChanger Github: https://github.com/DraftShift/StealthChanger
+
 primary_parts:
   - "Shuttle"
 accent_parts:

@@ -72,6 +72,10 @@ hardware_bom:
   Existing Voron Door With LDO Hinges:
     qty: 1
 
+resources:
+  DraftShift DoorBuffer Github: https://github.com/DraftShift/DoorBuffer
+  LDO Github: https://github.com/MotorDynamicsLab/LDOStealthChanger
+
 primary_parts:
 - "Top Mid"
 - "Bottom Mid"

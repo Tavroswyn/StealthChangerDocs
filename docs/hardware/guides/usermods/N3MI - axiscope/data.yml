@@ -26,6 +26,10 @@ hardware_bom:
   6x3mm Magnets:
     qty: 4
 
+resources:
+  Printables Source: https://www.printables.com/model/1099576-xy-nozzle-alignment-camera/files
+  Axiscope Github: https://github.com/nic335/Axiscope
+
 primary_parts:
   - "Case Upper"
   - "Case Lower"

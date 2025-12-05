@@ -20,6 +20,9 @@ hardware_bom:
     6x3mm Magnets:
       qty: 2
 
+resources:
+  DraftShift ModularDock Github: https://github.com/DraftShift/ModularDock
+
 primary_parts:
   - "Back"
   - "Base"

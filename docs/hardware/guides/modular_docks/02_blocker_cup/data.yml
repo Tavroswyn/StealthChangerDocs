@@ -24,6 +24,9 @@ hardware_bom:
     Pen Spring:
       qty: 1
 
+resources:
+  DraftShift ModularDock Github: https://github.com/DraftShift/ModularDock
+
 primary_parts:
   - "Block"
   - "Silicone Cup"

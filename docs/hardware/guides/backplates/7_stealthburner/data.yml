@@ -21,6 +21,9 @@ hardware_bom:
   6x3mm tapered magnet:
     qty: 1
 
+resources:
+  DraftShift StealthChanger Github: https://github.com/DraftShift/StealthChanger
+
 primary_parts:
   - "Shuttle"
 accent_parts:

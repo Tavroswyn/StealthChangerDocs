@@ -40,7 +40,6 @@ printed_bom:
     urls:
       Link: https://github.com/DraftShift/CableManagement/blob/main/STLs/FannyPack/STLs/brackets/extra/%5Ba%5D_mini_dc_dc_buck_converter.stl?raw=true
 
-
 hardware_bom:
   M3x6 BHCS Screws:
     qty: 6-10
@@ -50,6 +49,9 @@ hardware_bom:
   
   6x3mm Magnets:
     qty: 8
+
+resources:
+  DraftShift Cable Management Github: https://github.com/DraftShift/CableManagement
 
 primary_parts:
   - "Base"

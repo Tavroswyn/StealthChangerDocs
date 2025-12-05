@@ -35,6 +35,10 @@ hardware_bom:
   M3 Hammer Nuts:
     qty: 2
 
+resources:
+  DraftShift StealthChanger Github: https://github.com/DraftShift/StealthChanger
+  LDO Github: https://github.com/MotorDynamicsLab/LDOStealthChanger
+
 primary_parts:
   - "Endstop Block"
 

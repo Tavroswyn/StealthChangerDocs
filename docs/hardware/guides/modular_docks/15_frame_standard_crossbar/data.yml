@@ -29,6 +29,9 @@ hardware_bom:
     M3 Heat Inserts:
       qty: 6
 
+resources:
+  DraftShift ModularDock Github: https://github.com/DraftShift/ModularDock
+
 primary_parts:
   - "Crossbar Top"
   - "Crossbar Bottom"

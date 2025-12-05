@@ -86,6 +86,9 @@ hardware_bom:
   Existing Voron Doors With Latches:
     qty: 1
 
+resources:
+  DraftShift DoorBuffer Github: https://github.com/DraftShift/DoorBuffer
+
 primary_parts:
 - "Top Mid"
 - "Bottom Mid"

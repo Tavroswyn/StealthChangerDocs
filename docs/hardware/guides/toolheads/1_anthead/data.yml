@@ -28,18 +28,6 @@ summary: >
       The stock Anthead works really well with StealthChanger, however with some small tweaks we can make it even better. 
       This guide introduces some community usermods to make a complete and robust solution for reliable tool changes with StealthChanger.
 
-
-  **Credits:**
-
-
-  - **[hartk1213](https://github.com/hartk1213){target="_blank"}:** Anthead
-
-  - **[TheSin-](https://github.com/TheSin-){target="_blank"}:** StealthChanger Backplate & PCB Mount
-
-  - **[Averen](https://github.com/jwellman80){target="_blank"}:** LED Solder Jig
-
-  - **[N3MI-DG](https://github.com/N3MI-DG){target="_blank"}:** Nitehawk36 Cover & Spacers
-
 printed_bom:
   Complete Anthead:
     qty: 1
@@ -82,6 +70,12 @@ hardware_bom:
     qty: 2
   4x2mm PTFE ~40mm Long:
     qty: 1
+
+resources:
+  Anthead Github: https://github.com/PrintersForAnts/AntHead
+  TheSin's StealthChanger Backplate & PCB Mount Usermod: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/TheSin-/PCB36_Mount
+  Averen's LED Solder Jig: https://github.com/PrintersForAnts/AntHead/tree/main/UserMods/LED_Solder_Fixture
+  N3MI's Nitehawk36 Cover, Spacers & Nozzle LEDs: https://github.com/N3MI-DG/sc-guides/tree/main/Anthead
 
 steps:
   - description: "This guide uses a modified StealthChanger backplate which adds rigid mounting for the toolhead board mount. Both of these mods are by TheSin-. Before starting, ensure you have the correct StealthChanger Backplate for this guide. For assembly of the backplate, see the [StealthChanger Backplate Guide](../../backplates/anthead/)."

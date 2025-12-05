@@ -15,14 +15,6 @@ accent_parts:
 
 summary: >
   This is the full assembly of a Voron V2 250mm with Stealthchanger.  
-  
-
-  You can [download the full CAD .STEP file from here](https://github.com/N3MI-DG/sc-guides/tree/main){target="_blank"}.
-  
-
-  **Credits:**
-
-  - **[N3MI-DG](https://github.com/N3MI-DG){target="_blank"}:** StealthChanger 250 assembly CAD
 
 printed_bom:
    Stealthchanger Printed parts:
@@ -35,6 +27,11 @@ hardware_bom:
       qty: 1
   Stealthchanger Hardware set:
      qty: 1
+
+resources:
+  DraftShift StealthChanger Github: https://github.com/DraftShift/StealthChanger
+  N3MI's Voron 250 Stealchanger CAD: https://github.com/N3MI-DG/sc-guides
+
 
 steps:
   - description: "This is Stealthchanger on a Voron V2 250mm."

@@ -26,11 +26,13 @@ printed_bom:
     urls:
       Link: https://github.com/DraftShift/CableManagement/blob/main/STLs/Umbilical/Voron/TPU_Version/%5Btpu%5D_Relief_Voron_x5xN.stl
 
-
-
 hardware_bom:
   Spring Steel .3x3mm by length needed:
     qty: 1
+
+resources:
+  DraftShift Cable Management Github: https://github.com/DraftShift/CableManagement
+  N3MI's original usermod: https://github.com/DraftShift/CableManagement/tree/main/UserMods/N3MI-DG/Umbilical_plates_V2#installation
 
 primary_parts:
 

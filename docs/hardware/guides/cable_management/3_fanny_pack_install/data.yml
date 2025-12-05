@@ -41,6 +41,9 @@ hardware_bom:
   VHB tape: 
     qty: 100mm
 
+resources:
+  DraftShift Cable Management Github: https://github.com/DraftShift/CableManagement
+
 primary_parts:
   - "Fanny Pack Base"
   - "ECAS Panel Top"

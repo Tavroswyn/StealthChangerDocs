@@ -42,6 +42,9 @@ hardware_bom:
     Voron Top Panel (From existing printer):
       qty: 1
 
+resources:
+  Draftshift TopHat Github: https://github.com/DraftShift/Tophat
+
 primary_parts:
   - "Medallion Primary Front"
   - "Medallion Primary Back"

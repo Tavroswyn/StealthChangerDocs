@@ -61,6 +61,10 @@ hardware_bom:
   Voron Top Panel (From existing printer):
     qty: 1
 
+resources:
+  Draftshift TopHat Github: https://github.com/DraftShift/Tophat
+  LDO Github: https://github.com/MotorDynamicsLab/LDOStealthChanger
+
 primary_parts:
   - "Back Clips"
   - "Front Clips"

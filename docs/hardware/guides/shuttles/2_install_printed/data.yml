@@ -22,6 +22,9 @@ hardware_bom:
   M3x8 BHCS Screws:
     qty: 4
 
+resources:
+  DraftShift StealthChanger Github: https://github.com/DraftShift/StealthChanger
+
 primary_parts:
   - "Block Left"
   - "Block Right"

@@ -49,6 +49,9 @@ hardware_bom:
   M3 Hammerhead Nuts:
     qty: 2
 
+resources:
+  DraftShift Cable Management Github: https://github.com/DraftShift/CableManagement
+
 primary_parts:
   - "Center Skirt"
   - "90 Center Rear Skirt"

@@ -33,6 +33,9 @@ hardware_bom:
     PTFE Tube (Wiper Only):
       qty: 15mm
 
+resources:
+  DraftShift ModularDock Github: https://github.com/DraftShift/ModularDock
+
 primary_parts:
   - "Back"
   - "Base"
