@@ -24,6 +24,8 @@ toolheads:
       thesin_backplates: []
       author: Armchair Heavy Industries
       url: https://github.com/Armchair-Heavy-Industries/A4T
+      extra:
+        - Print cowl to suit XOL carriage.
 
     Anthead:
       name: Anthead

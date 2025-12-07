@@ -43,6 +43,12 @@ For the purposes of StealthChanger the toolhead selection is rather important. I
 
     **Stubby Dock:**{ title="The depth of the dock (Y axis) being less than standard and is not compatible with Door Buffer and is only available for the smaller toolheads." } {{ ':fontawesome-solid-check:{ style="color:green;" }' if tool_data.stubby_dock else ':fontawesome-solid-xmark:{ style="color:red;" }' }}
 
+    {% if tool_data.extra is defined %}
+    {% for extra in tool_data.extra %}
+    {{ extra }}<br>
+    {% endfor %}
+    {% endif %}
+
     | Size | Max Tools |
     |--------------|------------|
     | 250mm Voron  | {{ v250 }} |
