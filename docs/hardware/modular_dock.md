@@ -78,7 +78,7 @@ The left and right pieces come in 2 variants, `standard` and `short`. This deter
     * [StealthBurner](toolheads.md#stealthburner) is not compatible with short docks.
     * [Containers](#containers) are not compatible with short docks.
 
-There are 2020 and 1515 versions of the top and bottom pieces. Both versions have 2 varients, `standard` and `crossbar`. The `crossbar` is used in combination with [Door Buffer](door_buffer.md), while the standard version can be used for a `crossbar` in-line with the frame or as a combination with [Stabilizers](#stabilizers) or when hanging from the top of the printers frame. Optionally there is also an 'L bracket' that can help with stability of hanging docks.
+There are 2020 and 1515 versions of the top and bottom pieces. Both versions have 2 variants, `standard` and `crossbar`. The `crossbar` is used in combination with [Door Buffer](door_buffer.md), while the standard version can be used for a `crossbar` in-line with the frame or as a combination with [Stabilizers](#stabilizers) or when hanging from the top of the printers frame. Optionally there is also an 'L bracket' that can help with stability of hanging docks.
 
 | Standard Height | Short Height |
 | :-: | :-: |
