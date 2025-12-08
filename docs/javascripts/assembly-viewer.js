@@ -1113,7 +1113,7 @@ const UIManager = {
         this.prevButtonHandler = function() {
             if (currentStep > 0) {
                 currentStep--;
-                updateStepHash();
+                updateUrlParams();
                 updateStep();
             }
         };
@@ -1122,7 +1122,7 @@ const UIManager = {
             const maxStep = assemblySteps.length - 1;
             if (currentStep < maxStep) {
                 currentStep++;
-                updateStepHash();
+                updateUrlParams();
                 updateStep();
             }
         };
@@ -1312,6 +1312,18 @@ function initializeModelViewer() {
             
             // Don't call updateStep here - it will be called and will handle colors
             updateStep();
+            
+            // Apply pending maximize from URL parameter after model is loaded
+            if (window.pendingMaximize) {
+                const fullscreenBtn = document.getElementById('toggle-fullscreen');
+                if (fullscreenBtn) {
+                    // Small delay to ensure UI is ready
+                    setTimeout(function() {
+                        fullscreenBtn.click();
+                    }, 100);
+                }
+                window.pendingMaximize = false;
+            }
         }
     );
     };
@@ -1324,13 +1336,131 @@ function initializeModelViewer() {
     }
 }
 
-// Helper function to update URL hash
-function updateStepHash() {
-    const stepNum = currentStep + 1; // Convert to 1-indexed
-    const newHash = `#step-${stepNum}`;
-    if (window.location.hash !== newHash) {
-        window.history.pushState(null, '', newHash);
+// URL Parameter Registry
+// Each parameter defines: name, getValue (for URL updates), applyOnLoad, onPopstate
+var UrlParams = {
+    registry: [
+        {
+            name: 'step',
+            // Get current value for URL (return null to remove from URL)
+            getValue: function() {
+                return currentStep + 1; // 1-indexed
+            },
+            // Apply parameter on initial page load (before model loads)
+            applyOnLoad: function(value) {
+                if (value) {
+                    const stepNum = parseInt(value, 10) - 1; // Convert to 0-indexed
+                    if (stepNum >= 0 && stepNum < assemblySteps.length) {
+                        currentStep = stepNum;
+                    } else {
+                        currentStep = 0;
+                    }
+                } else {
+                    currentStep = 0;
+                }
+            },
+            // Handle popstate (browser back/forward)
+            onPopstate: function(value) {
+                if (value) {
+                    const stepNum = parseInt(value, 10) - 1;
+                    if (stepNum >= 0 && stepNum < assemblySteps.length && stepNum !== currentStep) {
+                        currentStep = stepNum;
+                        updateStep();
+                    }
+                }
+            }
+        },
+        {
+            name: 'max',
+            getValue: function() {
+                const viewerContainer = document.getElementById('model-viewer-container');
+                const isMaximized = viewerContainer && viewerContainer.classList.contains('fullscreen');
+                return isMaximized ? 'true' : null; // null removes from URL
+            },
+            applyOnLoad: function(value) {
+                window.pendingMaximize = (value === 'true');
+            },
+            onPopstate: function(value) {
+                const viewerContainer = document.getElementById('model-viewer-container');
+                const fullscreenBtn = document.getElementById('toggle-fullscreen');
+                if (viewerContainer && fullscreenBtn) {
+                    const isCurrentlyMaximized = viewerContainer.classList.contains('fullscreen');
+                    const shouldBeMaximized = (value === 'true');
+                    if (shouldBeMaximized && !isCurrentlyMaximized) {
+                        fullscreenBtn.click();
+                    } else if (!shouldBeMaximized && isCurrentlyMaximized) {
+                        fullscreenBtn.click();
+                    }
+                }
+            }
+        }
+    ],
+    
+    // Update URL with current state from all registered parameters
+    updateUrl: function() {
+        const url = new URL(window.location.href);
+        
+        this.registry.forEach(function(param) {
+            const value = param.getValue();
+            if (value !== null && value !== undefined) {
+                url.searchParams.set(param.name, value);
+            } else {
+                url.searchParams.delete(param.name);
+            }
+        });
+        
+        url.hash = '';
+        
+        let pathname = url.pathname;
+        if (!pathname.endsWith('/')) {
+            pathname += '/';
+        }
+        
+        const newUrl = pathname + url.search;
+        if (window.location.pathname + window.location.search !== newUrl) {
+            window.history.pushState(null, '', newUrl);
+        }
+    },
+    
+    // Parse URL and return object with all parameter values
+    parse: function() {
+        const url = new URL(window.location.href);
+        const result = {};
+        this.registry.forEach(function(param) {
+            result[param.name] = url.searchParams.get(param.name);
+        });
+        return result;
+    },
+    
+    // Apply all parameters on initial page load
+    applyOnLoad: function() {
+        const params = this.parse();
+        this.registry.forEach(function(param) {
+            if (param.applyOnLoad) {
+                param.applyOnLoad(params[param.name]);
+            }
+        });
+    },
+    
+    // Handle popstate event (browser back/forward)
+    handlePopstate: function() {
+        const params = this.parse();
+        this.registry.forEach(function(param) {
+            if (param.onPopstate) {
+                param.onPopstate(params[param.name]);
+            }
+        });
     }
+};
+
+// Convenience function for updating URL
+function updateUrlParams() {
+    UrlParams.updateUrl();
+}
+
+// Convenience function for getting URL params (maintains backward compatibility)
+function getUrlParams() {
+    return UrlParams.parse();
 }
 
 function updateStep() {
@@ -1599,19 +1729,8 @@ function setupAssemblyViewer() {
     // Reset state for new page
     modelViewerInitialized = false;
     
-    // Check URL hash for initial step (e.g., #step-5)
-    const hash = window.location.hash;
-    const stepMatch = hash.match(/^#step-(\d+)$/);
-    if (stepMatch) {
-        const stepNum = parseInt(stepMatch[1], 10) - 1; // Convert to 0-indexed
-        if (stepNum >= 0 && stepNum < assemblySteps.length) {
-            currentStep = stepNum;
-        } else {
-            currentStep = 0;
-        }
-    } else {
-        currentStep = 0;
-    }
+    // Apply URL parameters on load (step, max, etc.)
+    UrlParams.applyOnLoad();
     
     if (blinkInterval) {
         clearInterval(blinkInterval);
@@ -1697,6 +1816,114 @@ function setupAssemblyViewer() {
         };
     }
     
+    // Setup fullscreen toggle button
+    const fullscreenBtn = document.getElementById('toggle-fullscreen');
+    const fullscreenBackdrop = document.getElementById('fullscreen-backdrop');
+    const viewerContainer = document.getElementById('model-viewer-container');
+    
+    if (fullscreenBtn && fullscreenBackdrop && viewerContainer) {
+        setIcon(fullscreenBtn, 'icon-fullscreen');
+        
+        let savedScrollPosition = 0;
+        let savedViewerSize = null;
+        
+        const toggleFullscreen = function() {
+            fullscreenBtn.blur();
+            const willBeFullscreen = !viewerContainer.classList.contains('fullscreen');
+            const modelViewer = document.getElementById('model-viewer');
+            const camera = window.modelViewerCamera;
+            const controls = window.modelViewerControls;
+            
+            if (willBeFullscreen) {
+                // Save scroll position and viewer size before going fullscreen
+                savedScrollPosition = window.scrollY || window.pageYOffset;
+                savedViewerSize = {
+                    width: modelViewer.clientWidth,
+                    height: modelViewer.clientHeight
+                };
+                
+                viewerContainer.classList.add('fullscreen');
+                fullscreenBackdrop.classList.add('active');
+                setIcon(fullscreenBtn, 'icon-fullscreen-exit');
+                fullscreenBtn.setAttribute('data-tooltip', 'Minimize');
+                document.body.style.overflow = 'hidden';
+                
+                // Scale camera distance by the larger of width/height expansion ratios
+                if (camera && controls && savedViewerSize) {
+                    requestAnimationFrame(function() {
+                        const newWidth = modelViewer.clientWidth;
+                        const newHeight = modelViewer.clientHeight;
+                        const widthScale = newWidth / savedViewerSize.width;
+                        const heightScale = newHeight / savedViewerSize.height;
+                        // Use the larger scale to ensure model doesn't appear zoomed in
+                        const scale = Math.max(widthScale, heightScale);
+                        
+                        const direction = new THREE.Vector3().subVectors(camera.position, controls.target).normalize();
+                        const currentDistance = camera.position.distanceTo(controls.target);
+                        camera.position.copy(controls.target).addScaledVector(direction, currentDistance * scale);
+                        controls.update();
+                        needsRenderGlobal = true;
+                        renderFramesRemaining = 5;
+                    });
+                }
+            } else {
+                // Scale camera distance back before layout changes
+                if (camera && controls && savedViewerSize) {
+                    const currentWidth = modelViewer.clientWidth;
+                    const currentHeight = modelViewer.clientHeight;
+                    const widthScale = savedViewerSize.width / currentWidth;
+                    const heightScale = savedViewerSize.height / currentHeight;
+                    // Use the larger scale (inverse of what we used going in)
+                    const scale = Math.max(widthScale, heightScale);
+                    
+                    const direction = new THREE.Vector3().subVectors(camera.position, controls.target).normalize();
+                    const currentDistance = camera.position.distanceTo(controls.target);
+                    camera.position.copy(controls.target).addScaledVector(direction, currentDistance * scale);
+                    controls.update();
+                    needsRenderGlobal = true;
+                    renderFramesRemaining = 5;
+                }
+                
+                viewerContainer.classList.remove('fullscreen');
+                fullscreenBackdrop.classList.remove('active');
+                setIcon(fullscreenBtn, 'icon-fullscreen');
+                fullscreenBtn.setAttribute('data-tooltip', 'Maximize');
+                document.body.style.overflow = '';
+                // Restore scroll position after exiting fullscreen
+                window.scrollTo(0, savedScrollPosition);
+            }
+            
+            // Trigger resize to update renderer size
+            window.dispatchEvent(new Event('resize'));
+            
+            // Update URL to reflect fullscreen state
+            updateUrlParams();
+        };
+        
+        fullscreenBtn.onclick = toggleFullscreen;
+        
+        // Close fullscreen when clicking backdrop or the margin area around the viewer
+        fullscreenBackdrop.onclick = function() {
+            if (viewerContainer.classList.contains('fullscreen')) {
+                toggleFullscreen();
+            }
+        };
+        
+        // Close when clicking the container padding (outside the model-viewer)
+        viewerContainer.onclick = function(e) {
+            if (viewerContainer.classList.contains('fullscreen') && e.target === viewerContainer) {
+                toggleFullscreen();
+            }
+        };
+        
+        // Close fullscreen on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && viewerContainer.classList.contains('fullscreen')) {
+                toggleFullscreen();
+            }
+        });
+    }
+    
     // Setup color picker
     ColorPickerManager.setupColorPicker();
     
@@ -1720,17 +1947,9 @@ function setupAssemblyViewer() {
     UIManager.setupCollapseButton();
     UIManager.setupKeyboardShortcuts();
     
-    // Setup hash change listener for browser back/forward
-    window.addEventListener('hashchange', function() {
-        const hash = window.location.hash;
-        const stepMatch = hash.match(/^#step-(\d+)$/);
-        if (stepMatch) {
-            const stepNum = parseInt(stepMatch[1], 10) - 1;
-            if (stepNum >= 0 && stepNum < assemblySteps.length && stepNum !== currentStep) {
-                currentStep = stepNum;
-                updateStep();
-            }
-        }
+    // Setup popstate listener for browser back/forward with query parameters
+    window.addEventListener('popstate', function() {
+        UrlParams.handlePopstate();
     });
     
     // Setup camera overlay click to copy
