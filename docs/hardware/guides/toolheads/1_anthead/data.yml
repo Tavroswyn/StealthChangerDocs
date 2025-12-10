@@ -41,17 +41,15 @@ printed_bom:
 
 hardware_bom:
   M3x6 BHCS Screws:
-    qty: 6
+    qty: 2
   M3x8 BHCS Screws:
-    qty: 10
+    qty: 14
   M3x12 BHCS Screws:
-    qty: 4-5
+    qty: 5
   M3x14 BHCS Screws:
     qty: 2
   M3x8 SHCS Screws:
     qty: 4
-  M3x12 SHCS Screw:
-    qty: 0-1
   M3x28 SHCS Screws:
     qty: 2
   M3 Heat Insert:
@@ -250,7 +248,7 @@ steps:
     focus: 
       - "Axial Fan M3x14 BHCS"
 
-  - description: "Attach the hotend mount to the StealthChanger Backplate using 2 M3x28 SHCS screws. Make sure to capture the M3x12 SCHS screw between the Backplate and the Spacer. Note this SCHS is tightened through the backplate behind the optotap; if your driver bit does not fit the hole, you may require a M3x12 BHCS screw here instead."
+  - description: "Attach the hotend mount to the StealthChanger Backplate using 2 M3x28 SHCS screws. Make sure to capture the M3x12 BCHS screw between the Backplate and the Spacer. Note this SCHS is tightened through the backplate behind the optotap; if your driver bit does not fit the hole, you may require a M3x12 BHCS screw here instead."
     camera:
       azimuth: 118
       polar: 71
