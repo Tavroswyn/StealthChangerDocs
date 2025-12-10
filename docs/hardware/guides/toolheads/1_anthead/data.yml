@@ -248,7 +248,7 @@ steps:
     focus: 
       - "Axial Fan M3x14 BHCS"
 
-  - description: "Attach the hotend mount to the StealthChanger Backplate using 2 M3x28 SHCS screws. Make sure to capture the M3x12 BCHS screw between the Backplate and the Spacer. Note this SCHS is tightened through the backplate behind the optotap; if your driver bit does not fit the hole, you may require a M3x12 BHCS screw here instead."
+  - description: "Attach the hotend mount to the StealthChanger Backplate using 2 M3x28 SHCS screws. Make sure to capture the M3x12 BCHS screw between the Backplate and the Spacer."
     camera:
       azimuth: 118
       polar: 71
