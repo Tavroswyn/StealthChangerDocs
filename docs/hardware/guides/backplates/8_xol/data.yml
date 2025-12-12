@@ -163,7 +163,7 @@ steps:
       - "Bottom Pin With Screw"
       - "Top Pins With Screws"
   
-  - description: "Set the preload for the Backplate by backing out the 2 M3x6 FHCS screws in small increments until they both make even contact with the magnets in the shuttle. An easy way ensure even contact is by using a slither of paper between the screw and magnet similar setting z offset."
+  - description: "Set the preload for the Backplate by backing out the 2 M3x6 FHCS screws in small increments until they both make even contact with the magnets in the shuttle. An easy way ensure even contact is by using a sliver of paper between the screw and magnet similar setting z offset."
     camera:
       azimuth: 359
       polar: 85
