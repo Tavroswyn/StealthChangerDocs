@@ -270,6 +270,7 @@ steps:
     focus: 
       - "Spacer M3x12 SHCS"
       - "HE Mount M3x28 SHCS"
+      - "Anthead Spacer"
 
   - description: "Insert the Grill into the Main Body, angling the top in first and the pushing the bottom in to place."
     camera:
