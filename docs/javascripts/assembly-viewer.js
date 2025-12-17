@@ -1327,9 +1327,7 @@ var UrlParams = {
                 const isMaximized = viewerContainer && viewerContainer.classList.contains('fullscreen');
                 return isMaximized ? 'true' : null; // null removes from URL
             },
-            applyOnLoad: function(value) {
-                window.pendingMaximize = (value === 'true');
-            },
+            applyOnLoad: null, // Handled after UI is ready in setupAssemblyViewer
             onPopstate: function(value) {
                 const viewerContainer = document.getElementById('model-viewer-container');
                 const fullscreenBtn = document.getElementById('toggle-fullscreen');
@@ -1906,6 +1904,19 @@ function setupAssemblyViewer() {
         
         // Add the handler
         cameraOverlay.addEventListener('click', cameraOverlayHandler);
+    }
+    
+    // Check if we need to maximize the viewer after initialization (for max=true URL parameter)
+    const urlParams = UrlParams.parse();
+    if (urlParams.max === 'true') {
+        const fullscreenBtn = document.getElementById('toggle-fullscreen');
+        if (fullscreenBtn && viewerContainer && !viewerContainer.classList.contains('fullscreen')) {
+            // Use setTimeout to ensure the UI is fully rendered before maximizing
+            setTimeout(function() {
+                fullscreenBtn.click();
+                console.log('Applied fullscreen from URL parameter');
+            }, 100);
+        }
     }
 }
 
