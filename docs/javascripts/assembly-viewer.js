@@ -25,6 +25,7 @@ window.initialCameraPosition = null; // Store initial camera position after rece
 window.initialTarget = null; // Store initial orbit target after recenter
 window.referenceViewportSize = null; // Store viewport size when camera settings were applied
 window.baseDistance = null; // Store the base distance from YAML
+window.lastModelViewerSize = null; // Store last viewer size for resize-based framing preservation
 
 var currentStep = 0;
 var blinkInterval = null;
@@ -556,58 +557,54 @@ function initModelViewer(modelPath, onModelLoaded) {
     }
     resizeHandler = function () {
         if (!container.clientWidth || !container.clientHeight) return;
-        
-        // Calculate scale factor based on viewport size change
-        // Use the smaller dimension to determine scale (maintains framing in both orientations)
-        if (window.referenceViewportSize && window.baseDistance) {
-            const currentSize = Math.min(container.clientWidth, container.clientHeight);
-            const referenceSize = Math.min(window.referenceViewportSize.width, window.referenceViewportSize.height);
-            const rawScaleFactor = referenceSize / currentSize;
-            
-            // Apply the configurable ratio to control how much scaling occurs
-            // scaleFactor = 1 + (rawScaleFactor - 1) * ratio
-            // When ratio = 1.0: full scaling
-            // When ratio = 0.5: half the scaling effect
-            // When ratio = 0.0: no scaling (scaleFactor = 1.0)
-            const scaleFactor = 1 + (rawScaleFactor - 1) * distanceScaleRatio;
-            
-            // Scale the distance: smaller viewport = larger distance (object appears same size)
-            const scaledDistance = window.baseDistance * scaleFactor;
-            
-            // Get current camera position in spherical coordinates
-            const pos = camera.position;
-            const target = controls.target;
-            const relX = pos.x - target.x;
-            const relY = pos.y - target.y;
-            const relZ = pos.z - target.z;
-            
-            const currentDistance = Math.sqrt(relX * relX + relY * relY + relZ * relZ);
-            const polar = Math.acos(relY / currentDistance);
-            const azimuth = Math.atan2(relZ, relX);
-            
-            // Reposition camera at scaled distance with same angles
-            const x = scaledDistance * Math.sin(polar) * Math.cos(azimuth);
-            const y = scaledDistance * Math.cos(polar);
-            const z = scaledDistance * Math.sin(polar) * Math.sin(azimuth);
-            
-            camera.position.set(
-                target.x + x,
-                target.y + y,
-                target.z + z
-            );
-            
-            controls.update();
-        }
-        
+
+        // Track current size (used for optional future behaviors).
+        window.lastModelViewerSize = {
+            width: container.clientWidth,
+            height: container.clientHeight
+        };
+
         camera.aspect = container.clientWidth / container.clientHeight;
         camera.updateProjectionMatrix();
         renderer.setSize(container.clientWidth, container.clientHeight);
+
         // Trigger render after resize
         needsRenderGlobal = true;
         renderFramesRemaining = 2;
     };
     window.addEventListener('resize', resizeHandler);
 
+    // Initialize last size for resize-based framing preservation
+    window.lastModelViewerSize = {
+        width: container.clientWidth,
+        height: container.clientHeight
+    };
+
+}
+
+function initializeModelViewer() {
+    if (!modelFile) {
+        console.error('No model file specified');
+        return;
+    }
+
+    if (UIManager && typeof UIManager.showLoading === 'function') {
+        UIManager.showLoading();
+    }
+
+    initModelViewer(modelFile, function() {
+        modelViewerInitialized = true;
+
+        if (UIManager && typeof UIManager.hideLoading === 'function') {
+            UIManager.hideLoading();
+        }
+
+        if (typeof createVisibilityControls === 'function' && window.modelViewerParts) {
+            createVisibilityControls(window.modelViewerParts);
+        }
+
+        updateStep();
+    });
 }
 
 // Populate visibility controls
@@ -1289,53 +1286,6 @@ const UIManager = {
     }
 }
 
-// Function to initialize the model viewer (called on first step access)
-function initializeModelViewer() {
-    if (modelViewerInitialized) return;
-    modelViewerInitialized = true;
-    
-    // Show loading overlay
-    UIManager.showLoading();
-    
-    // Defer model loading until browser is idle to avoid blocking the main thread
-    const loadModel = function() {
-        initModelViewer(
-        modelFile, 
-        function() {
-            // This callback runs after the model is fully loaded
-            
-            // Hide loading overlay
-            UIManager.hideLoading();
-            
-            // Populate the parts list in the overlay
-            createVisibilityControls(window.modelViewerParts);
-            
-            // Don't call updateStep here - it will be called and will handle colors
-            updateStep();
-            
-            // Apply pending maximize from URL parameter after model is loaded
-            if (window.pendingMaximize) {
-                const fullscreenBtn = document.getElementById('toggle-fullscreen');
-                if (fullscreenBtn) {
-                    // Small delay to ensure UI is ready
-                    setTimeout(function() {
-                        fullscreenBtn.click();
-                    }, 100);
-                }
-                window.pendingMaximize = false;
-            }
-        }
-    );
-    };
-    
-    // Use requestIdleCallback if available, otherwise setTimeout
-    if (typeof requestIdleCallback !== 'undefined') {
-        requestIdleCallback(loadModel, { timeout: 1000 });
-    } else {
-        setTimeout(loadModel, 100);
-    }
-}
-
 // URL Parameter Registry
 // Each parameter defines: name, getValue (for URL updates), applyOnLoad, onPopstate
 var UrlParams = {
@@ -1592,28 +1542,11 @@ function updateStep() {
                 window.initialTarget.z + worldPan.z
             );
             
-            // Apply camera position with initial scaling based on viewport size
+            // Apply camera position (use authored YAML distance; do not scale by viewport size)
             if (azimuth !== null && polar !== null && distance !== null) {
-                // Get current viewport size
-                const container = document.getElementById('model-viewer');
-                let scaledDistance = distance;
-                
-                if (container) {
-                    // Calculate scale factor based on current viewport vs reference viewport
-                    const currentSize = Math.min(container.clientWidth, container.clientHeight);
-                    const referenceSize = Math.min(referenceFullViewportSize.width, referenceFullViewportSize.height);
-                    const rawScaleFactor = referenceSize / currentSize;
-                    
-                    // Apply the configurable ratio to control how much scaling occurs
-                    const scaleFactor = 1 + (rawScaleFactor - 1) * distanceScaleRatio;
-                    
-                    // Scale the distance for initial load
-                    scaledDistance = distance * scaleFactor;
-                }
-                
-                const x = scaledDistance * Math.sin(polarRad) * Math.cos(azimuthRad);
-                const y = scaledDistance * Math.cos(polarRad);
-                const z = scaledDistance * Math.sin(polarRad) * Math.sin(azimuthRad);
+                const x = distance * Math.sin(polarRad) * Math.cos(azimuthRad);
+                const y = distance * Math.cos(polarRad);
+                const z = distance * Math.sin(polarRad) * Math.sin(azimuthRad);
                 
                 camera.position.set(
                     controls.target.x + x,
@@ -1623,16 +1556,6 @@ function updateStep() {
             }
             
             controls.update();
-            
-            // Store the reference viewport size (from config) and base distance for scaling on resize
-            // Always use referenceFullViewportSize as the baseline, not the current viewport size
-            if (distance !== null) {
-                window.referenceViewportSize = {
-                    width: referenceFullViewportSize.width,
-                    height: referenceFullViewportSize.height
-                };
-                window.baseDistance = distance;
-            }
             
             // Force camera change detection by clearing last position
             // This ensures lights update on next animate loop iteration
@@ -1825,70 +1748,28 @@ function setupAssemblyViewer() {
         setIcon(fullscreenBtn, 'icon-fullscreen');
         
         let savedScrollPosition = 0;
-        let savedViewerSize = null;
         
         const toggleFullscreen = function() {
             fullscreenBtn.blur();
             const willBeFullscreen = !viewerContainer.classList.contains('fullscreen');
             const modelViewer = document.getElementById('model-viewer');
-            const camera = window.modelViewerCamera;
-            const controls = window.modelViewerControls;
             
             if (willBeFullscreen) {
                 // Save scroll position and viewer size before going fullscreen
                 savedScrollPosition = window.scrollY || window.pageYOffset;
-                savedViewerSize = {
-                    width: modelViewer.clientWidth,
-                    height: modelViewer.clientHeight
-                };
                 
                 viewerContainer.classList.add('fullscreen');
                 fullscreenBackdrop.classList.add('active');
                 setIcon(fullscreenBtn, 'icon-fullscreen-exit');
                 fullscreenBtn.setAttribute('data-tooltip', 'Minimize');
                 document.body.style.overflow = 'hidden';
-                
-                // Scale camera distance by the larger of width/height expansion ratios
-                if (camera && controls && savedViewerSize) {
-                    requestAnimationFrame(function() {
-                        const newWidth = modelViewer.clientWidth;
-                        const newHeight = modelViewer.clientHeight;
-                        const widthScale = newWidth / savedViewerSize.width;
-                        const heightScale = newHeight / savedViewerSize.height;
-                        // Use the larger scale to ensure model doesn't appear zoomed in
-                        const scale = Math.max(widthScale, heightScale);
-                        
-                        const direction = new THREE.Vector3().subVectors(camera.position, controls.target).normalize();
-                        const currentDistance = camera.position.distanceTo(controls.target);
-                        camera.position.copy(controls.target).addScaledVector(direction, currentDistance * scale);
-                        controls.update();
-                        needsRenderGlobal = true;
-                        renderFramesRemaining = 5;
-                    });
-                }
             } else {
-                // Scale camera distance back before layout changes
-                if (camera && controls && savedViewerSize) {
-                    const currentWidth = modelViewer.clientWidth;
-                    const currentHeight = modelViewer.clientHeight;
-                    const widthScale = savedViewerSize.width / currentWidth;
-                    const heightScale = savedViewerSize.height / currentHeight;
-                    // Use the larger scale (inverse of what we used going in)
-                    const scale = Math.max(widthScale, heightScale);
-                    
-                    const direction = new THREE.Vector3().subVectors(camera.position, controls.target).normalize();
-                    const currentDistance = camera.position.distanceTo(controls.target);
-                    camera.position.copy(controls.target).addScaledVector(direction, currentDistance * scale);
-                    controls.update();
-                    needsRenderGlobal = true;
-                    renderFramesRemaining = 5;
-                }
-                
                 viewerContainer.classList.remove('fullscreen');
                 fullscreenBackdrop.classList.remove('active');
                 setIcon(fullscreenBtn, 'icon-fullscreen');
                 fullscreenBtn.setAttribute('data-tooltip', 'Maximize');
                 document.body.style.overflow = '';
+                
                 // Restore scroll position after exiting fullscreen
                 window.scrollTo(0, savedScrollPosition);
             }
