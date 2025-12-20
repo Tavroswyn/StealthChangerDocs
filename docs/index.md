@@ -1,7 +1,7 @@
 Welcome to the official documentation for StealthChanger and the DraftShift Design ecosystem. This site will provide information on the many components and how to assemble, configure and operate them.
 
 ## What is StealthChanger
-[StealthChanger](hardware/stealthchanger.md) is the key componant of a larger ecosystem that can be used on Voron and other front mount printers. StealthChanger enables the tool to be completely removed from the gantry making it proficient in tool changing when combined with the rest of the DraftShift Design ecosystem.
+[StealthChanger](hardware/stealthchanger.md) is the key component of a larger ecosystem that can be used on Voron and other front mount printers. StealthChanger enables the tool to be completely removed from the gantry making it proficient in tool changing when combined with the rest of the DraftShift Design ecosystem.
 
 <div style="clear: both; margin-bottom: 20px;"></div>
 ![StealthChanger](assets/sc_anim.gif){ width=180 align=left }

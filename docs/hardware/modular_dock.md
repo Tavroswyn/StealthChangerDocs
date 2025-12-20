@@ -113,4 +113,4 @@ Containers are an aesthetic addon that can be position in the frame of the Modul
 | ![Containers](../assets/dock-container.png) |
 
 ## Assembly
-The assembly guide for the Modular Dock can be found in the [Build Guides](guides/modular_docks/index.md) section. There you will find a guide for the different componants and how to contruct the final assembly.
+The assembly guide for the Modular Dock can be found in the [Build Guides](guides/modular_docks/index.md) section. There you will find a guide for the different components and how to contruct the final assembly.
