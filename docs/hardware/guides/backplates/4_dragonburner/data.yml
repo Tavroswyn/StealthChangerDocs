@@ -6,6 +6,9 @@ summary: >
 
     - The Spacer is not used for the purpose of this guide. Put it aside in a safe place until building the toolhead.
 
+    !!! note "LDO CNC Shuttle"
+        It is recommended that 13mm long pins are used with the LDO CNC Shuttle due to it having tapered bushings. 13mm pins are included with the `LDO Tool & Dock Kit`.
+
 printed_bom:
   DragonBurner Backplate:
     qty: 1
@@ -18,7 +21,7 @@ printed_bom:
         Link: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/DragonBurner_Spacer.stl?raw=true
 
 hardware_bom:
-  4mmx12mm rounded pins with M3 internal thread:
+  4mmx12-13mm rounded pins with M3 internal thread:
     qty: 3
     urls:
         AliExpress: https://s.click.aliexpress.com/e/_DCQkrFP

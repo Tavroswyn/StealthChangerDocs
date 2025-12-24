@@ -3,6 +3,9 @@ author: "DraftShift Design"
 summary: >
     StealthChanger Backplate for the StealthBurner.
 
+    !!! note "LDO CNC Shuttle"
+        It is recommended that 13mm long pins are used with the LDO CNC Shuttle due to it having tapered bushings. 13mm pins are included with the `LDO Tool & Dock Kit`.
+
 printed_bom:
   StealthBurner Backplate:
     qty: 1
@@ -10,7 +13,7 @@ printed_bom:
         Link: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/StealthBurner.stl?raw=true
 
 hardware_bom:
-  4mmx12mm rounded pins with M3 internal thread:
+  4mmx12-13mm rounded pins with M3 internal thread:
     qty: 3
     urls:
         AliExpress: https://s.click.aliexpress.com/e/_DCQkrFP
