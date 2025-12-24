@@ -191,3 +191,22 @@ steps:
       - "Shuttle"
     focus:
       - "M3x6 FHCS Screws"
+
+  - description: "Mount the OptoTap PCB using 2 M3x6 BHCS screws."
+    camera:
+      azimuth: 278
+      polar: 93
+      distance: 70
+      pan_x: -0.64
+      pan_y: 13.43
+    visible:
+      - "Backplate"
+      - "M3 Heat Inserts"
+      - "6x3mm Magnet"
+      - "M3x6 FHCS Screws"
+      - "Pins"
+      - "M3x8 BHCS Screws"
+      - "OptoTap PCB"
+      - "M3x6 BHCS Screws"
+    focus:
+      - "M3x6 BHCS Screws"
