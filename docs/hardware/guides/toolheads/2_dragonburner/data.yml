@@ -112,7 +112,7 @@ steps:
       - "WS2812B LED (Logo)"
       - "WS2812B LEDs (Nozzle)"
 
-  - description: "Using the solder jig, solder wires to the 3 Neopixel LEDs."
+  - description: 'Solder the 3 LEDs using the [Solder Jig](https://github.com/N3MI-DG/sc-guides/blob/main/DragonBurner/STL/Solder%20Jig.stl){target="_blank"}'
     camera:
       azimuth: 94
       polar: 18
@@ -205,7 +205,7 @@ steps:
     focus:
       - "2510 Axial Fan"
 
-  - description: "Install The axial fan in to the Cowl. It needs to be inserted from the bottom."
+  - description: "Install The axial fan into the Cowl and route the wire thru the opening on either side. It needs to be inserted from the bottom"
     camera:
       azimuth: 275
       polar: 110
