@@ -1476,9 +1476,7 @@ function updateStep() {
             });
         } else {
             // Apply base colors (primary, accent, frame)
-            if (baseColors.length > 0) {
-                setFocusParts(baseColors);
-            }
+            setFocusParts(baseColors);
         }
     }
     
