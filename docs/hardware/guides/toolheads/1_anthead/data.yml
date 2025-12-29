@@ -420,7 +420,7 @@ steps:
     focus: 
       - "Duct Upper M3x8 BHCS"
 
-  - description: "Secure the Ducts to the Backplate using 2 M3x8 SHCS screws."
+  - description: "Secure the Ducts to the Backplate using 2 M3x8 BHCS screws."
     camera:
       azimuth: 273
       polar: 106
