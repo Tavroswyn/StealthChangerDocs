@@ -693,7 +693,7 @@ steps:
       - "EBB Mount"
       - "M3x12 BHCS Screws (EBB36)"
 
-  - description: "Attach 2 5x2mm N52 magnets to the front M3x40 SHSC screw heads."
+  - description: "Attach 2 5x2mm N52 magnets to the front M3x40 SHCS screw heads."
     camera:
       azimuth: 89
       polar: 83
