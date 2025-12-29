@@ -142,7 +142,7 @@ steps:
     focus:
       - "Top Pins Step"
 
-  - description: "Mesh the backplate and shuttle together and using the small end if an allen wrench, push the top 2 4x12mm pins in the rest of the way and secure with 2 M3x10 SHCS screws."
+  - description: "Mesh the backplate and shuttle together and using the small end of an allen wrench, push the top 2 4x12mm pins in the rest of the way and secure with 2 M3x10 SHCS screws."
     camera:
       azimuth: 280
       polar: 18
@@ -185,7 +185,7 @@ steps:
       - "Bottom Pin With Screw"
       - "Top Pins With Screws"
   
-  - description: "Set the preload for the Backplate by backing out the 2 M3x6 FHCS screws in small increments until they both make even contact with the magnets in the shuttle. An easy way ensure even contact is by using a sliver of paper between the screw and magnet similar setting z offset."
+  - description: "Set the preload for the Backplate by backing out the 2 M3x6 FHCS screws in small increments until they both make even contact with the magnets in the shuttle. An easy way to ensure even contact is by using a sliver of paper between the screw and magnet similar to setting z offset."
     camera:
       azimuth: 359
       polar: 85
