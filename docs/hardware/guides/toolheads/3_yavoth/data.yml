@@ -74,7 +74,7 @@ steps:
       pan_y: -4.48
     visible: []
 
-  - description: "After soldering wires to the LED, slide it through the side of the LED Holder fold the wires so the go in to the notch."
+  - description: "After soldering wires to the LED, slide it through the side opening of the LED Holder, fold the wires so they go into the notch."
     camera:
       azimuth: 269
       polar: 133
@@ -87,7 +87,7 @@ steps:
     focus:
       - "WS2812B LED"
 
-  - description: "Install 2 heatsets in to the EBB Mount."
+  - description: "Install 2 heatsets into the EBB Mount."
     camera:
       azimuth: 88
       polar: 117
@@ -100,7 +100,7 @@ steps:
     focus:
       - "Heat Inserts (PCB Mount)"
 
-  - description: "Install 2 heatsets in to the Cowl."
+  - description: "Install 2 heatsets into the Cowl."
     camera:
       azimuth: 269
       polar: 133
