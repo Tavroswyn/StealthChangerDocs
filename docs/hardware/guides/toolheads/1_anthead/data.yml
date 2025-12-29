@@ -150,7 +150,7 @@ steps:
     focus:
       - "LED Carrier Jig"
 
-  - description: "Install 7 heat inserts into the Main Body."
+  - description: "Install 7 heat inserts into the Main Body. Drill out the filament path in the middle with a 4 mm drill for the PTFE tube."
     camera:
       azimuth: 214
       polar: 47
@@ -203,7 +203,7 @@ steps:
     focus: 
       - "Duct Heat Inserts"
 
-  - description: "Install 4 heat inserts into the Hotend Mount."
+  - description: "Install 4 heat inserts into the Hotend Mount. Drill out the filament path with a 4 mm drill for the PTFE tube."
     camera:
       azimuth: 124
       polar: 97
